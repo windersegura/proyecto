@@ -1,2 +1,1 @@
-# proyecto
-proyecto sistema colegio
+# sistema-universidad
