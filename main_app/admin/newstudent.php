@@ -1,19 +1,19 @@
-<?php  
+<?php
 	session_start();
 
 	//si la variable de session existe se queda de lo contrario lo desloguea o lo envia para su usuario correcto
 	if(isset($_SESSION['usuario']))
 	{
-		if ($_SESSION['usuario']['TipoUsuario'] == "Secretario") 
+		if ($_SESSION['usuario']['TipoUsuario'] == "Secretario")
 		{
 			header("Location: ../secretary/");
 		}
 
-		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin") 		
+		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin")
 		{
 			header("Location: ../salir.php");
 		}
-		
+
 	}
 	else
 	{
@@ -28,6 +28,7 @@
 	
 </head>
 	<body>
+
 		<center>	
 			<div id="main" width="70%">
 				<form class="form-group" action="studentupdate.php" method="POST" >
@@ -83,5 +84,7 @@
 				</form>
 			</div>
 		</center>
+
+		
 	</body>
 </html>
