@@ -34,7 +34,8 @@
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
-		<div class="main">
+		<div class="main" style="margin-top: 0px">
+			<img src="img(1)/adminicon.png" alt="">
 			<form action="" id="formlg">
 				<input type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 				<input type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>

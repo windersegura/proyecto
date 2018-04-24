@@ -30,9 +30,9 @@
 	<body>
 		<ul>
 			<li><a href="newstudent.php">Ingresar Alumno</a></li>
-			<li><a href="#">Ingresar Maestro</a></li>
-			<li><a href="#">Ingresar Cursos</a></li>
-			<li><a href="#">Ingresar Carrera</a></li>
+			<li><a href="newteacher.php">Ingresar Maestro</a></li>
+			<li><a href="newcourse.php">Ingresar Cursos</a></li>
+			<li><a href="newcareer.php">Ingresar Carrera</a></li>
 			<li><a href="#">Eliminar Alumno</a></li>
 			<li><a href="#">Eliminar Maestro</a></li>
 			<li><a href="#">Consultar Alumno</a></li>
