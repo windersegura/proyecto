@@ -35,6 +35,7 @@
 		</div>
 		<div class="main">
 			<form action="" id="formlgteacher">
+				<img src="img(1)/teachericon.png" width="20%">
 				<input type="text" name="usuariolgteacher" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 				<input type="password" name="passlgteacher" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 				<input type="submit" class="botonlgteacher" value="Iniciar Sesion">

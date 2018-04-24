@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-04-2018 a las 03:17:27
+-- Tiempo de generación: 24-04-2018 a las 08:17:56
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -69,7 +69,9 @@ CREATE TABLE `alumnos` (
 
 INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`) VALUES
 (1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno'),
-(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno');
+(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno'),
+(10, 'CARLOS BELTRAN JONS', 23, 'santa ana, peten', 71934682, 'Masculino', 1793468524521, '699259', 'carlos@gmail.com', 'Alumno'),
+(11, 'CAROLINA VERONICA LOPEZ GARRIDO', 28, 'san luis, peten', 71256984, 'Femenino', 7139468529621, '877740', 'carol@gmail.com', 'Alumno');
 
 -- --------------------------------------------------------
 
@@ -326,7 +328,7 @@ ALTER TABLE `administracion`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
