@@ -31,19 +31,20 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 	<body>
-		<div class="error">
-			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
-		</div>
-		<div class="main" style="margin-top: 0px">
-			<img src="img(1)/adminicon.png" alt="">
-			<form action="" id="formlg">
-				<input type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-				<input type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-				<input type="submit" class="botonlg" value="Iniciar Sesion">
-			</form>
+		<center>
+			<div class="error">
+				<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
+			</div>
+			<div class="main" style="margin-top: 0px">
+				<img src="img(1)/adminicon.png" alt="">
+				<form action="" id="formlg">
+					<input type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
+					<input type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-.]{1,20}" required/><br><br>
+					<input type="submit" class="botonlg" value="Iniciar Sesion">
+				</form>
 
-		</div>
-		
+			</div>
+		</center>
 
 		<a href="index.php">Volver</a>
 		<script src="js/jquery-3.3.1.min.js"></script>
