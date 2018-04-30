@@ -1,5 +1,6 @@
 <?php  
 	require "../conexion.php";
+	require "../delete_accents.php";
 
 	session_start();
 
@@ -31,6 +32,8 @@
 	$correo=$_POST['correo'];
 	$tipo=$_POST['tipo'];
 		
+	$nombre1 = eliminar_simbolos($nombre);
+	$nombre1=strtoupper($nombre1);	
 
 	//confirmacion que todos los datos esten llenos
 	$req = (strlen($nombre)*strlen($direccion)*strlen($telefono)*strlen($password)*strlen($dpi)*strlen($correo)*strlen($tipo)) or die("No están llenos los espacios");

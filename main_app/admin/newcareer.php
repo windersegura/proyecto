@@ -33,7 +33,7 @@
 				<form class="form-group" action="careerupdate.php" method="POST" >
 					
 					<label>Nombre De La Carrera<span><em>(requerido)</em></span></label><br> 
-			        <input type="text" pattern="[A-Za-z ]{1,70}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre" required/><br> 
+			        <input type="text" pattern="[A-Za-z ñÑ]{1,70}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre" required/><br> 
 
 			        <label>Años De Duración<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="anos" class="form-input form-control" placeholder="Ingrese La Duracion" required/><br>

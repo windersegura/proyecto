@@ -33,13 +33,13 @@
 			<div id="main" width="70%">
 				<form class="form-group" action="studentupdate.php" method="POST" >
 					<label>Nombre Completo <span><em>(requerido)</em></span></label><br> 
-			        <input type="text" pattern="[A-Za-z ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" required/><br> 
+			        <input type="text" pattern="[A-Za-z ñÑé]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" required/><br> 
 
 			        <label>Edad<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="edad" class="form-input form-control" placeholder="Ingrese Edad" required/><br> 
 
 			        <label>Direccion <span><em>(requerido)</em></span></label><br> 
-			        <input type="text" pattern="[A-Za-z-_0-9,. ]{1,240}" name="direccion" class="form-input form-control" placeholder="Ingrese Su Direccion De Ubicacion" required/><br>
+			        <input type="text" pattern="[A-Za-z-_0-9,. ñÑ]{1,240}" name="direccion" class="form-input form-control" placeholder="Ingrese Su Direccion De Ubicacion" required/><br>
 
 			        <label>Telefono<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,10}" name="telefono" class="form-input form-control" placeholder="Ingrese Numero Telefonico" required/><br>
@@ -54,9 +54,6 @@
 							</select>
 						</div>
 					</div>
-
-					
-
 
 					<label>Numero De DPI<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,13}" name="dpi" class="form-input form-control" placeholder="Su Numero De DPI" required/><br>

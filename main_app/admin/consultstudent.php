@@ -50,20 +50,31 @@
 			$busqueda = $mysqli->query($busqueda) or die (mysql_error($mysqli));
 			while($fila=$busqueda->fetch_assoc())
 			{
+				$idAlumno = mysqli_real_escape_string($mysqli,$fila['idAlumno']);
+				$nombre = mysqli_real_escape_string($mysqli,$fila['Nombre']);
+				$edad = mysqli_real_escape_string($mysqli,$fila['Edad']);
+				$direccion = mysqli_real_escape_string($mysqli,$fila['Direccion']);
+				$telefono = mysqli_real_escape_string($mysqli,$fila['Telefono']);
+				$sexo = mysqli_real_escape_string($mysqli,$fila['Sexo']);
+				$dpi = mysqli_real_escape_string($mysqli,$fila['DPI']);
+				$password = mysqli_real_escape_string($mysqli,$fila['Password']);
+				$tipoUsuario = mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
+				$correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
+
 				echo "<tr>";
-					echo "<td><center>";	echo "$fila[idAlumno]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Nombre]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Edad]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Direccion]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Telefono]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Sexo]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[DPI]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Password]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[TipoUsuario]"; echo "</td>";
-					echo "<td><center>";	echo "$fila[Correo]"; echo "</td>";
-					echo "<td><a href='deletestudent.php?numero=$fila[idAlumno]'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
-					echo "<td><a href='#?numero=$fila[idAlumno]'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
-					echo "<td><a href='#?numero=$fila[idAlumno]'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
+					echo "<td><center>"; echo $idAlumno; echo "</center></td>";
+					echo "<td><center>"; echo $nombre; echo "</center></td>";
+					echo "<td><center>"; echo $edad; echo "</center></td>";
+					echo "<td><center>"; echo $direccion; echo "</center></td>";
+					echo "<td><center>"; echo $telefono; echo "</center></td>";
+					echo "<td><center>"; echo $sexo; echo "</center></td>";
+					echo "<td><center>"; echo $dpi; echo "</center></td>";
+					echo "<td><center>"; echo $password; echo "</center></td>";
+					echo "<td><center>"; echo $tipoUsuario; echo "</td>";
+					echo "<td><center>"; echo $correo; echo "</td>";
+					echo "<td><a href='deletestudent.php?numero=".$idAlumno."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
+					echo "<td><a href='modifystudent.php?numero=".$idAlumno."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
+					echo "<td><a href='#?numero=".$idAlumno."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}
 

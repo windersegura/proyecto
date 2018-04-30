@@ -33,7 +33,7 @@
 				<form class="form-group" action="teacherupdate.php" method="POST" >
 					
 					<label>Nombre Completo <span><em>(requerido)</em></span></label><br> 
-			        <input type="text" pattern="[A-Za-z ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" required/><br> 
+			        <input type="text" pattern="[A-Za-z ñÑ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" required/><br> 
 
 			        <label>Direccion <span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[A-Za-z-_0-9,. ]{1,240}" name="direccion" class="form-input form-control" placeholder="Ingrese Su Direccion De Ubicacion" required/><br>

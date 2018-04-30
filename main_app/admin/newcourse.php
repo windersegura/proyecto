@@ -33,7 +33,7 @@
 				<form class="form-group" action="courseupdate.php" method="POST" >
 					
 					<label>Nombre<span><em>(requerido)</em></span></label><br> 
-			        <input type="text" pattern="[A-Za-z ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Del Curso" required/><br> 
+			        <input type="text" pattern="[A-Za-z ñÑ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Del Curso" required/><br> 
 
 			        <label>Creditos<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="creditos" class="form-input form-control" placeholder="Ingresa La Cantidad De Creditos" required/><br>

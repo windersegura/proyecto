@@ -48,19 +48,28 @@
 			$busqueda = $mysqli->query($busqueda) or die (mysql_error($mysqli));
 			while($fila=$busqueda->fetch_assoc())
 			{
+				$idProfesor=mysqli_real_escape_string($mysqli,$fila['idProfesor']);
+				$nombre=mysqli_real_escape_string($mysqli,$fila['Nombre']);
+				$direccion=mysqli_real_escape_string($mysqli,$fila['Direccion']);
+				$telefono=mysqli_real_escape_string($mysqli,$fila['Telefono']);
+				$password=mysqli_real_escape_string($mysqli,$fila['Password']);
+				$dpi=mysqli_real_escape_string($mysqli,$fila['DPI']);
+				$correo=mysqli_real_escape_string($mysqli,$fila['Correo']);
+				$tipoUsuario=mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
+
 				echo "<tr>";
-					echo "<td><center>";	echo "$fila[idProfesor]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Nombre]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Direccion]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Telefono]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Password]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[DPI]"; echo "</center></td>";
-					echo "<td><center>";	echo "$fila[Correo]"; echo "</td>";
-					echo "<td><center>";	echo "$fila[TipoUsuario]"; echo "</td>";
+					echo "<td><center>"; echo $idProfesor; echo "</center></td>";
+					echo "<td><center>"; echo $nombre; echo "</center></td>";
+					echo "<td><center>"; echo $direccion; echo "</center></td>";
+					echo "<td><center>"; echo $telefono; echo "</center></td>";
+					echo "<td><center>"; echo $password; echo "</center></td>";
+					echo "<td><center>"; echo $dpi; echo "</center></td>";
+					echo "<td><center>"; echo $correo; echo "</td>";
+					echo "<td><center>"; echo $tipoUsuario; echo "</td>";
 					
-					echo "<td><a href='deleteteacher.php?numero=$fila[idProfesor]'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
-					echo "<td><a href='#?numero=$fila[idProfesor]'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
-					echo "<td><a href='#?numero=$fila[idProfesor]'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
+					echo "<td><a href='deleteteacher.php?numero=".$idProfesor."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
+					echo "<td><a href='#?numero=".$idProfesor."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
+					echo "<td><a href='#?numero=".$idProfesor."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}
 
