@@ -10,12 +10,10 @@
 		{
 			header("Location: ../secretary/");
 		}
-
 		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin") 		
 		{
 			header("Location: ../salir.php");
 		}
-		
 	}
 	else
 	{
@@ -23,21 +21,13 @@
 	}
 
 	//se guardan en variables todos los valores del formulario
-	$nombre=$_POST['nombre'];
-	$creditos=$_POST['creditos'];
 	$semestre=$_POST['semestre'];
-
-	require "../delete_accents.php";
-
-	
+	$carrera=$_POST['carrera'];	
 	
 	//confirmacion que todos los datos esten llenos
-	$req = (strlen($nombre)*strlen($creditos)*strlen($semestre)) or die("No están llenos los espacios");
+	$req = (strlen($semestre)*strlen($carrera)) or die("No están llenos los espacios");
 
-	$nombre1 = eliminar_simbolos($nombre);
-	$nombre1=strtoupper($nombre1);
-
-	$query = "INSERT INTO curso VALUES (NULL, '$nombre1','$creditos','$semestre')";
+	$query = "INSERT INTO semestre VALUES (NULL, '$semestre', '$carrera')";
 
 	$mysqli->query($query);
 

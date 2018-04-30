@@ -13,7 +13,6 @@
 		{
 			header("Location: ../salir.php");
 		}
-		
 	}
 	else
 	{
@@ -37,6 +36,9 @@
 
 			        <label>Creditos<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="creditos" class="form-input form-control" placeholder="Ingresa La Cantidad De Creditos" required/><br>
+
+			        <label>Semestre<span><em>(requerido)</em></span></label><br> 
+			        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El Semestre" required/><br>
 			
 					<input class="btn__submit" type="submit" value="REGISTRAR">
 			        

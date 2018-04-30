@@ -35,7 +35,10 @@
 			<li><a href="newcareer.php">Ingresar Carrera</a></li>
 			<li><a href="consultstudent.php">Consultar Alumno</a></li>
 			<li><a href="consultteacher.php">Consultar Maestro</a></li>
-			<li><a href="#">Solvencias</a></li>
+			<li><a href="consultcourse.php">Consultar Cursos</a></li>
+			<li><a href="consultsemester.php">Consultar Semestre</a></li>
+			<li><a href="#">Consultar Carrera</a></li>
+			<li><a href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a></li>
 			<li><a href="#">Asignar Alumno a curso</a></li>
 			<li><a href="#">Asignar Maestro a curso</a></li>
 
