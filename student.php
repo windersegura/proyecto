@@ -33,16 +33,17 @@
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
-		<div class="main" style="margin-top: 0px">
-			<img src="img(1)/studenticon.png" width="50%">
-			<form action="" id="formlgstudent">
-				<input type="text" name="usuariolgstudent" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-				<input type="password" name="passlgstudent" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-				<input type="submit" class="botonlgstudent" value="Iniciar Sesion">
-			</form>
+		<center>
+			<div class="main" style="margin-top: 0px">
+				<img src="img(1)/studenticon.png" width="20%">
+				<form action="" id="formlgstudent">
+					<input type="text" name="usuariolgstudent" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
+					<input type="password" name="passlgstudent" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
+					<input type="submit" class="botonlgstudent" value="Iniciar Sesion">
+				</form>
 
-		</div>
-		
+			</div>
+		</center>
 
 		<a type="button" href="index.php">Volver</a>
 		<script src="js/jquery-3.3.1.min.js"></script>
