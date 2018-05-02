@@ -24,12 +24,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	
 	<title>Nuevo Maestro</title>
 	
 </head>
 	<body>
 		<center>	
-			<div id="main" width="70%">
+			<div id="main" width="700">
 				<form class="form-group" action="teacherupdate.php" method="POST" >
 					
 					<label>Nombre Completo <span><em>(requerido)</em></span></label><br> 

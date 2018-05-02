@@ -27,6 +27,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<title>Nuevo Semestre</title>
 	
 </head>

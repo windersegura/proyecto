@@ -24,14 +24,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	
 	<title>Nuevo Estudiante</title>
 	
 </head>
 	<body>
 
 		<center>	
-			<div id="main" width="70%">
-				<form class="form-group" action="studentupdate.php" method="POST" >
+			<div class="form-group" width="700">
+				<form  action="studentupdate.php" method="POST" >
 					<label>Nombre Completo <span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[A-Za-z ñÑé]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" required/><br> 
 
