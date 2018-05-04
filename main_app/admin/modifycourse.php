@@ -34,6 +34,7 @@
 			$fila['Nombre'],
             $fila['Creditos'],
 			$fila['Semestre'],
+			$fila['Carrera']
 		];
 	}
 ?>
@@ -62,7 +63,26 @@
 			        <label>Semestre<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese Numero Del Semestre" value="<?php echo $consulta[3]?>" required/><br>
 
-					
+					<div class="form-group">
+						<label for="carrera" class="col-sm-2 control-label">Seleccionar Carrera</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="carrera" name="carrera">
+								
+								<?php 
+								require '../conexion.php';
+
+								$query = "SELECT NombreCarrera FROM carrera";
+								$resultado = $mysqli->query($query);
+								
+									WHILE($row = $resultado->fetch_assoc()) 
+								{?>
+									<option value="<?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
+								<?php 
+									}
+								?>
+							</select>
+						</div>
+					</div>
 			
 					<input class="btn__submit" type="submit" value="GUARDAR CAMBIOS">
 			        

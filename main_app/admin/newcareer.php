@@ -38,6 +38,9 @@
 
 			        <label>Años De Duración<span><em>(requerido)</em></span></label><br> 
 			        <input type="text" pattern="[0-9]{1,2}" name="anos" class="form-input form-control" placeholder="Ingrese La Duracion" required/><br>
+
+			        <label>Codigo Unico De La Carrera<span><em>(requerido)</em></span></label><br> 
+			        <input type="text" pattern="[0-9]{1,5}" name="codigocarrera" class="form-input form-control" placeholder="Ingrese El Codigo Que Identifique La Carrera" required/><br>
 			
 					<input class="btn__submit" type="submit" value="REGISTRAR">
 			        

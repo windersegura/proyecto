@@ -31,7 +31,8 @@
         return 
 		[   $fila['idCarrera'],
 			$fila['NombreCarrera'],
-            $fila['Duracion']
+            $fila['Duracion'],
+            $fila['CodCarrera'],
 		];
 	}
 ?>
@@ -58,7 +59,8 @@
 			        <input type="text" pattern="[0-9]{1,2}" name="duracion" class="form-input form-control" placeholder="Ingrese Los Creditos" value="<?php echo $consulta[2]?>" required/><br>
 
 
-					
+					<label>Codigo Unico De La Carrera<span><em>(requerido)</em></span></label><br> 
+			        <input type="text" pattern="[0-9]{1,5}" name="codigocarrera" class="form-input form-control" placeholder="Ingrese El Codigo Que Identifique La Carrera" value="<?php echo $consulta[3]?>" required/><br>
 			
 					<input class="btn__submit" type="submit" value="GUARDAR CAMBIOS">
 			        

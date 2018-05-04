@@ -22,16 +22,16 @@
 
 <?php
 	
-	ModificarAlumno($_POST['id'], $_POST['nombre'], $_POST['creditos'], $_POST['semestre']);
+	ModificarAlumno($_POST['id'], $_POST['nombre'], $_POST['creditos'], $_POST['semestre'], $_POST['carrera']);
 
-	function ModificarAlumno($id, $nombre, $creditos, $semestre)
+	function ModificarAlumno($id, $nombre, $creditos, $semestre,$carrera)
 	{
 		include '../conexion.php';
 		require "../delete_accents.php";
 
 		$nombre1 = eliminar_simbolos($nombre);
 		$nombre1=strtoupper($nombre1);
-		$sentencia="UPDATE curso SET idCurso ='".$id."', Nombre ='".$nombre1."',  Creditos ='".$creditos."', Semestre ='".$semestre."' WHERE idCurso='".$id."' ";
+		$sentencia="UPDATE curso SET idCurso ='".$id."', Nombre ='".$nombre1."',  Creditos ='".$creditos."', Semestre ='".$semestre."',  Carrera ='".$carrera."' WHERE idCurso='".$id."' ";
 		$mysqli->query($sentencia) or die ("Error al actualizar datos".mysqli_error($mysqli));
 		$mysqli->close();
 	}

@@ -80,7 +80,7 @@
 					<label for="tipo" class="col-sm-2 control-label">Tipo</label>
 						<div class="col-sm-10">
 							<select class="form-control" id="tipo" name="tipo">
-								<option value=""></option>
+								<option value="Maestro"></option>
 								<option value="Maestro">Maestro</option>
 								
 							</select>
