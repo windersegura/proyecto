@@ -3,16 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inicio</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Didact+Gothic">
 </head>
 	<body>
 		<body>
 		<div class="contenedor">
 			<header role="banner">
 					<div class="logo">
-						<img src="img(1)/logoU.jpg" height="300" alt="logo de la universidad">
-						<h2>Universidad Gran Jaguar de Guatemala</h2>
+
+						<img src="img(1)/logoU.jpg"  alt="logo de la universidad" id="logoprincipal">
+
+						<h2 id="titulo_principal">Universidad Gran Jaguar de Guatemala</h2>
 
 					</div>
+
 
 					<nav class="menu" role="navigation">
 						<ul>
@@ -28,7 +34,7 @@
 			<main class="contenedor-principal" role="main">
 
 				<section>
-					<h2> Construimos Un Futuro Juntos</h2>
+					<h2 id="eslogan"> "Construimos Un Futuro Juntos"</h2>
 						<div>
 
 							<img src="img(1)/universitarios1.jpg" alt="" width="500">

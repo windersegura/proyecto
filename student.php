@@ -1,10 +1,10 @@
-<?php  
+<?php
 	session_start();
 
 	//si la variable de session existe de lo contrario no se hace nada
 	if(isset($_SESSION['usuario']))
 	{
-		if ($_SESSION['usuario']['TipoUsuario'] == 'Admin') 
+		if ($_SESSION['usuario']['TipoUsuario'] == 'Admin')
 		{
 			header('Location: main_app/admin/');
 		}
@@ -28,7 +28,18 @@
 	<meta charset="UTF-8">
 	<title>Ingrese Sus Datos</title>
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
+
+<div class="contenedor_principal_estudiante">
+
+
+<header>
+</header>
+
+<main>
+
 	<body>
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
@@ -46,7 +57,10 @@
 		</center>
 
 		<a type="button" href="index.php">Volver</a>
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/main.js"></script>
+
+	</main>
+
 	</body>
+
+	</div>
 </html>
