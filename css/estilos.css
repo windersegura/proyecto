@@ -1,8 +1,3 @@
-.contenedor{
-
-
-
-}
 
 #titulo_principal{
   font-family: 'Didact Gothic', sans-serif;
@@ -34,12 +29,13 @@
 
 }
 
-.menu{
+btn-group{
 
-background-color: hsl(0, 0%, 0%)
+top: 0;
 
 
 }
+
 
 #eslogan{
 
