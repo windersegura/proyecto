@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2018 a las 04:32:17
+-- Tiempo de generación: 15-05-2018 a las 19:42:13
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -274,26 +274,30 @@ INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Passwo
 CREATE TABLE `semestre` (
   `idSemestre` int(11) NOT NULL,
   `NoSemestre` varchar(2) DEFAULT NULL,
-  `Carrera` varchar(45) DEFAULT NULL
+  `Carrera` int(5) DEFAULT NULL,
+  `NombreCarrera` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `semestre`
 --
 
-INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `Carrera`) VALUES
-(4, '10', 'CRIMINOLOGIA'),
-(5, '1', 'CRIMINOLOGIA'),
-(6, '1', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(7, '2', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(8, '3', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(9, '4', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(10, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(11, '6', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(12, '7', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(13, '8', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(14, '9', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(15, '10', 'INGENIERIA EN SISTEMAS DE INFORMACION');
+INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `Carrera`, `NombreCarrera`) VALUES
+(4, '10', 2, 'CRIMINOLOGIA'),
+(5, '1', 2, 'CRIMINOLOGIA'),
+(6, '1', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(7, '2', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(8, '3', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(9, '4', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(10, '5', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(11, '6', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(12, '7', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(13, '8', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(14, '9', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(15, '10', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(19, '2', 2, 'CRIMINOLOGIA'),
+(20, '3', 2, 'CRIMINOLOGIA'),
+(21, '4', 2, 'CRIMINOLOGIA');
 
 --
 -- Índices para tablas volcadas
@@ -458,7 +462,7 @@ ALTER TABLE `profesor`
 -- AUTO_INCREMENT de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Restricciones para tablas volcadas

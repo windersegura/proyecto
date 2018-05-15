@@ -38,14 +38,14 @@ function consultaprod( $no_prod )
     $fila['TipoUsuario'],
     $fila['Correo'],
   ];
-
 }
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Seleccion de carrera</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
   </head>
   <body>
     <center>
@@ -75,6 +75,37 @@ function consultaprod( $no_prod )
       echo "</tr>";
       ?>
     </table>
+    <?php
+      require '../conexion.php';
+      $query2 = "SELECT NombreCarrera, idCarrera FROM carrera ORDER BY idCarrera ASC";
+      $resultado2 = $mysqli->query($query2);
+    ?>
+    <form action="assignmentstudentupdate.php" method="post">
+      <div>Seleciona La Carrera
+          <select id="combo_carrera" name="idCarrera">
+            <option value="0">Seleccionar Carrera</option>
+            <?php while ($row = $resultado2->fetch_assoc()) { ?>
+              <option value="<?php echo $row['idCarrera'] ?>"><?php echo $row['NombreCarrera'] ?></option>
+            <?php
+            } ?>
+          </select>
+      </div>
+      <div class="form-group"> Seleccione El Semestre
+        <select name="idSemestre">
+          <option value=""></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+    </div>
+    </form>
   </center>
     <a href="index.php">Regresar</a>
   </body>
