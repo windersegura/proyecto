@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2018 a las 04:12:40
+-- Tiempo de generación: 15-05-2018 a las 04:32:17
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -42,7 +42,8 @@ CREATE TABLE `administracion` (
 
 INSERT INTO `administracion` (`idAdministracion`, `Nombre`, `Correo`, `Password`, `TipoUsuario`) VALUES
 (1, 'GERSON RODOLFO CHAMALE MEJIA', 'parkour100gerson@gmail.com', '111111', 'Admin'),
-(2, 'FREDY', 'fredy@gmail.com', '222222', 'Secretario');
+(2, 'FREDY', 'fredy@gmail.com', '222222', 'Admin'),
+(3, 'WINDER', 'winder@hotmail.com', '333333', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -403,7 +404,7 @@ ALTER TABLE `semestre`
 -- AUTO_INCREMENT de la tabla `administracion`
 --
 ALTER TABLE `administracion`
-  MODIFY `idAdministracion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idAdministracion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `alumnos`
