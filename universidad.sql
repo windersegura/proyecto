@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2018 a las 08:17:56
+-- Tiempo de generación: 15-05-2018 a las 04:12:40
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -70,8 +70,7 @@ CREATE TABLE `alumnos` (
 INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`) VALUES
 (1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno'),
 (2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno'),
-(10, 'CARLOS BELTRAN JONS', 23, 'santa ana, peten', 71934682, 'Masculino', 1793468524521, '699259', 'carlos@gmail.com', 'Alumno'),
-(11, 'CAROLINA VERONICA LOPEZ GARRIDO', 28, 'san luis, peten', 71256984, 'Femenino', 7139468529621, '877740', 'carol@gmail.com', 'Alumno');
+(13, 'CAROLIN', 1, '1', 1, 'Masculino', 1, '1', '1', 'Alumno');
 
 -- --------------------------------------------------------
 
@@ -97,8 +96,21 @@ CREATE TABLE `asignacioncursos` (
 CREATE TABLE `carrera` (
   `idCarrera` int(11) NOT NULL,
   `NombreCarrera` varchar(50) NOT NULL,
-  `Duracion` int(11) NOT NULL
+  `Duracion` int(11) NOT NULL,
+  `CodCarrera` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `carrera`
+--
+
+INSERT INTO `carrera` (`idCarrera`, `NombreCarrera`, `Duracion`, `CodCarrera`) VALUES
+(2, 'CRIMINOLOGIA', 5, 3311),
+(3, 'CRIMINALISTICA', 5, 3481),
+(4, 'ENFERMERIA', 5, 9485),
+(6, 'ARQUITECTURA', 6, 3169),
+(7, 'INGENIERIA EN SISTEMAS DE INFORMACION', 5, 1690),
+(8, 'INGENIERIA EN ELECTRONICA', 6, 1770);
 
 -- --------------------------------------------------------
 
@@ -120,8 +132,25 @@ CREATE TABLE `catedra` (
 CREATE TABLE `curso` (
   `idCurso` int(11) NOT NULL,
   `Nombre` varchar(45) NOT NULL,
-  `Creditos` int(11) NOT NULL
+  `Creditos` int(11) NOT NULL,
+  `Semestre` varchar(2) DEFAULT NULL,
+  `Carrera` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `curso`
+--
+
+INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `Carrera`) VALUES
+(1, 'METODOS NUMERICOS', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(2, 'PROGRAMACION III', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(3, 'ESTADISTICA II', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(4, 'ELECTRONICA ANALOGICA', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(5, 'COMPILADORES', 5, '7', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(6, 'PROCESO ADMINISTRATIVO', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(8, 'INTRODUCCION A LOS SISTEMAS DE COMPUTO', 5, '1', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(9, 'BASE DE DATOS I', 5, '6', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(10, 'PROGRAMACION I', 5, '2', 'INGENIERIA EN SISTEMAS DE INFORMACION');
 
 -- --------------------------------------------------------
 
@@ -170,6 +199,33 @@ CREATE TABLE `materiaprofs` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `meses`
+--
+
+CREATE TABLE `meses` (
+  `idMes` int(11) NOT NULL,
+  `NombreMes` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `meses`
+--
+
+INSERT INTO `meses` (`idMes`, `NombreMes`) VALUES
+(1, 'FEBRERO'),
+(2, 'MARZO'),
+(3, 'ABRIL'),
+(4, 'MAYO'),
+(5, 'JUNIO'),
+(6, 'JULIO'),
+(7, 'AGOSTO'),
+(8, 'SEPTIEMBRE'),
+(9, 'OCTUBRE'),
+(10, 'NOVIEMBRE');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `pagomensualidad`
 --
 
@@ -206,7 +262,7 @@ CREATE TABLE `profesor` (
 
 INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`) VALUES
 (1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro'),
-(2, 'JOSE REMON GIRARD LOPEZ', 'Ciudad capital', 61589437, '222222', 1397258647913, 'ramon@gmail.com', 'Maestro');
+(5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro');
 
 -- --------------------------------------------------------
 
@@ -216,8 +272,27 @@ INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Passwo
 
 CREATE TABLE `semestre` (
   `idSemestre` int(11) NOT NULL,
-  `Cursos` varchar(45) DEFAULT NULL
+  `NoSemestre` varchar(2) DEFAULT NULL,
+  `Carrera` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `semestre`
+--
+
+INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `Carrera`) VALUES
+(4, '10', 'CRIMINOLOGIA'),
+(5, '1', 'CRIMINOLOGIA'),
+(6, '1', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(7, '2', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(8, '3', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(9, '4', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(10, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(11, '6', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(12, '7', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(13, '8', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(14, '9', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(15, '10', 'INGENIERIA EN SISTEMAS DE INFORMACION');
 
 --
 -- Índices para tablas volcadas
@@ -292,6 +367,12 @@ ALTER TABLE `materiaprofs`
   ADD KEY `idProfesor1_idx` (`idProfesor1`);
 
 --
+-- Indices de la tabla `meses`
+--
+ALTER TABLE `meses`
+  ADD PRIMARY KEY (`idMes`);
+
+--
 -- Indices de la tabla `pagomensualidad`
 --
 ALTER TABLE `pagomensualidad`
@@ -328,7 +409,7 @@ ALTER TABLE `administracion`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
@@ -340,19 +421,25 @@ ALTER TABLE `asignacioncursos`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `facultad`
 --
 ALTER TABLE `facultad`
   MODIFY `idFacultad` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `meses`
+--
+ALTER TABLE `meses`
+  MODIFY `idMes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `pagomensualidad`
@@ -364,13 +451,13 @@ ALTER TABLE `pagomensualidad`
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `idProfesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idProfesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas

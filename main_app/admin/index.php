@@ -54,6 +54,7 @@
 						          <a class="dropdown-item" href="newteacher.php">Ingresar Maestro</a>
 						          <a class="dropdown-item" href="newcourse.php">Ingresar Cursos</a>
 						          <a class="dropdown-item" href="newcareer.php">Ingresar Carrera</a>
+											<a class="dropdown-item" href="newsemester.php">Ingresar Semestre</a>
 						          <a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
 						          <a class="dropdown-item" href="consultteacher.php">Consultar Maestro</a>
 						          <a class="dropdown-item" href="consultcourse.php">Consultar Cursos</a>
