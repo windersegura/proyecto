@@ -24,6 +24,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>Bienvenido Secretari@</title>
 	<link rel="stylesheet" href="../../css/bootstrap.css">
@@ -39,34 +40,25 @@
 				    	<span class="navbar-toggler-icon"></span>
 				  	</button>
 				  	<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-
 				    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-
-
-					      	<li class="nav-item dropdown">
+								 	<li class="nav-item dropdown">
 						        <a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          Opciones
 						        </a>
 						        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						          <a class="dropdown-item" href="newstudent.php">Ingresar Alumno</a>
 						          <a class="dropdown-item" href="newteacher.php">Ingresar Maestro</a>
-
 						          <a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
 						          <a class="dropdown-item" href="consultteacher.php">Consultar Maestro</a>
 						          <a class="dropdown-item" href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a>
 						          <a class="dropdown-item" href="assignmentstudent.php">Asignar Alumno a curso</a>
 						          <a class="dropdown-item" href="#">Asignar Maestro a curso</a>
-
-
-
 						        </div>
 					      	</li>
 					      	<li class="nav-item">
 					        	<a class="nav-link " href="../salir.php">Salir</a>
 					      	</li>
 				    	</ul>
-
 				  </div>
 				</nav>
 		    </div>
@@ -83,7 +75,5 @@
 			<br>
 			<img src="../../img(1)/secretary_icon.png" style="width: 20%">
 		</center>
-
-		<a href="../salir.php">SALIR</a>
 	</body>
 </html>

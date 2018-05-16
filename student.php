@@ -25,6 +25,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>Ingrese Sus Datos</title>
 	<link rel="stylesheet" href="css/main.css">

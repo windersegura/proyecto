@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inicio</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Didact+Gothic">
@@ -34,21 +35,15 @@
 								  	<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
 
 											<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-
-
 													<li class="nav-item dropdown">
 														<a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 															Menú
 														</a>
 														<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-															<a href="admin.php">Administrativo</a>
+															<a href="admin.php">Administrativo</a><br>
 															<a href="student.php">Estudiante</a>
-															<br>
-															<a href="teacher.php">Maestro</a>
-
-
+															<br><a href="teacher.php">Maestro</a>
 														</div>
 													</li>
 
@@ -64,52 +59,26 @@
 								</button>
 							</nav>
 						</div>
-
-
-
 						</ul>
-
-
-
-
 			</header>
-
-
 			<main class="contenedor-principal" role="main">
-
 				<section>
 					<h2 id="eslogan"> "Construimos Un Futuro Juntos"</h2>
 						<div>
-
 							<img src="img(1)/universitarios1.jpg" alt="" width="500">
 							<img src="img(1)/profecionales.jpg" alt="" width="500">
 							<img src="img(1)/superacion.jpg" alt="" width="500">
 						</div>
-
-
 				</section>
-
 			</main>
-
 		</div>
-
 		<footer role="contentinfo">
-
 				<div class="descripcion-nosotros">
-
-
-
 				</div>
-
 				<div class="menu-nosotros">
 					<nav role="navigation">
-						menu aqui
-
 					</nav>
 				</div>
-
 		</footer>
-
-
 	</body>
 </html>

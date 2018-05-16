@@ -1,10 +1,10 @@
-<?php  
+<?php
 	session_start();
 
 	//si la variable de session existe de lo contrario no se hace nada
 	if(isset($_SESSION['usuario']))
 	{
-		if ($_SESSION['usuario']['TipoUsuario'] == 'Admin') 
+		if ($_SESSION['usuario']['TipoUsuario'] == 'Admin')
 		{
 			header('Location: main_app/admin/');
 		}
@@ -25,6 +25,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>Ingrese Sus Datos</title>
 	<link rel="stylesheet" href="css/main.css">
@@ -45,7 +46,7 @@
 
 			</div>
 		</center>
-		
+
 		<a href="index.php">Volver</a>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/main.js"></script>

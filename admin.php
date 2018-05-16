@@ -26,8 +26,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>Ingrese Sus Datos</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/main.js"></script>
@@ -45,11 +47,17 @@
 								<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 							</div>
 							<div class="main" style="margin-top: 0px">
-								<img src="img(1)/adminicon.png" width="20%">
-								<form action="" id="formlg">
-									<input type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-									<input type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-.]{1,20}" required/><br><br>
-									<input type="submit" class="botonlg" value="Iniciar Sesion">
+								<img src="img(1)/adminicon.png" width="20%"><br>
+								<form action="" id="formlg" class="form-group">
+									<div class="col-md-4">
+										<input class="form-input form-control" type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/>
+									</div>
+<br>
+									<div class="col-md-4">
+										<input class="form-input form-control" type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-.]{1,20}" required/>
+									</div>
+<br>
+									<input type="submit" class="btn btn-primary col-md-4" value="Iniciar Sesion">
 								</form>
 
 							</div>

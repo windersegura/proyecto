@@ -22,6 +22,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta charset="UTF-8">
 	<title>Consulta Del Alumno</title>
 	<link rel="stylesheet" href="../../css/bootstrap.css">
@@ -114,7 +115,7 @@
 					echo "<td><center>"; echo $password; echo "</center></td>";
 					 $tipoUsuario;
 					echo "<td><center>"; echo $correo; echo "</td>";
-					
+
 					echo "<td><a href='#?numero=".$idAlumno."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}

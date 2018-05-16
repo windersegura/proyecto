@@ -28,7 +28,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 	<title>Nuevo Curso</title>
 
 </head>
@@ -38,21 +40,26 @@
 				<h1>Ingrese Los Datos Del Curso</h1>
 				<form class="form-group" action="courseupdate.php" method="POST" >
 
-					<label>Nombre<span><em>(requerido)</em></span></label><br>
-			        <input type="text" pattern="[A-Za-z ñÑ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Del Curso" required/><br>
+					<div class="col-md-4">
+						<label>Nombre<span><em>(requerido)</em></span></label><br>
+		        <input type="text" pattern="[A-Za-z ñÑ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Del Curso" required/>
+					</div>
 
-			        <label>Creditos<span><em>(requerido)</em></span></label><br>
-			        <input type="text" pattern="[0-9]{1,2}" name="creditos" class="form-input form-control" placeholder="Ingresa La Cantidad De Creditos" required/><br>
+					<div class="col-md-3">
+						<label>Creditos<span><em>(requerido)</em></span></label><br>
+						<input type="text" pattern="[0-9]{1,2}" name="creditos" class="form-input form-control" placeholder="Ingresa La Cantidad De Creditos" required/>
+					</div>
 
-			        <label>Semestre<span><em>(requerido)</em></span></label><br>
-			        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El Semestre" required/><br>
+					<div class="col-md-3">
+						<label>Semestre<span><em>(requerido)</em></span></label><br>
+						<input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El Semestre" required/>
+					</div>
 
-
-			        <div class="form-group">
+	        <div class="form-group col-md-5">
 						<label for="carrera" class="col-sm-2 control-label">Seleccionar Carrera</label>
 						<div class="col-sm-10">
 							<select class="form-control" id="carrera" name="carrera">
-
+								<option value="">Seleccione Carrera</option>
 								<?php
 									WHILE($row = $resultado->fetch_assoc())
 								{?>
@@ -64,9 +71,9 @@
 						</div>
 					</div>
 
-					<input class="btn__submit" type="submit" value="REGISTRAR">
+					<input class="btn__submit btn btn-dark" type="submit" value="REGISTRAR">
 
-					<a href="index.php">Regresar</a>
+					<a href="index.php" class="btn btn-success">Regresar</a>
 				</form>
 			</div>
 		</center>
