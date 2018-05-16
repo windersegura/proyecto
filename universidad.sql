@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-05-2018 a las 19:42:13
+-- Tiempo de generación: 16-05-2018 a las 11:02:55
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -111,7 +111,8 @@ INSERT INTO `carrera` (`idCarrera`, `NombreCarrera`, `Duracion`, `CodCarrera`) V
 (4, 'ENFERMERIA', 5, 9485),
 (6, 'ARQUITECTURA', 6, 3169),
 (7, 'INGENIERIA EN SISTEMAS DE INFORMACION', 5, 1690),
-(8, 'INGENIERIA EN ELECTRONICA', 6, 1770);
+(8, 'INGENIERIA EN ELECTRONICA', 6, 1770),
+(9, 'CONTADURIA PUBLICA Y AUDITORIA', 5, 325);
 
 -- --------------------------------------------------------
 
@@ -135,23 +136,30 @@ CREATE TABLE `curso` (
   `Nombre` varchar(45) NOT NULL,
   `Creditos` int(11) NOT NULL,
   `Semestre` varchar(2) DEFAULT NULL,
-  `Carrera` varchar(55) DEFAULT NULL
+  `CodCarrera` int(5) DEFAULT NULL,
+  `idSemestre` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `curso`
 --
 
-INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `Carrera`) VALUES
-(1, 'METODOS NUMERICOS', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(2, 'PROGRAMACION III', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(3, 'ESTADISTICA II', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(4, 'ELECTRONICA ANALOGICA', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(5, 'COMPILADORES', 5, '7', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(6, 'PROCESO ADMINISTRATIVO', 5, '5', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(8, 'INTRODUCCION A LOS SISTEMAS DE COMPUTO', 5, '1', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(9, 'BASE DE DATOS I', 5, '6', 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(10, 'PROGRAMACION I', 5, '2', 'INGENIERIA EN SISTEMAS DE INFORMACION');
+INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `CodCarrera`, `idSemestre`) VALUES
+(1, 'METODOS NUMERICOS', 5, '5', 1690, NULL),
+(2, 'PROGRAMACION III', 5, '5', 1690, NULL),
+(3, 'ESTADISTICA II', 5, '5', 1690, NULL),
+(4, 'ELECTRONICA ANALOGICA', 5, '5', 1690, NULL),
+(5, 'COMPILADORES', 5, '7', 1690, NULL),
+(6, 'PROCESO ADMINISTRATIVO', 5, '5', 1690, NULL),
+(8, 'INTRODUCCION A LOS SISTEMAS DE COMPUTO', 5, '1', 1690, NULL),
+(9, 'BASE DE DATOS I', 5, '6', 1690, NULL),
+(10, 'PROGRAMACION I', 5, '3', 1690, NULL),
+(11, 'DESARROLLO HUMANO Y PROFESIONAL', 4, '1', 1690, NULL),
+(12, 'METODOLOGIA DE LA INVESTIGACION', 5, '1', 1690, NULL),
+(13, 'CONTABILIDAD I', 5, '1', 1690, NULL),
+(14, 'LOGICA DE SISTEMAS', 5, '1', 1690, NULL),
+(15, 'PRECALCULO', 5, '2', 1690, NULL),
+(17, 'ALGEBRA LINEAL', 5, '2', 1690, NULL);
 
 -- --------------------------------------------------------
 
@@ -274,7 +282,7 @@ INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Passwo
 CREATE TABLE `semestre` (
   `idSemestre` int(11) NOT NULL,
   `NoSemestre` varchar(2) DEFAULT NULL,
-  `Carrera` int(5) DEFAULT NULL,
+  `CodCarrera` int(5) DEFAULT NULL,
   `NombreCarrera` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -282,22 +290,23 @@ CREATE TABLE `semestre` (
 -- Volcado de datos para la tabla `semestre`
 --
 
-INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `Carrera`, `NombreCarrera`) VALUES
-(4, '10', 2, 'CRIMINOLOGIA'),
-(5, '1', 2, 'CRIMINOLOGIA'),
-(6, '1', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(7, '2', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(8, '3', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(9, '4', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(10, '5', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(11, '6', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(12, '7', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(13, '8', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(14, '9', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(15, '10', 7, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
-(19, '2', 2, 'CRIMINOLOGIA'),
-(20, '3', 2, 'CRIMINOLOGIA'),
-(21, '4', 2, 'CRIMINOLOGIA');
+INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `CodCarrera`, `NombreCarrera`) VALUES
+(4, '10', 3311, 'CRIMINOLOGIA'),
+(5, '1', 3311, 'CRIMINOLOGIA'),
+(6, '1', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(7, '2', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(8, '3', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(9, '4', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(10, '5', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(11, '6', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(12, '7', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(13, '8', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(14, '9', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(15, '10', 1690, 'INGENIERIA EN SISTEMAS DE INFORMACION'),
+(19, '2', 3311, 'CRIMINOLOGIA'),
+(20, '3', 3311, 'CRIMINOLOGIA'),
+(21, '4', 3311, 'CRIMINOLOGIA'),
+(22, '1', 3481, 'CRIMINALISTICA');
 
 --
 -- Índices para tablas volcadas
@@ -426,13 +435,13 @@ ALTER TABLE `asignacioncursos`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idCarrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `facultad`
@@ -462,7 +471,7 @@ ALTER TABLE `profesor`
 -- AUTO_INCREMENT de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Restricciones para tablas volcadas

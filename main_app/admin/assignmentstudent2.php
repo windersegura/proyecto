@@ -44,11 +44,16 @@ function consultaprod( $no_prod )
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Seleccion de carrera</title>
+    <title>Asignacion De Estudiante</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<script src="js/index.js"></script>
   </head>
   <body>
     <center>
+			<br><br>
+			<h1>Seleccione: Carrera, Semestre y Curso</h1>
+			<br>
       <table class="table">
   			<th>Id.</th>
   			<th>Nombre</th>
@@ -80,32 +85,13 @@ function consultaprod( $no_prod )
       $query2 = "SELECT NombreCarrera, idCarrera FROM carrera ORDER BY idCarrera ASC";
       $resultado2 = $mysqli->query($query2);
     ?>
-    <form action="assignmentstudentupdate.php" method="post">
-      <div>Seleciona La Carrera
-          <select id="combo_carrera" name="idCarrera">
-            <option value="0">Seleccionar Carrera</option>
-            <?php while ($row = $resultado2->fetch_assoc()) { ?>
-              <option value="<?php echo $row['idCarrera'] ?>"><?php echo $row['NombreCarrera'] ?></option>
-            <?php
-            } ?>
-          </select>
-      </div>
-      <div class="form-group"> Seleccione El Semestre
-        <select name="idSemestre">
-          <option value=""></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-    </div>
-    </form>
+		<form name="combo" action="assignmentstudentupdate.php" method="POST">
+				<input type="hidden" name="idStudent" value="<?php echo $consulta[0]?>">
+        <select name="cargar_carrera" id="cargar_carrera"></select>
+        <select name="cargar_semestre" id="cargar_semestre"></select>
+        <select name="cargar_curso" id="cargar_curso"></select>
+				<input type="submit" name="" value="Guardar" class="btn btn-danger">
+      </form>
   </center>
     <a href="index.php">Regresar</a>
   </body>

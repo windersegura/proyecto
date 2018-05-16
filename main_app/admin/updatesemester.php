@@ -24,7 +24,7 @@
 	$semestre=$_POST['semestre'];
 	$carrera=$_POST['carrera'];
 
-	$query2 = "SELECT NombreCarrera FROM carrera WHERE idCarrera= $carrera";
+	$query2 = "SELECT NombreCarrera FROM carrera WHERE CodCarrera= $carrera";
 	$resultado = $mysqli->query($query2);
 	$fila=$resultado->fetch_assoc();
 	$Carerita = $fila['NombreCarrera'];

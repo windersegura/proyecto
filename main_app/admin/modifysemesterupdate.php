@@ -27,12 +27,12 @@
 	function ModificarAlumno($id, $semestre, $carrera)
 	{
 		include '../conexion.php';
-		$query2 = "SELECT NombreCarrera FROM carrera WHERE idCarrera= $carrera";
+		$query2 = "SELECT NombreCarrera FROM carrera WHERE CodCarrera= $carrera";
 		$resultado = $mysqli->query($query2);
 		$fila=$resultado->fetch_assoc();
 		$Carerita = $fila['NombreCarrera'];
 
-		$sentencia="UPDATE semestre SET idSemestre ='".$id."', NoSemestre ='".$semestre."',  Carrera ='".$carrera."',  NombreCarrera ='".$Carerita."' WHERE idSemestre='".$id."' ";
+		$sentencia="UPDATE semestre SET idSemestre ='".$id."', NoSemestre ='".$semestre."',  CodCarrera ='".$carrera."',  NombreCarrera ='".$Carerita."' WHERE idSemestre='".$id."' ";
 		$mysqli->query($sentencia) or die ("Error al actualizar datos".mysqli_error($mysqli));
 		$mysqli->close();
 	}
