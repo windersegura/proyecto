@@ -18,7 +18,6 @@
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -70,7 +69,7 @@
             <form action="socket.php" method="post">
 
 
-              
+
 
         </div>
 
