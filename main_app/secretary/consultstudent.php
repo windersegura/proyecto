@@ -115,7 +115,8 @@
 					echo "<td><center>"; echo $password; echo "</center></td>";
 					 $tipoUsuario;
 					echo "<td><center>"; echo $correo; echo "</td>";
-
+					echo "<td><a href='deletestudent.php?numero=".$idAlumno."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
+					echo "<td><a href='modifystudent.php?numero=".$idAlumno."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
 					echo "<td><a href='#?numero=".$idAlumno."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}
