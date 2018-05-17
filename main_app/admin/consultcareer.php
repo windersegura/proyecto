@@ -1,20 +1,20 @@
 
-<?php  
+<?php
 	session_start();
 
 	//si la variable de session existe se queda de lo contrario lo desloguea o lo envia para su usuario correcto
 	if(isset($_SESSION['usuario']))
 	{
-		if ($_SESSION['usuario']['TipoUsuario'] == "Secretario") 
+		if ($_SESSION['usuario']['TipoUsuario'] == "Secretario")
 		{
 			header("Location: ../secretary/");
 		}
 
-		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin") 		
+		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin")
 		{
 			header("Location: ../salir.php");
 		}
-		
+
 	}
 	else
 	{
@@ -38,11 +38,11 @@
 				    	<span class="navbar-toggler-icon"></span>
 				  	</button>
 				  	<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-				    	
+
 				    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				      		
-					      	
-					      	
+
+
+
 					      	<li class="nav-item dropdown">
 						        <a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          Opciones
@@ -69,7 +69,7 @@
 					        	<a class="nav-link " href="../salir.php">Salir</a>
 					      	</li>
 				    	</ul>
-				    
+
 				  </div>
 				</nav>
 		    </div>
@@ -89,10 +89,10 @@
 			<th>Nombre De La Carrera</th>
 			<th>Duracion En Años</th>
 			<th>Código De La Carrera</th>
-			
+
 			<th><a href="newcareer.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
-		
+
 			<?php
 			include "../conexion.php";
 			$busqueda = "SELECT * FROM carrera";
@@ -109,7 +109,7 @@
 					echo "<td><center>"; echo $NombreCarrera; echo "</center></td>";
 					echo "<td><center>"; echo $Duracion; echo "</center></td>";
 					echo "<td><center>"; echo $codigocarrera; echo "</center></td>";
-					
+
 					echo "<td><a href='deletecareer.php?numero=".$idCarrera."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
 					echo "<td><a href='modifycareer.php?numero=".$idCarrera."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
 					echo "<td><a href='#?numero=".$idCarrera."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
@@ -117,7 +117,10 @@
 			}?>
 			</table>
 
-			<a href="index.php">Volver</a>
+			<?php
+			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger'>Volver</Button></a>"
+
+			?>
 		</center>
 
 		<script src="../../js/bootstrap.js"></script>

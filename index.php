@@ -21,7 +21,7 @@
 			<header role="banner">
 					<div class="logo">
 
-						<img src="img(1)/logoU.jpg"  alt="logo de la universidad" id="logoprincipal">
+						<img src="img(1)/logotipo3.png"  alt="logo de la universidad" id="logoprincipal">
 
 						<h2 id="titulo_principal">Universidad Gran Jaguar de Guatemala</h2>
 

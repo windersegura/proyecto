@@ -43,6 +43,7 @@
 						          <a class="dropdown-item" href="#">Consultar Horario</a>
 						          <a class="dropdown-item" href="#">Consultar Curso</a>
 						          <a class="dropdown-item" href="#">Consultar Maestro</a>
+											<a class="dropdown-item" href="formPago.php">Realizar Pago</a>
 						        </div>
 					      	</li>
 					      	<li class="nav-item">
