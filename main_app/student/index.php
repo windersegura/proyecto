@@ -15,9 +15,9 @@
 	{
 		header('Location: ../../');
 	}
-
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +45,7 @@
 						          <a class="dropdown-item" href="#">Consultar Horario</a>
 						          <a class="dropdown-item" href="#">Consultar Curso</a>
 						          <a class="dropdown-item" href="#">Consultar Maestro</a>
+											<a class="dropdown-item" href="formPago.php">Realizar Pago</a>
 						        </div>
 					      	</li>
 					      	<li class="nav-item">
@@ -62,29 +63,13 @@
 		  </nav>
 		</div>
 		<center><br>
-			<h1><?php
-			$idAlumno =  $_SESSION['usuario']['idAlumno'];
-
-			require "../conexion.php";
-			$query = "SELECT Nombre,Sexo FROM alumnos WHERE idAlumno = $idAlumno";
-			$resultado= $mysqli->query($query) or die ("Error al consultar producto".mysqli_error($mysqli));
-			$fila=$resultado->fetch_assoc();
-			return
-			[
-				$fila['Nombre'],
-				$fila['Sexo']
-			 ];
+			<h1>BIENVENID@  <?php
+			 $idAlumno = $_SESSION['usuario']['idAlumno'];
+			 include '../conexion.php';
+		 ?></h1>
 
 
-					if($consulta[1]=="Masculino")
-					{
-						echo "BIENVENIDO".$consulta[0];
-					}
-					else
-					{
-						echo "BIENVENIDA".$consulta[0];
-					}
-			 ?></h1>
+			</aside>
 		</center>
 	</body>
 </html>
