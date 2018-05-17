@@ -15,6 +15,30 @@
 	{
 		header('Location: ../../');
 	}
+
+$idAlumno = $_SESSION['usuario']['idAlumno'];
+	$consulta=consultaprod($idAlumno);
+	function consultaprod( $no_prod )
+	{
+		include '../conexion.php';
+		$sentencia="SELECT * FROM alumnos WHERE idAlumno='".$no_prod."' ";
+		$resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+		$fila=$resultado->fetch_assoc();
+
+		return
+		[
+			$fila['idAlumno'],
+			$fila['Nombre'],
+			$fila['Edad'],
+			$fila['Direccion'],
+			$fila['Telefono'],
+			$fila['Sexo'],
+			$fila['DPI'],
+			$fila['Password'],
+			$fila['TipoUsuario'],
+			$fila['Correo'],
+		];
+	}
 ?>
 
 
@@ -43,7 +67,7 @@
 						        </a>
 						        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						          <a class="dropdown-item" href="#">Consultar Horario</a>
-						          <a class="dropdown-item" href="#">Consultar Curso</a>
+						          <a class="dropdown-item" href="consultcoursestudent.php">Consultar Curso</a>
 						          <a class="dropdown-item" href="#">Consultar Maestro</a>
 											<a class="dropdown-item" href="formPago.php">Realizar Pago</a>
 						        </div>
@@ -63,10 +87,15 @@
 		  </nav>
 		</div>
 		<center><br>
-			<h1>BIENVENID@  <?php
-			 $idAlumno = $_SESSION['usuario']['idAlumno'];
-			 include '../conexion.php';
-		 ?></h1>
+			<?php
+		 	if ($consulta[5] =="Masculino")
+			{
+				 echo "<h1> BIENVENIDO $consulta[1]</h1>" ;
+		 	}
+			else
+			{
+				echo "<h1> BIENVENIDA $consulta[1]</h1>" ;
+			}?>
 
 
 			</aside>

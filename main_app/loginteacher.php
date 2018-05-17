@@ -1,4 +1,4 @@
-<?php  
+<?php
 	require "conexion.php";
 
 	if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
@@ -15,7 +15,7 @@
 		$usuario =  $mysqli->real_escape_string($_POST['usuariolgteacher']);
 		$pas =  $mysqli->real_escape_string($_POST['passlgteacher']);
 
-		if($nueva_consulta = $mysqli->prepare("SELECT Nombre, TipoUsuario FROM profesor WHERE Correo=? AND Password=?"))
+		if($nueva_consulta = $mysqli->prepare("SELECT idProfesor, TipoUsuario FROM profesor WHERE Correo=? AND Password=?"))
 		{
 			//aceptara el tipo de datos en este caso son 2 string
 			$nueva_consulta->bind_param('ss',$usuario,$pas);
@@ -27,7 +27,7 @@
 			$resultado = $nueva_consulta->get_result();
 
 			//evaluamos si nuestra consulta devuelve resultados
-			if ($resultado->num_rows == 1) 
+			if ($resultado->num_rows == 1)
 			{
 				$datos = $resultado->fetch_assoc();
 				$_SESSION['usuario'] = $datos;//almacenara el arreglo de los datos que le especifiquemos de nuestra consulta

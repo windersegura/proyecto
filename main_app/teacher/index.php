@@ -14,6 +14,28 @@
 	{
 		header('Location: ../../');
 	}
+
+	$idProfesor = $_SESSION['usuario']['idProfesor'];
+		$consulta=consultaprod($idProfesor);
+		function consultaprod( $no_prod )
+		{
+			include '../conexion.php';
+			$sentencia="SELECT * FROM profesor WHERE idProfesor='".$no_prod."' ";
+			$resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+			$fila=$resultado->fetch_assoc();
+
+			return
+			[
+				$fila['idProfesor'],
+				$fila['Nombre'],
+        $fila['Direccion'],
+				$fila['Telefono'],
+        $fila['Password'],
+				$fila['DPI'],
+				$fila['Correo'],
+				$fila['TipoUsuario'],
+			];
+		}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +81,7 @@
 		  </nav>
 		</div>
 		<center><br>
-			<h1>BIENVENIDO  <?php echo $_SESSION['usuario']['Nombre'] ?></h1>
+			<h1>BIENVENIDO <?php echo $consulta[1]?></h1>
 		</center>
 	</body>
 </html>
