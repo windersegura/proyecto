@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Didact+Gothic">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Didact+Gothic|Roboto">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -64,12 +64,46 @@
 			<main class="contenedor-principal" role="main">
 				<section>
 					<h2 id="eslogan"> "Construimos Un Futuro Juntos"</h2>
-						<div>
-							<img src="img(1)/universitarios1.jpg" alt="" width="500">
-							<img src="img(1)/profecionales.jpg" alt="" width="500">
-							<img src="img(1)/superacion.jpg" alt="" width="500">
-						</div>
+
 				</section>
+
+				<section class="slider-container">
+						<ul id="slider" class="slider-wrapper">
+
+							<li>
+								<img src="img(1)/universitarios1.jpg" alt="" width="500">
+								<div class="caption">
+										<h3 class="caption-title"></h3>
+										<p></p>
+
+								</div>
+
+							</li>
+
+							<li>
+								<img src="img(1)/profecionales.jpg" alt="" width="500">
+								<div class="caption">
+										<h3 class="caption-title"></h3>
+										<p></p>
+
+								</div>
+							</li>
+
+							<li>
+								<img src="img(1)/superacion.jpg" alt="" width="500">
+								<div class="caption">
+										<h3 class"caption-title"></h3>
+										<p></p>
+
+								</div>
+
+							</li>
+
+
+						</ul>
+
+				</section>
+
 			</main>
 		</div>
 		<footer role="contentinfo">

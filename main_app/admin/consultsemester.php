@@ -114,7 +114,10 @@
 			}?>
 			</table>
 
-			<a href="index.php">Volver</a>
+			<?php
+			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger'>Volver</Button></a>"
+
+			?>
 		</center>
 		<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/jquery-3.2.1.min.js"></script>
