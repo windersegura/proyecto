@@ -21,7 +21,7 @@
 
 	require '../conexion.php';
 
-	$query = "SELECT CodCarrera, NombreCarrera FROM carrera";
+	$query = "SELECT idCarrera, NombreCarrera FROM carrera";
 	$resultado = $mysqli->query($query);
 ?>
 <!DOCTYPE html>
@@ -55,15 +55,15 @@
 						<input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El Semestre" required/>
 					</div>
 
-	        <div class="form-group col-md-5">
-						<label for="carrera" class="col-sm-2 control-label">Seleccionar Carrera</label>
-						<div class="col-sm-10">
+	        <div class="form-group ">
+						<label for="carrera" class="control-label">Seleccionar Carrera</label>
+						<div class="col-md-5">
 							<select class="form-control" id="carrera" name="carrera">
 								<option value="">Seleccione Carrera</option>
 								<?php
 									WHILE($row = $resultado->fetch_assoc())
 								{?>
-									<option value="<?php if($row['CodCarrera'] != 1){echo $row['CodCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
+									<option value="<?php if($row['idCarrera'] != 1){echo $row['idCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
 								<?php
 									}
 								?>

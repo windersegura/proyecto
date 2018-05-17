@@ -5,7 +5,7 @@ require_once 'conexion.php';
 	{
 		$mysqli = getConn();
 		$id = $_POST['id'];
-		$query = "SELECT * FROM semestre WHERE CodCarrera = $id";
+		$query = "SELECT * FROM semestre WHERE idCarrera = $id";
 		$result = $mysqli->query($query);
 		$semestres = '<option value="">Elige El Semestre</option>';
 		while($row = $result->fetch_array(MYSQLI_ASSOC))

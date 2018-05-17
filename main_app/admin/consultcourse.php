@@ -89,7 +89,7 @@
 			<th>Nombre</th>
 			<th>Creditos</th>
 			<th>Semestre</th>
-			<th>Codigo De Carrera</th>
+			<th>idCarrera</th>
 
 			<th><a href="newcourse.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
@@ -104,7 +104,7 @@
 				$nombre = mysqli_real_escape_string($mysqli,$fila['Nombre']);
 				$creditos = mysqli_real_escape_string($mysqli,$fila['Creditos']);
 				$semestre = mysqli_real_escape_string($mysqli,$fila['Semestre']);
-				$carrera = mysqli_real_escape_string($mysqli,$fila['CodCarrera']);
+				$carrera = mysqli_real_escape_string($mysqli,$fila['idCarrera']);
 
 
 				echo "<tr>";

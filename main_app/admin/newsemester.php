@@ -20,7 +20,7 @@
 	}
 	require '../conexion.php';
 
-	$query = "SELECT CodCarrera, NombreCarrera FROM carrera";
+	$query = "SELECT idCarrera, NombreCarrera FROM carrera";
 	$resultado = $mysqli->query($query);
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
 								<?php
 									WHILE($row = $resultado->fetch_assoc())
 								{?>
-									<option value="<?php if($row['CodCarrera'] != 1){echo $row['CodCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
+									<option value="<?php if($row['idCarrera'] != 1){echo $row['idCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
 								<?php
 									}
 								?>

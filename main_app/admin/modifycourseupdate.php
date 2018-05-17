@@ -31,7 +31,7 @@
 
 		$nombre1 = eliminar_simbolos($nombre);
 		$nombre1=strtoupper($nombre1);
-		$sentencia="UPDATE curso SET idCurso ='".$id."', Nombre ='".$nombre1."',  Creditos ='".$creditos."', Semestre ='".$semestre."',  CodCarrera ='".$carrera."' WHERE idCurso='".$id."' ";
+		$sentencia="UPDATE curso SET idCurso ='".$id."', Nombre ='".$nombre1."',  Creditos ='".$creditos."', Semestre ='".$semestre."',  idCarrera ='".$carrera."' WHERE idCurso='".$id."' ";
 		$mysqli->query($sentencia) or die ("Error al actualizar datos".mysqli_error($mysqli));
 		$mysqli->close();
 	}

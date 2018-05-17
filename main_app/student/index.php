@@ -15,6 +15,8 @@
 	{
 		header('Location: ../../');
 	}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +62,29 @@
 		  </nav>
 		</div>
 		<center><br>
-			<h1>BIENVENID@  <?php echo $_SESSION['usuario']['Nombre'] ?></h1>
+			<h1><?php
+			$idAlumno =  $_SESSION['usuario']['idAlumno'];
+
+			require "../conexion.php";
+			$query = "SELECT Nombre,Sexo FROM alumnos WHERE idAlumno = $idAlumno";
+			$resultado= $mysqli->query($query) or die ("Error al consultar producto".mysqli_error($mysqli));
+			$fila=$resultado->fetch_assoc();
+			return
+			[
+				$fila['Nombre'],
+				$fila['Sexo']
+			 ];
+
+
+					if($consulta[1]=="Masculino")
+					{
+						echo "BIENVENIDO".$consulta[0];
+					}
+					else
+					{
+						echo "BIENVENIDA".$consulta[0];
+					}
+			 ?></h1>
 		</center>
 	</body>
 </html>

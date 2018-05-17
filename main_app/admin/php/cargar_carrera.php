@@ -9,7 +9,7 @@
 		$listas = '<option value="">Elige La Carrera</option>';
 		while($row = $result->fetch_array(MYSQLI_ASSOC))
 		{
-			$listas.="<option value='$row[CodCarrera]'>$row[NombreCarrera]</option>";
+			$listas.="<option value='$row[idCarrera]'>$row[NombreCarrera]</option>";
 		}
 
 		return $listas;

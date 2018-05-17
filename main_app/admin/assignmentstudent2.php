@@ -51,9 +51,7 @@ function consultaprod( $no_prod )
   </head>
   <body>
     <center>
-			<br><br>
 			<h1>Seleccione: Carrera, Semestre y Curso</h1>
-			<br>
       <table class="table">
   			<th>Id.</th>
   			<th>Nombre</th>
@@ -85,14 +83,19 @@ function consultaprod( $no_prod )
       $query2 = "SELECT NombreCarrera, idCarrera FROM carrera ORDER BY idCarrera ASC";
       $resultado2 = $mysqli->query($query2);
     ?>
-		<form name="combo" action="assignmentstudentupdate.php" method="POST">
+		<div class="form-group">
+
+
+			<form name="combo" action="assignmentstudentupdate.php" method="POST">
 				<input type="hidden" name="idStudent" value="<?php echo $consulta[0]?>">
-        <select name="cargar_carrera" id="cargar_carrera"></select>
-        <select name="cargar_semestre" id="cargar_semestre"></select>
-        <select name="cargar_curso" id="cargar_curso"></select>
-				<input type="submit" name="" value="Guardar" class="btn btn-danger">
-      </form>
+				<select name="cargar_carrera" id="cargar_carrera" class="col-md-4 form-control"></select><br>
+	      <select name="cargar_semestre" id="cargar_semestre"  class="col-md-4 form-control"></select><br>
+	      <select name="cargar_curso" id="cargar_curso"  class="col-md-4 form-control"></select><br>
+				<input type="submit" name="" value="ASIGNAR" class="btn btn-dark col-md-3">
+				<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+	    </form>
+		</div>
   </center>
-    <a href="index.php">Regresar</a>
+
   </body>
 </html>

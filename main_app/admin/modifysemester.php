@@ -32,7 +32,7 @@
         return
 		[   $fila['idSemestre'],
 			$fila['NoSemestre'],
-            $fila['CodCarrera']
+            $fila['idCarrera']
 		];
 	}
 ?>
@@ -65,11 +65,11 @@
 							<select class="form-control" id="carrera" name="carrera">
 								<?php
 								require '../conexion.php';
-								$query = "SELECT CodCarrera,NombreCarrera FROM carrera";
+								$query = "SELECT idCarrera,NombreCarrera FROM carrera";
 								$resultado = $mysqli->query($query);
 									WHILE($row = $resultado->fetch_assoc())
 								{?>
-									<option value="<?php if($row['CodCarrera'] != 1){echo $row['CodCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
+									<option value="<?php if($row['idCarrera'] != 1){echo $row['idCarrera'];} ?>"><?php if($row['NombreCarrera'] != 1){echo $row['NombreCarrera'];} ?></option>
 								<?php
 									}
 								?>
@@ -79,7 +79,7 @@
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 
-					<a href="index.php" class="btn btn-success col-md-3">Regresar</a>
+					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
 				</form>
 			</div>
 		</center>

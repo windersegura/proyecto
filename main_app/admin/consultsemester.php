@@ -85,10 +85,9 @@
 		<center><br><h1>LISTADO DE SEMESTRE</h1><br><br>
 
 		<table class="table">
-			<th>Id.</th>
+			<th>Id. Semestre</th>
 			<th>No. Semestre</th>
-			<th>Codigo De Carrera</th>
-			<th>Nombre De La Carrera</th>
+			<th>Id. Carrera</th>
 
 			<th><a href="newsemester.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
@@ -101,14 +100,12 @@
 			{
 				$idSemestre = mysqli_real_escape_string($mysqli,$fila['idSemestre']);
 				$semestre = mysqli_real_escape_string($mysqli,$fila['NoSemestre']);
-				$carrera = mysqli_real_escape_string($mysqli,$fila['CodCarrera']);
-				$NombreCarrera = mysqli_real_escape_string($mysqli,$fila['NombreCarrera']);
+				$carrera = mysqli_real_escape_string($mysqli,$fila['idCarrera']);
 
 				echo "<tr>";
 					echo "<td><center>"; echo $idSemestre; echo "</center></td>";
 					echo "<td><center>"; echo $semestre; echo "</center></td>";
 					echo "<td><center>"; echo $carrera; echo "</center></td>";
-					echo "<td><center>"; echo $NombreCarrera; echo "</center></td>";
 
 					echo "<td><a href='deletesemester.php?numero=".$idSemestre."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
 					echo "<td><a href='modifysemester.php?numero=".$idSemestre."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
