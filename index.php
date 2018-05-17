@@ -79,8 +79,25 @@
 								</div>
 
 							</li>
-							<li><img src="img(1)/profecionales.jpg" alt="" width="500"></li>
-							<li><img src="img(1)/superacion.jpg" alt="" width="500"></li>
+
+							<li>
+								<img src="img(1)/profecionales.jpg" alt="" width="500">
+								<div class="caption">
+										<h3 class="caption-title"></h3>
+										<p></p>
+
+								</div>
+							</li>
+
+							<li>
+								<img src="img(1)/superacion.jpg" alt="" width="500">
+								<div class="caption">
+										<h3 class"caption-title"></h3>
+										<p></p>
+
+								</div>
+
+							</li>
 
 
 						</ul>
