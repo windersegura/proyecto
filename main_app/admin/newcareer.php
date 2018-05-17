@@ -52,9 +52,9 @@
 					</div>
 
 					<br>
-					<input class="btn__submit btn btn-dark col-md-2" type="submit" value="REGISTRAR">
+					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
 
-					<a href="index.php" class="btn btn-success col-md-2">Regresar</a>
+					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
 				</form>
 			</div>
 		</center>

@@ -75,9 +75,9 @@
 						</div>
 					</div>
 
-					<input class="btn__submit btn btn-dark" type="submit" value="REGISTRAR">
+					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
 
-					<a href="index.php" class="btn btn-primary">Regresar</a>
+					<a href="index.php" class="btn btn-primary col-md-3">REGRESAR</a>
 				</form>
 			</div>
 		</center>

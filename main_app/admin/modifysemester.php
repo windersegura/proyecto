@@ -38,30 +38,33 @@
 ?>
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Modificación De Curso</title>
-
-    </head>
+  <head>
+      <meta charset="utf-8">
+      <title>Modificación De Curso</title>
+			<link rel="stylesheet" href="../../css/bootstrap.css">
+			<script src="../../js/jquery-3.3.1.min.js"></script>
+			<script src="../../js/bootstrap.min.js"></script>
+  </head>
 
 	<body>
 		<center>
+			<h1>Modificación Del Curso</h1>
 			<div id="main" width="70%">
 				<form class="form-group" action="modifysemesterupdate.php" method="POST" >
 
 					<input type="hidden" name="id" value="<?php echo $consulta[0]?>">
 
-					<label>No. Semestre <span><em>(requerido)</em></span></label><br>
-			        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El No. Del Semestre" value="<?php echo $consulta[1]?>" required/><br>
+					<div class="col-md-3">
+						<label>No. Semestre <span><em>(requerido)</em></span></label><br>
+		        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El No. Del Semestre" value="<?php echo $consulta[1]?>" required/>
+					</div>
 
 					<div class="form-group">
 						<label for="carrera" class="col-sm-2 control-label">Seleccionar Carrera</label>
-						<div class="col-sm-10">
+						<div class="col-md-4">
 							<select class="form-control" id="carrera" name="carrera">
-
 								<?php
 								require '../conexion.php';
-
 								$query = "SELECT CodCarrera,NombreCarrera FROM carrera";
 								$resultado = $mysqli->query($query);
 									WHILE($row = $resultado->fetch_assoc())
@@ -74,9 +77,9 @@
 						</div>
 					</div>
 
-					<input class="btn__submit" type="submit" value="GUARDAR CAMBIOS">
+					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 
-					<a href="index.php">Regresar</a>
+					<a href="index.php" class="btn btn-success col-md-3">Regresar</a>
 				</form>
 			</div>
 		</center>
