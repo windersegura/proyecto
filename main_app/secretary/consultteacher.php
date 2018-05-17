@@ -106,6 +106,8 @@
 					echo "<td><center>"; echo $dpi; echo "</center></td>";
 					echo "<td><center>"; echo $correo; echo "</td>";
 					$tipoUsuario;
+					echo "<td><a href='deleteteacher.php?numero=".$idProfesor."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
+					echo "<td><a href='modifyteacher.php?numero=".$idProfesor."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
 					echo "<td><a href='#?numero=".$idProfesor."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}
@@ -113,9 +115,10 @@
 
 			?>
 			</table>
+<?php
+ echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger'>Volver</Button></a>"
 
-<a href="index.php">Volver</a>
-
+?>
 		</center>
 		<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/jquery-3.2.1.min.js"></script>
