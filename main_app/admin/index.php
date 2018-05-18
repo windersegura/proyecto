@@ -55,11 +55,13 @@
 						          <a class="dropdown-item" href="newcourse.php">Ingresar Cursos</a>
 						          <a class="dropdown-item" href="newcareer.php">Ingresar Carrera</a>
 											<a class="dropdown-item" href="newsemester.php">Ingresar Semestre</a>
+											<a class="dropdown-item" href="newfaculty.php">Ingresar Facultad</a>
 						          <a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
 						          <a class="dropdown-item" href="consultteacher.php">Consultar Maestro</a>
 						          <a class="dropdown-item" href="consultcourse.php">Consultar Cursos</a>
 						          <a class="dropdown-item" href="consultsemester.php">Consultar Semestre</a>
 						          <a class="dropdown-item" href="consultcareer.php">Consultar Carrera</a>
+											<a class="dropdown-item" href="consultfaculty.php">Consultar Facultad</a>
 						          <a class="dropdown-item" href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a>
 						          <a class="dropdown-item" href="assignmentstudent.php">Asignar Alumno a curso</a>
 						          <a class="dropdown-item" href="#">Asignar Maestro a curso</a>
