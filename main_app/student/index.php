@@ -1,6 +1,5 @@
 <?php
 	session_start();
-
 	//si la variable de session existe de lo contrario no se hace nada
 	if(isset($_SESSION['usuario']))
 	{
@@ -15,7 +14,6 @@
 	{
 		header('Location: ../../');
 	}
-
 $idAlumno = $_SESSION['usuario']['idAlumno'];
 	$consulta=consultaprod($idAlumno);
 	function consultaprod( $no_prod )
@@ -40,8 +38,6 @@ $idAlumno = $_SESSION['usuario']['idAlumno'];
 		];
 	}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

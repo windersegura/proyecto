@@ -30,6 +30,8 @@
 	<title>Ingrese Sus Datos</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 
 <div class="contenedor_principal_estudiante">
@@ -44,14 +46,14 @@
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
-		<a class="btn btn-dark col-md-1" href="index.php">Volver</a>
 		<center>
 			<div class="main" style="margin-top: 0px">
 				<img src="img(1)/studenticon.png" width="20%">
 				<form action="" id="formlgstudent">
 					<input type="text" name="usuariolgstudent" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 					<input type="password" name="passlgstudent" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-					<input type="submit" class="btn btn-success" value="Iniciar Sesion">
+					<a class="btn btn-dark col-md-2" href="index.php">Volver</a>
+					<input type="submit" class="btn btn-danger col-md-2" value="INICIAR SESION">
 				</form>
 
 			</div>

@@ -35,7 +35,7 @@
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
-		<a href="index.php" class="btn btn-dark col-md-1">Volver</a>
+
 		<center>
 			<div class="main" style="margin-top: 0px" >
 			<img src="img(1)/teachericon.png" width="20%">
@@ -43,7 +43,8 @@
 
 					<input type="text" name="usuariolgteacher" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 					<input type="password" name="passlgteacher" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-					<input class="btn btn-dark" type="submit"  value="Iniciar Sesion">
+					<a href="index.php" class="btn btn-dark col-md-2">VOLVER</a>
+					<input class="btn btn-success col-md-2" type="submit"  value="INICIAR SESION">
 				</form>
 
 			</div>
