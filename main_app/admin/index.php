@@ -43,8 +43,6 @@
 
 				    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-
-
 					      	<li class="nav-item dropdown">
 						        <a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          Opciones
@@ -64,9 +62,7 @@
 											<a class="dropdown-item" href="consultfaculty.php">Consultar Facultad</a>
 						          <a class="dropdown-item" href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a>
 						          <a class="dropdown-item" href="assignmentstudent.php">Asignar Alumno a curso</a>
-						          <a class="dropdown-item" href="#">Asignar Maestro a curso</a>
-
-
+						          <a class="dropdown-item" href="assignmentteacher.php">Asignar Maestro a curso</a>
 
 						        </div>
 					      	</li>
