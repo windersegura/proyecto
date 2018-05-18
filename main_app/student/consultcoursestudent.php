@@ -49,16 +49,16 @@
         $NombreCurso =$fila1['Nombre'];
 
         $query2 = "SELECT NoSemestre FROM semestre WHERE idSemestre=$idSemestre";
-        $consulta2 = $mysqli->query($query1) or die (mysql_error($mysqli));
+        $consulta2 = $mysqli->query($query2) or die (mysql_error($mysqli));
         $fil = $consulta2->fetch_assoc();
         $NoSemestre = $fil['NoSemestre'];
 
 				echo "<tr>";
 					echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
-					echo "<td><center>"; echo $NoSemestre; echo "</center></td>";
+					echo "<td><center>    "; echo $NoSemestre; echo "                    </center></td>";
 
-          echo "<td><a href='deletesemester.php?numero=".$idCurso."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
-					echo "<td><a href='modifysemester.php?numero=".$idCurso."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
+          echo "<td><a href='deletesemester.php?numero=".$idCurso."'><button type='button' name='eliminar' class='btn btn-danger'>Ver El Punto Del Curso</Button></a></td>";
+					echo "<td><a href='modifysemester.php?numero=".$idCurso."'><button type='button' name='modificar' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}?>
 			</table>
