@@ -37,14 +37,15 @@
 		</div>
 
 		<center>
-			<div class="main" style="margin-top: 0px" >
 			<img src="img(1)/teachericon.png" width="20%">
+			<div class="main col-md-5" style="margin-top: 0px" >
+
 				<form action="" id="formlgteacher">
 
 					<input type="text" name="usuariolgteacher" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 					<input type="password" name="passlgteacher" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-					<a href="index.php" class="btn btn-dark col-md-2">VOLVER</a>
-					<input class="btn btn-success col-md-2" type="submit"  value="INICIAR SESION">
+					<a href="index.php" class="btn btn-dark col-md-5">VOLVER</a>
+					<input class="btn btn-success col-md-5" type="submit"  value="INICIAR SESION">
 				</form>
 
 			</div>

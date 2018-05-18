@@ -27,13 +27,7 @@
 			return
 			[
 				$fila['idProfesor'],
-				$fila['Nombre'],
-        $fila['Direccion'],
-				$fila['Telefono'],
-        $fila['Password'],
-				$fila['DPI'],
-				$fila['Correo'],
-				$fila['TipoUsuario'],
+				$fila['Nombre']
 			];
 		}
 ?>
@@ -61,7 +55,7 @@
 						          Opciones
 						        </a>
 						        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						          <a class="dropdown-item" href="enrollstudent.php">Matricular Estudiante a Curso</a>
+						          <a class="dropdown-item" href="consultstudentteacher.php">Ingresar Notas Del Estudiante</a>
 						          <a class="dropdown-item" href="#">Consultar Curso</a>
 						          <a class="dropdown-item" href="#">Consultar Alumno</a>
 						        </div>

@@ -91,7 +91,9 @@ $idAlumno = $_SESSION['usuario']['idAlumno'];
 			else
 			{
 				echo "<h1> BIENVENIDA $consulta[1]</h1>" ;
-			}?>
+			}
+				$query = "SELECT Solvencia ";
+			?>
 
 
 			</aside>
