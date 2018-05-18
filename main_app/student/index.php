@@ -64,7 +64,7 @@ $idAlumno = $_SESSION['usuario']['idAlumno'];
 						        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						          <a class="dropdown-item" href="#">Consultar Horario</a>
 						          <a class="dropdown-item" href="consultcoursestudent.php">Consultar Curso</a>
-						          <a class="dropdown-item" href="#">Consultar Maestro</a>
+						          <a class="dropdown-item" href="consultteacherstudent.php">Consultar Maestro</a>
 											<a class="dropdown-item" href="formPago.php">Realizar Pago</a>
 						        </div>
 					      	</li>

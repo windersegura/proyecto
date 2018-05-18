@@ -19,20 +19,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Consulta De Cursos</title>
+	<title>Consulta De Mestros</title>
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 	<body>
 
-		<center><br><h1>LISTADO DE  TU CURSOS ASIGNADOS</h1><br><br>
+		<center><br><h1>LISTADO DE PROFESORES QUE TE IMPARTE CURSOS</h1><br><br>
 
 		<table class="table">
-			<th><center>Curso</center></th>
-			<th><center>Semestre</center></th>
-			<th><center>Profesor</center></th>
-
-			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
+			<th><center>Nombre</center></th>
+      <th><center>Telefono</center></th>
+			<th><center>Correo</center></th>
 
 			<?php
       $idAlumno = $_SESSION['usuario']['idAlumno'];
@@ -49,10 +47,6 @@
         $fila1 = $consulta1->fetch_assoc();
         $NombreCurso =$fila1['Nombre'];
 
-        $query2 = "SELECT NoSemestre FROM semestre WHERE idSemestre=$idSemestre";
-        $consulta2 = $mysqli->query($query2) or die (mysql_error($mysqli));
-        $fila2 = $consulta2->fetch_assoc();
-        $NoSemestre = $fila2['NoSemestre'];
 
 				$query3 = "SELECT idProfesor FROM asignatura WHERE idAlumno=$idAlumno AND idCurso=$idCurso";
         $consulta3 = $mysqli->query($query3) or die (mysql_error($mysqli));
@@ -60,23 +54,25 @@
         $idProfesor = $fila3['idProfesor'];
 
 				echo "<tr>";
-					echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
-					echo "<td><center>"; echo $NoSemestre; echo " </center></td>";
+
 					if ($idProfesor != NULL)
 					{
-						$query4 = "SELECT Nombre FROM profesor WHERE idProfesor=$idProfesor";
+						$query4 = "SELECT Nombre,Telefono,Correo FROM profesor WHERE idProfesor=$idProfesor";
 		        $consulta4 = $mysqli->query($query4) or die (mysql_error($mysqli));
 		        $fila4 = $consulta4->fetch_assoc();
 		        $NombreProfesor = $fila4['Nombre'];
+            $Telefono = $fila4['Telefono'];
+            $Correo = $fila4['Correo'];
 						echo "<td><center>"; echo $NombreProfesor; echo "</center></td>";
+            echo "<td><center>"; echo $Telefono; echo "</center></td>";
+  					echo "<td><center>"; echo $Correo; echo " </center></td>";
 					}
 					else
 					{
-						echo "<td><center>"; echo "Sin Asignar"; echo "</center></td>";
+						echo "<td><center>"; echo "SIN ASIGNAR A TU CURSO"; echo "</center></td>";
+            echo "<td><center>"; echo "----"; echo "</center></td>";
+            echo "<td><center>"; echo "----"; echo "</center></td>";
 					}
-
-          echo "<td><a href='#?numero=".$idCurso."'><button type='button' name='eliminar' class='btn btn-danger'>Ver El Punto Del Curso</Button></a></td>";
-					echo "<td><a href='#?numero=".$idCurso."'><button type='button' name='modificar' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}?>
 			</table>
