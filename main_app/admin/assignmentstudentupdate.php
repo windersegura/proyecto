@@ -38,7 +38,8 @@ $idSemestre = $fila2['idSemestre'];
 $query4 ="INSERT INTO asignacioncursos VALUES (NULL, '$idAlumno', '$idCurso', '0', '$idSemestre', '$idCarrera',0)";
 $mysqli->query($query4);
 
-$query5 = "SELECT * FROM alumnos WHERE idProfesor=$idAlumno";
+include '../conexion.php';
+$query5 = "SELECT * FROM alumnos WHERE idAlumno=$idAlumno";
 $resultado5 = $mysqli->query($query5);
 while($fila5=$resultado5->fetch_assoc())
 {

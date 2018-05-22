@@ -35,6 +35,7 @@
     <meta charset="utf-8">
     <title>Buscador Alumno Para La Asignacion</title>
     <link rel="stylesheet" href="../../css/main.css"/>
+		<link rel="stylesheet" href="../../css/bootstrap.css"/>
     <script type="text/javascript">
       function active()
       {
@@ -100,8 +101,13 @@
             $correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
 						$cantidadcursos = mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
 
-						if ($cantidadcursos != 6) {
+						if ($cantidadcursos != 5)
+						{
 							echo '<h3>'.'<a href="assignmentstudent2.php?numero='.$idalumno.'">'.$nombre.'</h3></a><p> '.$edad.' '.$dpi.' '.$correo.'</p><br>';
+							if ($cantidadcursos==4)
+							{
+								echo "<spam style=' color: red'>$nombre Se Encuentra Al Limite De Cursos Permitidos</spam>";
+							}
 						}
 						else
 						{
