@@ -74,6 +74,8 @@
 		    </button>
 		  </nav>
 		</div>
+
+		
 		<center><br>
 			<h1>BIENVENIDO <?php echo $consulta[1]?></h1>
 		</center>
