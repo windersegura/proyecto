@@ -36,6 +36,7 @@
       $fila['DPI'],
       $fila['Correo'],
       $fila['TipoUsuario'],
+			$fila['CantidadCursos']
     ];
   }
 ?>
@@ -60,6 +61,7 @@
         <th><center>DPI</center></th>
         <th><center>Correo</center></th>
   			<th><center>Tipo De Usuario</center></th>
+				<th><center>Cantidad Cursos Asignados</center></th>
       <?php
       echo "<tr>";
         echo "<td><center>"; echo $consulta[0]; echo "</center></td>";
@@ -70,9 +72,12 @@
         echo "<td><center>"; echo $consulta[5]; echo "</center></td>";
         echo "<td><center>"; echo $consulta[6]; echo "</center></td>";
         echo "<td><center>"; echo $consulta[7]; echo "</center></td>";
+				echo "<td><center>"; echo $consulta[8]; echo "</center></td>";
       echo "</tr>";
       ?>
     </table>
+
+	
     <?php
       require '../conexion.php';
       $query2 = "SELECT NombreCarrera, idCarrera FROM carrera ORDER BY idCarrera ASC";

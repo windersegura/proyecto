@@ -1,7 +1,5 @@
-
 <?php
 	session_start();
-
 	//si la variable de session existe se queda de lo contrario lo desloguea o lo envia para su usuario correcto
 	if(isset($_SESSION['usuario']))
 	{
@@ -9,12 +7,10 @@
 		{
 			header("Location: ../secretary/");
 		}
-
 		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin")
 		{
 			header("Location: ../salir.php");
 		}
-
 	}
 	else
 	{
@@ -92,6 +88,7 @@
 			<th>DPI</th>
 			<th>Correo</th>
 			<th>Tipo De Usuario</th>
+			<th>Cantidad Cursos</th>
 
 			<th><a href="newteacher.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
@@ -110,6 +107,7 @@
 				$dpi=mysqli_real_escape_string($mysqli,$fila['DPI']);
 				$correo=mysqli_real_escape_string($mysqli,$fila['Correo']);
 				$tipoUsuario=mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
+				$cantidadcursos=mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
 
 				echo "<tr>";
 					echo "<td><center>"; echo $idProfesor; echo "</center></td>";
@@ -120,6 +118,7 @@
 					echo "<td><center>"; echo $dpi; echo "</center></td>";
 					echo "<td><center>"; echo $correo; echo "</td>";
 					echo "<td><center>"; echo $tipoUsuario; echo "</td>";
+					echo "<td><center>"; echo $cantidadcursos; echo "</td>";
 
 					echo "<td><a href='deleteteacher.php?numero=".$idProfesor."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
 					echo "<td><a href='modifyteacher.php?numero=".$idProfesor."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";

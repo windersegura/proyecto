@@ -26,19 +26,21 @@
 	function consultaprod( $no_prod )
 	{
 		include '../conexion.php';
-        $sentencia="SELECT * FROM profesor WHERE idProfesor='".$no_prod."' ";
-        $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
-        $fila=$resultado->fetch_assoc();
+    $sentencia="SELECT * FROM profesor WHERE idProfesor='".$no_prod."' ";
+    $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+    $fila=$resultado->fetch_assoc();
 
-        return
-		[   $fila['idProfesor'],
+    return
+		[
+			$fila['idProfesor'],
 			$fila['Nombre'],
-            $fila['Direccion'],
+      $fila['Direccion'],
 			$fila['Telefono'],
-            $fila['Password'],
+      $fila['Password'],
 			$fila['DPI'],
 			$fila['Correo'],
 			$fila['TipoUsuario'],
+			$fila['CantidadCursos']
 		];
 	}
 ?>
@@ -145,6 +147,8 @@
 							</select>
 						</div>
 					</div>
+
+					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[8]?>">
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 

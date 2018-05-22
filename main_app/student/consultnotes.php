@@ -64,7 +64,7 @@
           $idCurso = $consulta[1];
           $query1 = "SELECT Nombre FROM curso WHERE idCurso=$idCurso";
           $consulta1 =$mysqli->query($query1);
-            $fila1=$consulta1->fetch_assoc();
+          $fila1=$consulta1->fetch_assoc();
           $NombreCurso =$fila1['Nombre'];
         ?>
         <tr>

@@ -84,6 +84,7 @@
 			<th>Password</th>
 
 			<th>Correo</th>
+			<th>Cantidad Cursos Asignados</th>
 			<th><a href="newstudent.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
 
@@ -103,6 +104,7 @@
 				$password = mysqli_real_escape_string($mysqli,$fila['Password']);
 				$tipoUsuario = mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
 				$correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
+				$cantidadcursos = mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
 
 				echo "<tr>";
 					$idAlumno;
@@ -115,6 +117,7 @@
 					echo "<td><center>"; echo $password; echo "</center></td>";
 					 $tipoUsuario;
 					echo "<td><center>"; echo $correo; echo "</td>";
+					echo "<td><center>"; echo $cantidadcursos; echo "</td>";
 					echo "<td><a href='deletestudent.php?numero=".$idAlumno."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
 					echo "<td><a href='modifystudent.php?numero=".$idAlumno."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
 					echo "<td><a href='#?numero=".$idAlumno."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";

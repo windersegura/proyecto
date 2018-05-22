@@ -77,6 +77,7 @@
 			<th><center>Password</center></th>
 			<th><center>DPI</center></th>
 			<th><center>Correo</center></th>
+			<th><center>Cantidad Cursos Asignados</center></th>
 
 
 			<th><a href="newteacher.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
@@ -96,6 +97,7 @@
 				$dpi=mysqli_real_escape_string($mysqli,$fila['DPI']);
 				$correo=mysqli_real_escape_string($mysqli,$fila['Correo']);
 				$tipoUsuario=mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
+				$cantidadcursos=mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
 
 				echo "<tr>";
 					$idProfesor;
@@ -104,7 +106,8 @@
 					echo "<td><center>"; echo $telefono; echo "</center></td>";
 					echo "<td><center>"; echo $password; echo "</center></td>";
 					echo "<td><center>"; echo $dpi; echo "</center></td>";
-					echo "<td><center>"; echo $correo; echo "</td>";
+					echo "<td><center>"; echo $correo; echo "</center></td>";
+					echo "<td><center>"; echo $cantidadcursos; echo "</center></td>";
 					$tipoUsuario;
 					echo "<td><a href='deleteteacher.php?numero=".$idProfesor."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
 					echo "<td><a href='modifyteacher.php?numero=".$idProfesor."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";

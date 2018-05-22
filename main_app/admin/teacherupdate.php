@@ -38,7 +38,7 @@
 	//confirmacion que todos los datos esten llenos
 	$req = (strlen($nombre1)*strlen($direccion)*strlen($telefono)*strlen($password)*strlen($dpi)*strlen($correo)*strlen($tipo)) or die("No están llenos los espacios");
 
-	$query = "INSERT INTO profesor VALUES (NULL, '$nombre1','$direccion','$telefono','$password','$dpi','$correo','$tipo')";
+	$query = "INSERT INTO profesor VALUES (NULL, '$nombre1','$direccion','$telefono','$password','$dpi','$correo','$tipo',0)";
 
 	$mysqli->query($query);
 
