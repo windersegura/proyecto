@@ -54,7 +54,7 @@
   while($fila3 = $resultado3->fetch_assoc())
   {
     $idAlumno = $fila3['IdAlumno4'];
-    $query4 ="INSERT INTO asignatura VALUES (NULL, '$idCurso', '0', '0', '0', '0', '$idAlumno', '$idTeacher', '$idCarrera', '$idSemestre')";
+    $query4 ="INSERT INTO asignatura VALUES (NULL, '$idCurso', '0', '0', '0', '0', '$idAlumno', '$idTeacher', '$idCarrera', '$idSemestre','0')";
     $mysqli->query($query4);
   }
 

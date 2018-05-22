@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2018 a las 05:46:44
+-- Tiempo de generación: 22-05-2018 a las 10:36:21
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -71,7 +71,7 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
-(1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 2),
+(1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 5),
 (2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno', 0),
 (13, 'MARIA ANGELES MARTIN LEAL', 19, 'San Luis', 12340999, 'Femenino', 8967454152678, '122334', 'doamari@gmail.com', 'Alumno', 0),
 (14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno', 0),
@@ -135,16 +135,20 @@ CREATE TABLE `asignacioncursos` (
   `Solvencia` tinyint(4) NOT NULL,
   `idSemestre2` int(11) NOT NULL,
   `idCarrera3` int(11) NOT NULL,
-  `CursoSuperado` tinyint(1) NOT NULL
+  `CursoSuperado` tinyint(1) NOT NULL,
+  `idHorario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `asignacioncursos`
 --
 
-INSERT INTO `asignacioncursos` (`idAsignacion`, `IdAlumno4`, `IdCurso2`, `Solvencia`, `idSemestre2`, `idCarrera3`, `CursoSuperado`) VALUES
-(33, 1, 8, 0, 6, 7, 0),
-(34, 1, 8, 0, 6, 7, 0);
+INSERT INTO `asignacioncursos` (`idAsignacion`, `IdAlumno4`, `IdCurso2`, `Solvencia`, `idSemestre2`, `idCarrera3`, `CursoSuperado`, `idHorario`) VALUES
+(37, 1, 8, 0, 6, 7, 0, 0),
+(38, 1, 11, 0, 6, 7, 0, 0),
+(39, 1, 12, 0, 6, 7, 0, 0),
+(40, 1, 13, 0, 6, 7, 0, 0),
+(41, 1, 14, 0, 6, 7, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -162,8 +166,18 @@ CREATE TABLE `asignatura` (
   `idAlumno` int(7) DEFAULT NULL,
   `idProfesor` int(7) DEFAULT NULL,
   `idCarrera` int(7) DEFAULT NULL,
-  `idSemestre` int(7) DEFAULT NULL
+  `idSemestre` int(7) DEFAULT NULL,
+  `idHorario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `asignatura`
+--
+
+INSERT INTO `asignatura` (`idAsignatura`, `idCurso`, `PrimerPar`, `SegundoPar`, `Tareas`, `ParcialFinal`, `idAlumno`, `idProfesor`, `idCarrera`, `idSemestre`, `idHorario`) VALUES
+(17, 8, 0, 0, 0, 0, 1, 1, 7, 6, 0),
+(18, 13, 0, 0, 0, 0, 1, 1, 7, 6, 0),
+(19, 11, 0, 0, 0, 0, 1, 1, 7, 6, 0);
 
 -- --------------------------------------------------------
 
@@ -292,6 +306,45 @@ INSERT INTO `facultad` (`idFacultad`, `Nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `horarios`
+--
+
+CREATE TABLE `horarios` (
+  `idHorario` int(11) NOT NULL,
+  `Hora` varchar(11) NOT NULL,
+  `Periodo` varchar(6) NOT NULL,
+  `Jornada` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `horarios`
+--
+
+INSERT INTO `horarios` (`idHorario`, `Hora`, `Periodo`, `Jornada`) VALUES
+(1, '07:00-08:10', '1ro', 'Temprano'),
+(2, '08:10-09:20', '2do', 'Temprano'),
+(3, '09:20-09:40', 'Receso', 'Temprano'),
+(4, '09:40-10:50', '3ro', 'Temprano'),
+(5, '10:50-12:00', '4to', 'Temprano'),
+(6, '13:00-14:10', '1ro', 'Tarde'),
+(7, '14:10-15:20', '2do', 'Tarde'),
+(8, '15:20-15:40', 'Receso', 'Tarde'),
+(9, '15:40-16:50', '3ro', 'Tarde'),
+(10, '16:50-18:00', '4to', 'Tarde'),
+(11, '07:00-09:00', '1ro', 'Sabados'),
+(12, '09:00-11:00', '2do', 'Sabados'),
+(13, '11:00-13:00', '3ro', 'Sabados'),
+(14, '14:00-16:00', '4to', 'Sabados'),
+(15, '16:00-18:00', '5to', 'Sabados'),
+(16, '07:00-09:00', '1ro', 'Domingos'),
+(17, '09:00-11:00', '2do', 'Domingos'),
+(18, '11:00-13:00', '3ro', 'Domingos'),
+(19, '14:00-16:00', '4to', 'Domingos'),
+(20, '16:00-18:00', '5to', 'Domingos');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `materia`
 --
 
@@ -377,7 +430,7 @@ CREATE TABLE `profesor` (
 --
 
 INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
-(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 0),
+(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 4),
 (5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro', 0),
 (6, 'LUIS FELIPE MORALES HERRERA', 'San Benito', 80502778, '818415', 4097444228826, 'luismorales@yahoo.com', 'Maestro', 0),
 (7, 'GILDA BEATRIZ RUIZ CASTILLO', 'Flores', 35849960, '810482', 2762446012347, 'gildacastillo@yahoo.com', 'Maestro', 0),
@@ -482,6 +535,12 @@ ALTER TABLE `facultad`
   ADD PRIMARY KEY (`idFacultad`);
 
 --
+-- Indices de la tabla `horarios`
+--
+ALTER TABLE `horarios`
+  ADD PRIMARY KEY (`idHorario`);
+
+--
 -- Indices de la tabla `materia`
 --
 ALTER TABLE `materia`
@@ -544,13 +603,13 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
 --
 ALTER TABLE `asignacioncursos`
-  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `carrera`
@@ -569,6 +628,12 @@ ALTER TABLE `curso`
 --
 ALTER TABLE `facultad`
   MODIFY `idFacultad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `horarios`
+--
+ALTER TABLE `horarios`
+  MODIFY `idHorario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `meses`

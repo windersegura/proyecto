@@ -49,7 +49,7 @@
   $idSemestre = $fila2['idSemestre'];
 
 
-  $query4 ="INSERT INTO asignacioncursos VALUES (NULL, '$idAlumno', '$idCurso', '0', '$idSemestre', '$idCarrera',0)";
+  $query4 ="INSERT INTO asignacioncursos VALUES (NULL, '$idAlumno', '$idCurso', '0', '$idSemestre', '$idCarrera','0','0')";
   $mysqli->query($query4);
 
   include '../conexion.php';
