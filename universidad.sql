@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2018 a las 11:12:08
+-- Tiempo de generación: 22-05-2018 a las 05:46:44
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -62,64 +62,65 @@ CREATE TABLE `alumnos` (
   `DPI` double NOT NULL,
   `Password` varchar(15) NOT NULL,
   `Correo` varchar(40) NOT NULL,
-  `TipoUsuario` varchar(10) NOT NULL
+  `TipoUsuario` varchar(10) NOT NULL,
+  `CantidadCursos` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`) VALUES
-(1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno'),
-(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno'),
-(13, 'MARIA ANGELES MARTIN LEAL', 19, 'San Luis', 12340999, 'Femenino', 8967454152678, '122334', 'doamari@gmail.com', 'Alumno'),
-(14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno'),
-(15, 'FREDY HENRY SUAREZ CERON', 20, 'San Benito', 50786922, 'Masculino', 3245678909123, '135955', 'suarez@gmail.com', 'Alumno'),
-(16, 'ROSA MARGARITA LOPEZ PEREZ', 22, 'San Francisco', 56788900, 'Femenino', 5555566678222, '141104', 'rosita@gmail.com', 'Alumno'),
-(17, 'CARLOS DIAZ CRUZ', 23, 'San Andres', 55556790, 'Masculino', 3456789012345, '255113', 'carlosdc@gmail.com', 'Alumno'),
-(18, 'DELIA ESPINOSA HERNANDEZ', 19, 'Puerto Barrios', 45678902, 'Femenino', 1234567890098, '790767', 'hernandez45@gmail.com', 'Alumno'),
-(19, 'CLAUDIA VALERIA DAVILA MONTERO', 22, 'San Francisco', 12567800, 'Femenino', 6777778900034, '544178', 'valeriac@gmail.com', 'Alumno'),
-(20, 'JULIO ROGELIO CORONADO MEDINA', 25, 'San Benito', 45678903, 'Masculino', 2356789055678, '102488', 'julio@gmail.com', 'Alumno'),
-(21, 'CARLOS LUIS ERAZO BERNAL', 26, 'Santa Ana', 53483517, 'Masculino', 6720710843801, '587782', 'caslosle@gmail.com', 'Alumno'),
-(22, 'MARIA YOLANDA ASCENCIO LOPEZ', 19, 'San Andres', 54550426, 'Femenino', 4258705552667, '995784', 'lopezmaria@gmail.com', 'Alumno'),
-(23, 'JUANA PATRICIA CADENA PALACIOS', 18, 'San Jose', 66697455, 'Femenino', 7262580830603, '652184', 'juanapatricia@gmail.com', 'Alumno'),
-(24, 'YULIANA ESPINOZA ARANA', 18, 'Poptun', 55536680, 'Femenino', 1395608380436, '277090', 'espinoza@gmail.com', 'Alumno'),
-(25, 'PRUDENCIANO CABALLERO VALLE', 24, 'San Luis', 16970074, 'Masculino', 7916698012501, '166089', 'pruden@gmail.com', 'Alumno'),
-(26, 'PERLA CANTU TREVINO', 21, 'La Libertad', 71772428, 'Femenino', 1085561998188, '569272', 'perlacantu@gmail.com', 'Alumno'),
-(27, 'CECILIA HERRERA CARBAJAL', 22, 'Rio Dulce', 59990868, 'Femenino', 5041408400982, '736244', 'doÃ±acecilia@gmail.com', 'Alumno'),
-(28, 'MARCO ANTONIO CARDENAS CORNEJO', 26, 'Rio Dulce', 12103826, 'Masculino', 5114833854138, '976311', 'cardenasmarco@gmail.com', 'Alumno'),
-(29, 'GONZALO CARRERA MOLINA', 20, 'Las Cruces', 42089266, 'Masculino', 7325787581503, '510435', 'gonzalo445@gmail.com', 'Alumno'),
-(30, 'JOSE MARTIN CORCUERA CESPEDES', 24, 'Las Cruces', 11273856, 'Masculino', 909507866948, '905969', 'martincespedes@gmail.com', 'Alumno'),
-(31, 'SUSAN MEJIA REVOLLEDO', 19, 'San Benito', 30322422, 'Femenino', 142375305294, '696657', 'susan@gmail.com', 'Alumno'),
-(32, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno'),
-(33, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno'),
-(34, 'CARLOS ALFONSO LUQUE VILLAVICENCIO', 26, 'Santa Ana', 35143850, 'Masculino', 5934783179312, '955681', 'carlosalfonso66@gmail.com', 'Alumno'),
-(35, 'JAVIER GUTIERREZ VELEZ', 19, 'San Benito', 64631650, 'Masculino', 7898018538951, '595311', 'javier@gmail.com', 'Alumno'),
-(36, 'ROGER DIAZ ROJAS', 20, 'Santa Elena', 61673022, 'Masculino', 7459319766610, '385693', 'rogerdr@gmail.com', 'Alumno'),
-(37, 'ELENA CARPIO SALAZAR', 19, 'Santa Elena', 31501377, 'Femenino', 7887360554188, '599484', 'elenacarpio@gmail.com', 'Alumno'),
-(38, 'PATRICIO RIVERA OCHOA', 23, 'Poptun', 96233426, 'Masculino', 1644069910049, '113858', 'riveraochoa@hotmail.com', 'Alumno'),
-(39, 'PATRICIO RIVERA OCHOA', 23, 'Poptun', 96233426, 'Masculino', 1644069910049, '113858', 'riveraochoa@hotmail.com', 'Alumno'),
-(40, 'LUZ MARIA MENESES', 27, 'San Luis', 97139462, 'Femenino', 7081310417503, '124545', 'luzma@gmail.com', 'Alumno'),
-(41, 'DAGOBERTO BARRERA ARISTA', 25, 'San Jose', 64562356, 'Masculino', 1901183586567, '978783', 'dagob@gmail.com', 'Alumno'),
-(42, 'MIGUEL LOPEZ CHORRES', 18, 'Flores', 48653907, 'Masculino', 5426739662885, '676906', 'miguellopez@hotmail.com', 'Alumno'),
-(43, 'GLADYS PLASENCIA UGAZ', 18, 'Flores', 89293996, 'Femenino', 3302513416856, '236260', 'gladys@hotmail.com', 'Alumno'),
-(44, 'MARTHA CRESPIN ZAMORA', 21, 'El Chal', 12827440, 'Femenino', 6920157425105, '470008', 'crespin@gmail.com', 'Alumno'),
-(45, 'ELIZABETH CABALLERO LA MADRID', 23, 'Poptun', 14268014, 'Femenino', 1574590638279, '696734', 'caballero@hotmail.com', 'Alumno'),
-(46, 'GIRALDO HERRERA MONZON', 21, 'Santa Ana', 21224532, 'Masculino', 3898499038070, '823254', 'monzonherrera@outlook.com', 'Alumno'),
-(47, 'BETTY ROSELIA TORRES RIVERA', 19, 'Melchor', 39802899, 'Femenino', 3534047681838, '625148', 'torresbr@outlook.com', 'Alumno'),
-(48, 'LUIS MURIEL RENDON', 23, 'San Benito', 29325241, 'Masculino', 2197287850081, '967114', 'luismuriel@yahoo.com', 'Alumno'),
-(49, 'MARIAN MURIEL RENDON', 21, 'San Benito', 54168845, 'Femenino', 6361762035638, '843958', 'mmrendon@outlook.com', 'Alumno'),
-(50, 'JULIA MONROY ROJAS', 18, 'San Francisco', 58705096, 'Femenino', 5563417933881, '271871', 'juliamrojas@outlook.com', 'Alumno'),
-(51, 'ANDRES HUAMAN LOPEZ', 21, 'San Luis', 84732442, 'Masculino', 5023107297718, '625816', 'huaman@gmail.com', 'Alumno'),
-(52, 'ANDRES HUAMAN LOPEZ', 21, 'San Luis', 84732442, 'Masculino', 5023107297718, '625816', 'huaman@gmail.com', 'Alumno'),
-(53, 'JORGE LUIS CHAUCA TORRES', 18, 'Poptun', 15400326, 'Masculino', 5741854492574, '317667', 'jorgeluis@yahoo.com', 'Alumno'),
-(54, 'JORGE VIGIL MATTOS', 20, 'San Benito', 42328443, 'Masculino', 6309979595243, '912062', 'mattos@yahoo.com', 'Alumno'),
-(55, 'APOLONIO NAVARRO SERRANO', 20, 'Santa Ana', 88611595, 'Masculino', 6309979595243, '970451', 'serrano@outlook.com', 'Alumno'),
-(56, 'SONIA SANTILLANA DE GARAY', 28, 'San Francisco', 59314723, 'Femenino', 1199984055012, '177805', 'degaray@gmail.com', 'Alumno'),
-(57, 'CHRISTIAN MADRID HERBOZO', 19, 'San Benito', 89882441, 'Masculino', 6106088008731, '609876', 'herbozo@yahoo.com', 'Alumno'),
-(58, 'JOSE ANTONIO LUNA BAZO', 25, 'Melchor', 53503541, 'Masculino', 5960182722657, '813783', 'lunabazo@yahoo.com', 'Alumno'),
-(59, 'CONSUELO ISABEL CASAS PONCE', 23, 'San Benito', 83023880, 'Femenino', 7125494670122, '900958', 'casasponce@outlook.com', 'Alumno'),
-(60, 'REBECA LUQUE DE VASQUEZ', 25, 'Poptun', 62068250, 'Femenino', 4691655423492, '697757', 'luquevasquez@outlook.com', 'Alumno');
+INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
+(1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 2),
+(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno', 0),
+(13, 'MARIA ANGELES MARTIN LEAL', 19, 'San Luis', 12340999, 'Femenino', 8967454152678, '122334', 'doamari@gmail.com', 'Alumno', 0),
+(14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno', 0),
+(15, 'FREDY HENRY SUAREZ CERON', 20, 'San Benito', 50786922, 'Masculino', 3245678909123, '135955', 'suarez@gmail.com', 'Alumno', 0),
+(16, 'ROSA MARGARITA LOPEZ PEREZ', 22, 'San Francisco', 56788900, 'Femenino', 5555566678222, '141104', 'rosita@gmail.com', 'Alumno', 0),
+(17, 'CARLOS DIAZ CRUZ', 23, 'San Andres', 55556790, 'Masculino', 3456789012345, '255113', 'carlosdc@gmail.com', 'Alumno', 0),
+(18, 'DELIA ESPINOSA HERNANDEZ', 19, 'Puerto Barrios', 45678902, 'Femenino', 1234567890098, '790767', 'hernandez45@gmail.com', 'Alumno', 0),
+(19, 'CLAUDIA VALERIA DAVILA MONTERO', 22, 'San Francisco', 12567800, 'Femenino', 6777778900034, '544178', 'valeriac@gmail.com', 'Alumno', 0),
+(20, 'JULIO ROGELIO CORONADO MEDINA', 25, 'San Benito', 45678903, 'Masculino', 2356789055678, '102488', 'julio@gmail.com', 'Alumno', 0),
+(21, 'CARLOS LUIS ERAZO BERNAL', 26, 'Santa Ana', 53483517, 'Masculino', 6720710843801, '587782', 'caslosle@gmail.com', 'Alumno', 0),
+(22, 'MARIA YOLANDA ASCENCIO LOPEZ', 19, 'San Andres', 54550426, 'Femenino', 4258705552667, '995784', 'lopezmaria@gmail.com', 'Alumno', 0),
+(23, 'JUANA PATRICIA CADENA PALACIOS', 18, 'San Jose', 66697455, 'Femenino', 7262580830603, '652184', 'juanapatricia@gmail.com', 'Alumno', 0),
+(24, 'YULIANA ESPINOZA ARANA', 18, 'Poptun', 55536680, 'Femenino', 1395608380436, '277090', 'espinoza@gmail.com', 'Alumno', 0),
+(25, 'PRUDENCIANO CABALLERO VALLE', 24, 'San Luis', 16970074, 'Masculino', 7916698012501, '166089', 'pruden@gmail.com', 'Alumno', 0),
+(26, 'PERLA CANTU TREVINO', 21, 'La Libertad', 71772428, 'Femenino', 1085561998188, '569272', 'perlacantu@gmail.com', 'Alumno', 0),
+(27, 'CECILIA HERRERA CARBAJAL', 22, 'Rio Dulce', 59990868, 'Femenino', 5041408400982, '736244', 'donacecilia@gmail.com', 'Alumno', 0),
+(28, 'MARCO ANTONIO CARDENAS CORNEJO', 26, 'Rio Dulce', 12103826, 'Masculino', 5114833854138, '976311', 'cardenasmarco@gmail.com', 'Alumno', 0),
+(29, 'GONZALO CARRERA MOLINA', 20, 'Las Cruces', 42089266, 'Masculino', 7325787581503, '510435', 'gonzalo445@gmail.com', 'Alumno', 0),
+(30, 'JOSE MARTIN CORCUERA CESPEDES', 24, 'Las Cruces', 11273856, 'Masculino', 909507866948, '905969', 'martincespedes@gmail.com', 'Alumno', 0),
+(31, 'SUSAN MEJIA REVOLLEDO', 19, 'San Benito', 30322422, 'Femenino', 142375305294, '696657', 'susan@gmail.com', 'Alumno', 0),
+(32, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
+(33, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
+(34, 'CARLOS ALFONSO LUQUE VILLAVICENCIO', 26, 'Santa Ana', 35143850, 'Masculino', 5934783179312, '955681', 'carlosalfonso66@gmail.com', 'Alumno', 0),
+(35, 'JAVIER GUTIERREZ VELEZ', 19, 'San Benito', 64631650, 'Masculino', 7898018538951, '595311', 'javier@gmail.com', 'Alumno', 0),
+(36, 'ROGER DIAZ ROJAS', 20, 'Santa Elena', 61673022, 'Masculino', 7459319766610, '385693', 'rogerdr@gmail.com', 'Alumno', 0),
+(37, 'ELENA CARPIO SALAZAR', 19, 'Santa Elena', 31501377, 'Femenino', 7887360554188, '599484', 'elenacarpio@gmail.com', 'Alumno', 0),
+(38, 'PATRICIO RIVERA OCHOA', 23, 'Poptun', 96233426, 'Masculino', 1644069910049, '113858', 'riveraochoa@hotmail.com', 'Alumno', 0),
+(39, 'PATRICIO RIVERA OCHOA', 23, 'Poptun', 96233426, 'Masculino', 1644069910049, '113858', 'riveraochoa@hotmail.com', 'Alumno', 0),
+(40, 'LUZ MARIA MENESES', 27, 'San Luis', 97139462, 'Femenino', 7081310417503, '124545', 'luzma@gmail.com', 'Alumno', 0),
+(41, 'DAGOBERTO BARRERA ARISTA', 25, 'San Jose', 64562356, 'Masculino', 1901183586567, '978783', 'dagob@gmail.com', 'Alumno', 0),
+(42, 'MIGUEL LOPEZ CHORRES', 18, 'Flores', 48653907, 'Masculino', 5426739662885, '676906', 'miguellopez@hotmail.com', 'Alumno', 0),
+(43, 'GLADYS PLASENCIA UGAZ', 18, 'Flores', 89293996, 'Femenino', 3302513416856, '236260', 'gladys@hotmail.com', 'Alumno', 0),
+(44, 'MARTHA CRESPIN ZAMORA', 21, 'El Chal', 12827440, 'Femenino', 6920157425105, '470008', 'crespin@gmail.com', 'Alumno', 0),
+(45, 'ELIZABETH CABALLERO LA MADRID', 23, 'Poptun', 14268014, 'Femenino', 1574590638279, '696734', 'caballero@hotmail.com', 'Alumno', 0),
+(46, 'GIRALDO HERRERA MONZON', 21, 'Santa Ana', 21224532, 'Masculino', 3898499038070, '823254', 'monzonherrera@outlook.com', 'Alumno', 0),
+(47, 'BETTY ROSELIA TORRES RIVERA', 19, 'Melchor', 39802899, 'Femenino', 3534047681838, '625148', 'torresbr@outlook.com', 'Alumno', 0),
+(48, 'LUIS MURIEL RENDON', 23, 'San Benito', 29325241, 'Masculino', 2197287850081, '967114', 'luismuriel@yahoo.com', 'Alumno', 0),
+(49, 'MARIAN MURIEL RENDON', 21, 'San Benito', 54168845, 'Femenino', 6361762035638, '843958', 'mmrendon@outlook.com', 'Alumno', 0),
+(50, 'JULIA MONROY ROJAS', 18, 'San Francisco', 58705096, 'Femenino', 5563417933881, '271871', 'juliamrojas@outlook.com', 'Alumno', 0),
+(51, 'ANDRES HUAMAN LOPEZ', 21, 'San Luis', 84732442, 'Masculino', 5023107297718, '625816', 'huaman@gmail.com', 'Alumno', 0),
+(52, 'ANDRES HUAMAN LOPEZ', 21, 'San Luis', 84732442, 'Masculino', 5023107297718, '625816', 'huaman@gmail.com', 'Alumno', 0),
+(53, 'JORGE LUIS CHAUCA TORRES', 18, 'Poptun', 15400326, 'Masculino', 5741854492574, '317667', 'jorgeluis@yahoo.com', 'Alumno', 0),
+(54, 'JORGE VIGIL MATTOS', 20, 'San Benito', 42328443, 'Masculino', 6309979595243, '912062', 'mattos@yahoo.com', 'Alumno', 0),
+(55, 'APOLONIO NAVARRO SERRANO', 20, 'Santa Ana', 88611595, 'Masculino', 6309979595243, '970451', 'serrano@outlook.com', 'Alumno', 0),
+(56, 'SONIA SANTILLANA DE GARAY', 28, 'San Francisco', 59314723, 'Femenino', 1199984055012, '177805', 'degaray@gmail.com', 'Alumno', 0),
+(57, 'CHRISTIAN MADRID HERBOZO', 19, 'San Benito', 89882441, 'Masculino', 6106088008731, '609876', 'herbozo@yahoo.com', 'Alumno', 0),
+(58, 'JOSE ANTONIO LUNA BAZO', 25, 'Melchor', 53503541, 'Masculino', 5960182722657, '813783', 'lunabazo@yahoo.com', 'Alumno', 0),
+(59, 'CONSUELO ISABEL CASAS PONCE', 23, 'San Benito', 83023880, 'Femenino', 7125494670122, '900958', 'casasponce@outlook.com', 'Alumno', 0),
+(60, 'REBECA LUQUE DE VASQUEZ', 25, 'Poptun', 62068250, 'Femenino', 4691655423492, '697757', 'luquevasquez@outlook.com', 'Alumno', 0);
 
 -- --------------------------------------------------------
 
@@ -142,14 +143,8 @@ CREATE TABLE `asignacioncursos` (
 --
 
 INSERT INTO `asignacioncursos` (`idAsignacion`, `IdAlumno4`, `IdCurso2`, `Solvencia`, `idSemestre2`, `idCarrera3`, `CursoSuperado`) VALUES
-(3, 1, 8, 0, 6, 7, 0),
-(4, 1, 11, 0, 6, 7, 0),
-(7, 1, 12, 0, 6, 7, 0),
-(10, 1, 13, 0, 6, 7, 0),
-(11, 1, 14, 0, 6, 7, 0),
-(12, 2, 5, 0, 12, 7, 0),
-(14, 13, 8, 0, 6, 7, 0),
-(15, 27, 8, 0, 6, 7, 0);
+(33, 1, 8, 0, 6, 7, 0),
+(34, 1, 8, 0, 6, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -169,15 +164,6 @@ CREATE TABLE `asignatura` (
   `idCarrera` int(7) DEFAULT NULL,
   `idSemestre` int(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `asignatura`
---
-
-INSERT INTO `asignatura` (`idAsignatura`, `idCurso`, `PrimerPar`, `SegundoPar`, `Tareas`, `ParcialFinal`, `idAlumno`, `idProfesor`, `idCarrera`, `idSemestre`) VALUES
-(6, 8, 0, 0, 0, 0, 1, 5, 7, 6),
-(7, 8, 0, 0, 0, 0, 13, 5, 7, 6),
-(8, 8, 0, 0, 0, 0, 27, 5, 7, 6);
 
 -- --------------------------------------------------------
 
@@ -240,9 +226,7 @@ INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `idCarrera`) V
 (3, 'ESTADISTICA II', 5, '5', 7),
 (4, 'ELECTRONICA ANALOGICA', 5, '5', 7),
 (5, 'COMPILADORES', 5, '7', 7),
-(6, 'PROCESO ADMINISTRATIVO', 5, '5', 7),
 (8, 'INTRODUCCION A LOS SISTEMAS DE COMPUTO', 5, '1', 7),
-(9, 'BASE DE DATOS I', 5, '6', 7),
 (10, 'PROGRAMACION I', 5, '3', 7),
 (11, 'DESARROLLO HUMANO Y PROFESIONAL', 4, '1', 7),
 (12, 'METODOLOGIA DE LA INVESTIGACION', 5, '1', 7),
@@ -250,7 +234,27 @@ INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `idCarrera`) V
 (14, 'LOGICA DE SISTEMAS', 5, '1', 7),
 (15, 'PRECALCULO', 5, '2', 7),
 (17, 'ALGEBRA LINEAL', 5, '2', 7),
-(18, 'DESARROLLO WEB', 5, '8', 7);
+(18, 'DESARROLLO WEB', 5, '8', 7),
+(19, 'ALGORITMOS', 5, '2', 7),
+(20, 'CONTABILIDAD II', 5, '2', 7),
+(21, 'MATEMATICA DISCRETA', 5, '2', 7),
+(22, 'FISICA I', 5, '3', 7),
+(23, 'PROGRAMACION I', 5, '3', 7),
+(24, 'CALCULO I', 5, '3', 7),
+(25, 'PROCESO ADMINISTRATIVO', 5, '3', 7),
+(26, 'DERECHO INFORMATICO', 5, '3', 7),
+(27, 'EMPRENDEDORES DE NEGOCIOS', 5, '5', 7),
+(28, 'MICROECONOMIA', 5, '4', 7),
+(29, 'PROGRAMACION II', 5, '4', 7),
+(30, 'CALCULO II', 5, '4', 7),
+(31, 'ESTADISTICA I', 5, '4', 7),
+(32, 'FISICA II', 5, '4', 7),
+(33, 'INVESTIGACION DE OPERACIONES', 5, '6', 7),
+(34, 'BASE DE DATOS I', 5, '6', 7),
+(35, 'AUTOMATAS Y LENGUAJES FORMALES', 5, '6', 7),
+(36, 'SISTEMAS OPERATIVOS I', 5, '6', 7),
+(37, 'ELECTRONICA DIGITAL', 5, '6', 7),
+(38, 'BASE DE DATOS II', 5, '7', 7);
 
 -- --------------------------------------------------------
 
@@ -364,21 +368,22 @@ CREATE TABLE `profesor` (
   `Password` varchar(45) NOT NULL,
   `DPI` double NOT NULL,
   `Correo` varchar(40) NOT NULL,
-  `TipoUsuario` varchar(10) NOT NULL
+  `TipoUsuario` varchar(10) NOT NULL,
+  `CantidadCursos` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `profesor`
 --
 
-INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`) VALUES
-(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro'),
-(5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro'),
-(6, 'LUIS FELIPE MORALES HERRERA', 'San Benito', 80502778, '818415', 4097444228826, 'luismorales@yahoo.com', 'Maestro'),
-(7, 'GILDA BEATRIZ RUIZ CASTILLO', 'Flores', 35849960, '810482', 2762446012347, 'gildacastillo@yahoo.com', 'Maestro'),
-(8, 'ROSA GARAY SANCHEZ', 'San Francisco', 94952660, '395267', 2756189879029, 'garayrs@gmail.com', 'Maestro'),
-(9, 'JUAN NOE UCEDA SOTO', 'Santa Ana', 83023345, '158507', 2867853414267, 'sotojuan@yahoo.com', 'Maestro'),
-(11, 'JUAN NOE UCEDA SOTO', 'quetin', 666, '666', 666, 'quetin@gmail.com', 'Maestro');
+INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
+(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 0),
+(5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro', 0),
+(6, 'LUIS FELIPE MORALES HERRERA', 'San Benito', 80502778, '818415', 4097444228826, 'luismorales@yahoo.com', 'Maestro', 0),
+(7, 'GILDA BEATRIZ RUIZ CASTILLO', 'Flores', 35849960, '810482', 2762446012347, 'gildacastillo@yahoo.com', 'Maestro', 0),
+(8, 'ROSA GARAY SANCHEZ', 'San Francisco', 94952660, '395267', 2756189879029, 'garayrs@gmail.com', 'Maestro', 0),
+(9, 'JUAN NOE UCEDA SOTO', 'Santa Ana', 83023345, '158507', 2867853414267, 'sotojuan@yahoo.com', 'Maestro', 0),
+(11, 'JUAN NOE UCEDA SOTO', 'quetin', 4679458, '666', 666, 'quetin@gmail.com', 'Maestro', 0);
 
 -- --------------------------------------------------------
 
@@ -539,13 +544,13 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
 --
 ALTER TABLE `asignacioncursos`
-  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `carrera`
@@ -557,7 +562,7 @@ ALTER TABLE `carrera`
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `facultad`
