@@ -111,7 +111,7 @@
           }
         }
       ?>
+			<a href="index.php" class="btn btn-dark col-md-3">Regresar</a>
     </center>
-		<a href="index.php">Regresar</a>
   </body>
 </html>
