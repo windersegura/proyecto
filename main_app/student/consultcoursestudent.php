@@ -54,11 +54,18 @@
         $fila2 = $consulta2->fetch_assoc();
         $NoSemestre = $fila2['NoSemestre'];
 
+<<<<<<< Updated upstream
 				$query3 = "SELECT idAsignatura, idProfesor FROM asignatura WHERE idAlumno=$idAlumno AND idCurso=$idCurso";
         $consulta3 = $mysqli->query($query3) or die (mysql_error($mysqli));
         $fila3 = $consulta3->fetch_assoc();
         $idProfesor = $fila3['idProfesor'];
 				$idAsignatura = $fila3['idAsignatura'];
+=======
+				$query3 = "SELECT idProfesor FROM asignatura WHERE idAlumno=$idAlumno AND idCurso=$idCurso";
+        $consulta3 = $mysqli->query($query3) or die (mysql_error($mysqli));
+        $fila3 = $consulta3->fetch_assoc();
+        $idProfesor = $fila3['idProfesor'];
+>>>>>>> Stashed changes
 
 				echo "<tr>";
 					echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
@@ -76,8 +83,13 @@
 						echo "<td><center>"; echo "Sin Asignar"; echo "</center></td>";
 					}
 
+<<<<<<< Updated upstream
           echo "<td><a href='consultnotes.php?numero=".$idAsignatura."'><button type='button' name='eliminar' class='btn btn-danger'>Ver El Punto Del Curso</Button></a></td>";
 					echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='modificar' class='btn btn-success'>Imprimir</Button></a></td>";
+=======
+          echo "<td><a href='#?numero=".$idCurso."'><button type='button' name='eliminar' class='btn btn-danger'>Ver El Punto Del Curso</Button></a></td>";
+					echo "<td><a href='#?numero=".$idCurso."'><button type='button' name='modificar' class='btn btn-success'>Imprimir</Button></a></td>";
+>>>>>>> Stashed changes
 				echo "<tr>";
 			}?>
 			</table>

@@ -20,6 +20,7 @@
 		header('Location: ../../');
 	}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,40 +85,34 @@
 		<center><br><h1>LISTADO DE CARERRAS</h1><br><br>
 
 		<table class="table">
-			<th>Id.</th>
-			<th>Nombre De La Carrera</th>
-			<th>Duracion En Años</th>
-			<th>Código De La Carrera</th>
+			<th><center>Id.</center></th>
+			<th><center>Nombre De La Facultad</center></th>
 
-			<th><a href="newcareer.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
+			<th><a href="newfaculty.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
 
 			<?php
 			include "../conexion.php";
-			$busqueda = "SELECT * FROM carrera";
+			$busqueda = "SELECT * FROM facultad";
 			$busqueda = $mysqli->query($busqueda) or die (mysql_error($mysqli));
 			while($fila=$busqueda->fetch_assoc())
 			{
-				$idCarrera = mysqli_real_escape_string($mysqli,$fila['idCarrera']);
-				$NombreCarrera = mysqli_real_escape_string($mysqli,$fila['NombreCarrera']);
-				$Duracion = mysqli_real_escape_string($mysqli,$fila['Duracion']);
-				$codigocarrera = mysqli_real_escape_string($mysqli,$fila['CodCarrera']);
+				$idFacultad = mysqli_real_escape_string($mysqli,$fila['idFacultad']);
+				$NombreFacultad = mysqli_real_escape_string($mysqli,$fila['Nombre']);
 
 				echo "<tr>";
-					echo "<td><center>"; echo $idCarrera; echo "</center></td>";
-					echo "<td><center>"; echo $NombreCarrera; echo "</center></td>";
-					echo "<td><center>"; echo $Duracion; echo "</center></td>";
-					echo "<td><center>"; echo $codigocarrera; echo "</center></td>";
+					echo "<td><center>"; echo $idFacultad; echo "</center></td>";
+					echo "<td><center>"; echo $NombreFacultad; echo "</center></td>";
 
-					echo "<td><a href='deletecareer.php?numero=".$idCarrera."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
-					echo "<td><a href='modifycareer.php?numero=".$idCarrera."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
-					echo "<td><a href='#?numero=".$idCarrera."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
+					echo "<td><a href='deletefaculty.php?numero=".$idFacultad."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
+					echo "<td><a href='modifyfaculty.php?numero=".$idFacultad."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
+					echo "<td><a href='#?numero=".$idFacultad."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
 				echo "<tr>";
 			}?>
 			</table>
 
 			<?php
-			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger'>Volver</Button></a>"
+			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-dark col-md-3'>Volver</Button></a>"
 
 			?>
 		</center>
