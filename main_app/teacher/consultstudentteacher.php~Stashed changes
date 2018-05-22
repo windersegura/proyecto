@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream:main_app/student/index.php
+
 <?php
 	session_start();
 	//si la variable de session existe de lo contrario no se hace nada
@@ -101,7 +101,8 @@ $idAlumno = $_SESSION['usuario']['idAlumno'];
 		</center>
 	</body>
 </html>
-=======
+
+
 <?php
 	session_start();
 	//si la variable de session existe de lo contrario no se hace nada
@@ -132,5 +133,7 @@ $idAlumno = $_SESSION['usuario']['idAlumno'];
 			<h1>Control De Notas Del Estudiante</h1>
 		</center>
 	</body>
+
 </html>
->>>>>>> Stashed changes:main_app/teacher/consultstudentteacher.php
+
+
