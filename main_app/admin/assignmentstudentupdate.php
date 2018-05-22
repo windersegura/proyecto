@@ -35,8 +35,55 @@ $fila2 = $resultado2->fetch_assoc();
 $idSemestre = $fila2['idSemestre'];
 
 
-$query4 ="INSERT INTO asignacioncursos VALUES (NULL, '$idAlumno', '$idCurso', '0', '$idSemestre', '$idCarrera')";
+$query4 ="INSERT INTO asignacioncursos VALUES (NULL, '$idAlumno', '$idCurso', '0', '$idSemestre', '$idCarrera',0)";
 $mysqli->query($query4);
+
+$query5 = "SELECT * FROM alumnos WHERE idProfesor=$idAlumno";
+$resultado5 = $mysqli->query($query5);
+while($fila5=$resultado5->fetch_assoc())
+{
+  include '../conexion.php';
+  $idalumno = mysqli_real_escape_string($mysqli,$fila5['idAlumno']);
+  $nombre = mysqli_real_escape_string($mysqli,$fila5['Nombre']);
+  $edad = mysqli_real_escape_string($mysqli,$fila5['Edad']);
+  $direccion = mysqli_real_escape_string($mysqli,$fila5['Direccion']);
+  $telefono = mysqli_real_escape_string($mysqli,$fila5['Telefono']);
+  $sexo = mysqli_real_escape_string($mysqli,$fila5['Sexo']);
+  $dpi = mysqli_real_escape_string($mysqli,$fila5['DPI']);
+  $password = mysqli_real_escape_string($mysqli,$fila5['Password']);
+  $correo = mysqli_real_escape_string($mysqli,$fila5['Correo']);
+  $tipo = mysqli_real_escape_string($mysqli,$fila5['TipoUsuario']);
+  $cantidadcursos = mysqli_real_escape_string($mysqli,$fila5['CantidadCursos']);
+
+  if ($cantidadcursos==0)
+  {
+    $cantidadcursos=1;
+  }
+  else if ($cantidadcursos==1)
+  {
+    $cantidadcursos=2;
+  }
+  else if ($cantidadcursos==2)
+  {
+    $cantidadcursos=3;
+  }
+  else if ($cantidadcursos==3)
+  {
+    $cantidadcursos=4;
+  }
+  else if ($cantidadcursos==4)
+  {
+    $cantidadcursos=5;
+  }
+  else if ($cantidadcursos==5)
+  {
+    $cantidadcursos=6;
+  }
+
+  $query6="UPDATE alumnos SET idAlumno ='".$idalumno."', Nombre ='".$nombre."', Edad ='".$edad."', Direccion ='".$direccion."', Telefono ='".$telefono."', Sexo='".$sexo."', DPI ='".$dpi."', Password ='".$password."', TipoUsuario='".$tipo."', Correo ='".$correo."',CantidadCursos ='".$cantidadcursos."' WHERE idAlumno='".$idalumno."' ";
+  $mysqli->query($query6) or die ("Error al actualizar datos".mysqli_error($mysqli));
+}
+
 $mysqli->close();
 
 header('Location: index.php')

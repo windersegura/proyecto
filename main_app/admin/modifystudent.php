@@ -26,21 +26,23 @@
 	function consultaprod( $no_prod )
 	{
 		include '../conexion.php';
-        $sentencia="SELECT * FROM alumnos WHERE idAlumno='".$no_prod."' ";
-        $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
-        $fila=$resultado->fetch_assoc();
+    $sentencia="SELECT * FROM alumnos WHERE idAlumno='".$no_prod."' ";
+    $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+    $fila=$resultado->fetch_assoc();
 
         return
-		[   $fila['idAlumno'],
+		[
+			$fila['idAlumno'],
 			$fila['Nombre'],
-            $fila['Edad'],
-            $fila['Direccion'],
+      $fila['Edad'],
+      $fila['Direccion'],
 			$fila['Telefono'],
 			$fila['Sexo'],
 			$fila['DPI'],
-            $fila['Password'],
+      $fila['Password'],
 			$fila['TipoUsuario'],
 			$fila['Correo'],
+			$fila['CantidadCursos'],
 		];
 
 	}
@@ -121,6 +123,7 @@
 						<label>Correo Electronico<span><em>(requerido)</em></span></label><br>
 		        <input type="mail" pattern="[0-9A-Za-z_-@.]{1,35}" name="correo" class="form-input form-control" placeholder="Su Correo" value="<?php echo $consulta[9]?>" required/>
 					</div>
+					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[10]?>">
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 

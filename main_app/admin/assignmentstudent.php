@@ -98,7 +98,17 @@
             $edad = mysqli_real_escape_string($mysqli,$fila['Edad']);
             $dpi = mysqli_real_escape_string($mysqli,$fila['DPI']);
             $correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
-            echo '<h3>'.'<a href="assignmentstudent2.php?numero='.$idalumno.'">'.$nombre.'</h3></a><p> '.$edad.' '.$dpi.' '.$correo.'</p><br>';
+						$cantidadcursos = mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
+
+						if ($cantidadcursos != 6) {
+							echo '<h3>'.'<a href="assignmentstudent2.php?numero='.$idalumno.'">'.$nombre.'</h3></a><p> '.$edad.' '.$dpi.' '.$correo.'</p><br>';
+						}
+						else
+						{
+							echo '<h3>'.$nombre.'</h3>';
+							echo '<p>No Se Pueden Asignar Mas Curso Porque El Alumno Alcanzo La Maxima Cantidad De Cursos</p>';
+						}
+
 
           }
         }

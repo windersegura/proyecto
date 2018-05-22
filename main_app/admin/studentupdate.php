@@ -1,4 +1,4 @@
-<?php  
+<?php
 	require "../conexion.php";
 	require "../delete_accents.php";
 
@@ -12,11 +12,11 @@
 			header("Location: ../secretary/");
 		}
 
-		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin") 		
+		else   if ($_SESSION['usuario']['TipoUsuario'] != "Admin")
 		{
 			header("Location: ../salir.php");
 		}
-		
+
 	}
 	else
 	{
@@ -34,14 +34,14 @@
 	$tipo=$_POST['tipo'];
 	$correo=$_POST['correo'];
 
-	
+
 	$nombre1 = eliminar_simbolos($nombre);
 	$nombre1=strtoupper($nombre1);
 
 	//confirmacion que todos los datos esten llenos
 	$req = (strlen($nombre1)*strlen($edad)*strlen($direccion)*strlen($telefono)*strlen($sexo)*strlen($dpi)*strlen($password)*strlen($tipo)*strlen($correo)) or die("No están llenos los espacios");
 
-	$query = "INSERT INTO alumnos VALUES (NULL, '$nombre1','$edad','$direccion','$telefono','$sexo','$dpi','$password','$correo','$tipo')";
+	$query = "INSERT INTO alumnos VALUES (NULL, '$nombre1','$edad','$direccion','$telefono','$sexo','$dpi','$password','$correo','$tipo',0)";
 
 	$mysqli->query($query);
 

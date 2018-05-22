@@ -22,19 +22,20 @@ $consulta=consultaprod($_GET['numero']);
 function consultaprod( $no_prod )
 {
   include '../conexion.php';
-      $sentencia="SELECT * FROM alumnos WHERE idAlumno='".$no_prod."' ";
-      $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
-      $fila=$resultado->fetch_assoc();
+  $sentencia="SELECT * FROM alumnos WHERE idAlumno='".$no_prod."' ";
+  $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+  $fila=$resultado->fetch_assoc();
 
       return
-  [   $fila['idAlumno'],
+  [
+		$fila['idAlumno'],
     $fila['Nombre'],
-          $fila['Edad'],
-          $fila['Direccion'],
+    $fila['Edad'],
+    $fila['Direccion'],
     $fila['Telefono'],
     $fila['Sexo'],
     $fila['DPI'],
-          $fila['Password'],
+    $fila['Password'],
     $fila['TipoUsuario'],
     $fila['Correo'],
   ];

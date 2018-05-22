@@ -97,7 +97,17 @@
 
             $dpi = mysqli_real_escape_string($mysqli,$fila['DPI']);
             $correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
-            echo '<h3>'.'<a href="assignmentteacher2.php?numero='.$idProfesor.'">'.$nombre.'</h3></a><p>  '.$dpi.' '.$correo.'</p><br>';
+						$cantidadcursos = mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
+						if ($cantidadcursos != 4)
+						{
+							echo '<h3>'.'<a href="assignmentteacher2.php?numero='.$idProfesor.'">'.$nombre.'</h3></a><p>  '.$dpi.' '.$correo.'</p><br>';
+						}
+						else
+						{
+							echo '<h3>'.$nombre.'</h3>';
+								echo '<p>No Se Pueden Asignar Mas Curso Porque El Profesor Alcanzo La Maxima Cantidad De Cursos</p>';
+						}
+
           }
         }
       ?>

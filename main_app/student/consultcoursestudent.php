@@ -25,7 +25,7 @@
 </head>
 	<body>
 
-		<center><br><h1>LISTADO DE  TU CURSOS ASIGNADOS</h1><br><br>
+		<center><br><h1>LISTADO DE TUS CURSOS ASIGNADOS</h1><br><br>
 
 		<table class="table">
 			<th><center>Curso</center></th>
