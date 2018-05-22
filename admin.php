@@ -57,13 +57,14 @@
 										<input class="form-input form-control" type="password" name="passlg" placeholder="Contraseña" pattern="[A-Za-z0-9_-.]{1,20}" required/>
 									</div>
 <br>
-									<input type="submit" class="btn btn-primary col-md-4" value="Iniciar Sesion">
+									<input type="submit" class="btn btn-primary col-md-3" value="Iniciar Sesion">
+									<a href="index.php" class="btn btn-dark col-md-3">Volver</a>
 								</form>
 
 							</div>
 						</center>
 
-						<a href="index.php">Volver</a>
+
 
 			</body>
 		</main>

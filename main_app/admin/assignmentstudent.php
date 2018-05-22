@@ -106,7 +106,7 @@
 							echo '<h3>'.'<a href="assignmentstudent2.php?numero='.$idalumno.'">'.$nombre.'</h3></a><p> '.$edad.' '.$dpi.' '.$correo.'</p><br>';
 							if ($cantidadcursos==4)
 							{
-								echo "<spam style=' color: red'>$nombre Se Encuentra Al Limite De Cursos Permitidos</spam>";
+								echo "<spam style=' color: red'>$nombre Se Encuentra Cerca Del Limite De Cursos Permitidos</spam>";
 							}
 						}
 						else

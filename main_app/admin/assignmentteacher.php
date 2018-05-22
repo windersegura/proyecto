@@ -34,6 +34,7 @@
     <meta charset="utf-8">
     <title>Buscador Maestro Para La Asignacion</title>
     <link rel="stylesheet" href="../../css/main.css"/>
+		<link rel="stylesheet" href="../../css/bootstrap.css"/>
     <script type="text/javascript">
       function active()
       {
@@ -101,6 +102,10 @@
 						if ($cantidadcursos != 4)
 						{
 							echo '<h3>'.'<a href="assignmentteacher2.php?numero='.$idProfesor.'">'.$nombre.'</h3></a><p>  '.$dpi.' '.$correo.'</p><br>';
+							if ($cantidadcursos==3)
+							{
+								echo "<spam style=' color: red'>$nombre Se Encuentra Cerca Del Limite De Cursos Permitidos</spam>";
+							}
 						}
 						else
 						{

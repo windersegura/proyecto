@@ -23,7 +23,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-  <link rel="stylesheet" href="../../css/bootstrap.css">
+  	<link rel="stylesheet" href="../../css/bootstrap.css">
+		<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <title>Formulario de Pagos</title>
   </head>
   <body>
@@ -80,7 +82,7 @@
 
                 <label>Numero de Tarjeta <span><em>(requerido)</em></span></label><br>
             <input type="text" pattern="[0-20]{1,45}" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
-                
+
               </div>
 
           <div class="col-md-3">

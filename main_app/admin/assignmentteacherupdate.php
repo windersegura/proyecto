@@ -23,6 +23,21 @@
   $carrera = $_POST['cargar_carrera'];//recibo el id carrera
   $semestre = $_POST['cargar_semestre'];//no recibo id solo recibo el numero del semestre
   $idCurso = $_POST['cargar_curso'];//recibo id del curso
+  include '../conexion.php';
+
+  $query0 = "SELECT idProfesor,idCurso FROM asignatura WHERE idCurso=$idCurso";
+  $resultado0 = $mysqli->query($query0);
+  while ($fila0 = $resultado0->fetch_assoc())
+  {
+    if ($fila0['idCurso']==$idCurso && $fila0['idProfesor']==$idTeacher)
+    {
+      echo '<script type="text/javascript">
+          alert("¡El Curso Ya Fue Asignado, Seleccione Otro!");
+          window.location.href="assignmentteacher.php";
+          </script>';
+          exit();
+    }
+  }
 
   $query ="SELECT idCarrera FROM carrera WHERE idCarrera =$carrera";
   $resultado = $mysqli->query($query);

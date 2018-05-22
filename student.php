@@ -52,8 +52,8 @@
 				<form action="" id="formlgstudent">
 					<input type="text" name="usuariolgstudent" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
 					<input type="password" name="passlgstudent" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" required/><br><br>
-					<a class="btn btn-dark col-md-2" href="index.php">Volver</a>
-					<input type="submit" class="btn btn-danger col-md-2" value="INICIAR SESION">
+					<input type="submit" class="btn btn-danger col-md-3" value="INICIAR SESION">
+					<a class="btn btn-dark col-md-3" href="index.php">Volver</a>
 				</form>
 
 			</div>
