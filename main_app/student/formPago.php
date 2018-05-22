@@ -22,6 +22,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
     <title>Formulario de Pagos</title>
   </head>
   <body>
@@ -68,9 +70,27 @@
         <div class="form-group" width="700">
 
             <form action="socket.php" method="post">
+
+         <div class="col-md-3">
+            <label>Identificacion<span><em>(requerido)</em></span></label><br>
+            <input type="text" pattern="[0-9]{1,45}" name="Id" class="form-input form-control" placeholder="Ingrese su ID" required/>
+          </div>
+
               <div class="col-md-4">
+
+                <label>Numero de Tarjeta <span><em>(requerido)</em></span></label><br>
+            <input type="text" pattern="[0-20]{1,45}" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
                 
               </div>
+
+          <div class="col-md-3">
+            <label>Codigo de Seguridad<span><em>(requerido)</em></span></label><br>
+            <input type="text" pattern="[0-9]{1,3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
+          </div>
+
+          <input class="btn__submit btn btn-dark col-md-3" type="submit" value="Pagar">
+          <a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+
 
             </form>
 
