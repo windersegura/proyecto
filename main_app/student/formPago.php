@@ -61,12 +61,18 @@
       </nav>
     </div>
 
+
     <center>
 
         <h3>Ingrese los Datos Requeridos</h3>
         <div class="form-group" width="700">
 
             <form action="socket.php" method="post">
+              <div class="col-md-4">
+                
+              </div>
+
+            </form>
 
 
 
