@@ -1,7 +1,7 @@
 <?php
 	require_once 'conexion.php';
 
-	function getCarrera()
+	function getHora()
 	{
 		$mysqli = getConn();
 		$query = 'SELECT * FROM carrera';
@@ -14,5 +14,5 @@
 
 		return $listas;
 	}
-	echo getCarrera();
+	echo getHora();
 ?>

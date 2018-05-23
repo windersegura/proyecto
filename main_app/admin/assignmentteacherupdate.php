@@ -23,8 +23,20 @@
   $carrera = $_POST['cargar_carrera'];//recibo el id carrera
   $semestre = $_POST['cargar_semestre'];//no recibo id solo recibo el numero del semestre
   $idCurso = $_POST['cargar_curso'];//recibo id del curso
+  $idHora = $_POST['cargar_hora'];//recibo el id de la hora
   include '../conexion.php';
 
+
+  //VALIDACION QUE SI LOS CAMPOS ESTAN VACIOS SE REGRESE
+  if ($idHora == "" || $idTeacher =="" || $carrera =="" || $semestre=="" || $idCurso=="")
+  {
+    echo '<script type="text/javascript">
+        alert("¡Alguno De Los Campos Estam Vacios, Intente De Nuevo!");
+        window.location.href="assignmentteacher.php";
+        </script>';
+        exit();
+  }
+  //VALIDACION SI EL CURSO YA HABIA SIDO SIGNADO ANTERIORMENTE
   $query0 = "SELECT idProfesor,idCurso FROM asignatura WHERE idCurso=$idCurso";
   $resultado0 = $mysqli->query($query0);
   while ($fila0 = $resultado0->fetch_assoc())
@@ -38,6 +50,45 @@
           exit();
     }
   }
+
+  //VALIDACION SI EL EL HORARIO YA HABIA SIDO ASIGNADO ANTERIORMENTE Y SI NO SE GUARDE EN LA TABLA DEL ALUMNO
+  //PARA QUE EL ALUMNO LO PUEDA CONSULTAR
+  $query_0 = "SELECT idProfesor,idHorario FROM asignatura WHERE idHorario=$idHora";
+  $resultado_0 = $mysqli->query($query_0);
+  while ($fila_0 = $resultado_0->fetch_assoc())
+  {
+    if ($fila_0['idHorario']==$idHora && $fila_0['idProfesor']==$idTeacher)
+    {
+      echo '<script type="text/javascript">
+          alert("¡El Horario Ya Fue Asignado, Seleccione Otro!");
+          window.location.href="assignmentteacher.php";
+          </script>';
+          exit();
+    }
+
+  }
+
+  //SE GUARDA EN LA TABLA DEL ALUMNO EL HORARIO PARA QUE EL ALUMNO PUEDA CONSULTAR
+  $query_01 = "SELECT IdCurso2,idHorario FROM asignacioncursos WHERE IdCurso2=$idCurso";
+  $resultado_01 = $mysqli->query($query_01);
+  while ($fila_01 = $resultado_01->fetch_assoc())
+  {
+    if ($fila_01['IdCurso2']==$idCurso && $fila_0['idHorario'] == 0)
+    {
+      $query_010 = "UPDATE asignacioncursos SET idHorario=$idHora WHERE asignacioncursos.IdCurso2=$idCurso";
+      $resultado_010 = $mysqli->query($query_010);
+    }
+    else
+    {
+      echo '<script type="text/javascript">
+          alert("¡El Horario Ya Fue Asignado, Seleccione Otro!");
+          window.location.href="assignmentteacher.php";
+          </script>';
+          exit();
+    }
+
+  }
+
 
   $query ="SELECT idCarrera FROM carrera WHERE idCarrera =$carrera";
   $resultado = $mysqli->query($query);
@@ -54,10 +105,11 @@
   while($fila3 = $resultado3->fetch_assoc())
   {
     $idAlumno = $fila3['IdAlumno4'];
-    $query4 ="INSERT INTO asignatura VALUES (NULL, '$idCurso', '0', '0', '0', '0', '$idAlumno', '$idTeacher', '$idCarrera', '$idSemestre','0')";
+    $query4 ="INSERT INTO asignatura VALUES (NULL, '$idCurso', '0', '0', '0', '0', '$idAlumno', '$idTeacher', '$idCarrera', '$idSemestre','$idHora')";
     $mysqli->query($query4);
   }
 
+  //SE VA ALMACENANDO LA CANTIDAD DE CURSOS QUE SE LE ASIGNARION AL PROFESOR
   $query5 = "SELECT * FROM profesor WHERE idProfesor=$idTeacher";
   $resultado5 = $mysqli->query($query5);
   while($fila5=$resultado5->fetch_assoc())
@@ -73,7 +125,11 @@
     $tipo = $fila5['TipoUsuario'];
     $cantidadcursos = $fila5['CantidadCursos'];
 
-    if ($cantidadcursos==0)
+    if ($cantidadcursos==NULL)
+    {
+      $cantidadcursos=0;
+    }
+    else if ($cantidadcursos==0)
     {
       $cantidadcursos=1;
     }

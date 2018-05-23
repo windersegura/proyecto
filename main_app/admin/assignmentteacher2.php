@@ -77,7 +77,7 @@
       ?>
     </table>
 
-	
+
     <?php
       require '../conexion.php';
       $query2 = "SELECT NombreCarrera, idCarrera FROM carrera ORDER BY idCarrera ASC";
@@ -91,6 +91,28 @@
 				<select name="cargar_carrera" id="cargar_carrera" class="col-md-4 form-control"></select><br>
 	      <select name="cargar_semestre" id="cargar_semestre"  class="col-md-4 form-control"></select><br>
 	      <select name="cargar_curso" id="cargar_curso"  class="col-md-4 form-control"></select><br>
+				<?php
+				echo "<select name='cargar_hora' id='cargar_hora'  class='col-md-4 form-control'>";
+					$query3 = "SELECT * FROM horarios";
+					$resultado3 = $mysqli->query($query3);
+					echo '<option value="">Elige El Horario</option>';
+					while($row = $resultado3->fetch_array(MYSQLI_ASSOC))
+					{
+						if ($row['Periodo']=="Receso")
+						{
+							echo "<option value=''><bold> Receso</bold> </option>";
+						}
+						else
+						{
+							echo "<option value='$row[idHorario]'>$row[Hora] || $row[Jornada]</option>";
+						}
+
+					}
+
+				echo "</select><br>";
+
+				?>
+
 				<input type="submit" name="" value="ASIGNAR" class="btn btn-dark col-md-3">
 				<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
 	    </form>

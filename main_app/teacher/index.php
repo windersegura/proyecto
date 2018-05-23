@@ -58,6 +58,7 @@
 						          <a class="dropdown-item" href="consultstudentteacher.php">Ingresar Notas Del Estudiante</a>
 						          <a class="dropdown-item" href="#">Consultar Curso</a>
 						          <a class="dropdown-item" href="#">Consultar Alumno</a>
+											<a class="dropdown-item" href="checkschedule.php">Consultar Horario</a>
 						        </div>
 					      	</li>
 					      	<li class="nav-item">
@@ -75,7 +76,7 @@
 		  </nav>
 		</div>
 
-		
+
 		<center><br>
 			<h1>BIENVENIDO <?php echo $consulta[1]?></h1>
 		</center>

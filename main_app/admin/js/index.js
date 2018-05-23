@@ -11,9 +11,9 @@ $(document).ready(function()
 		alert('Hubo Un Error Al Cargar Carrera');
 	})
 
-	$('#cargar_carrera').on('change', function() 
+	$('#cargar_carrera').on('change', function()
 	{	var id = $('#cargar_carrera').val();//AL SELECT SEMESTRE LE ENVIO EL CODIGO DE LA CARRERA
-		
+
 		$.ajax({
 		url: 'php/cargar_semestre.php',
 		type: 'POST',
@@ -29,11 +29,11 @@ $(document).ready(function()
 			console.log("complete");
 		});
 
-		$('#cargar_semestre').on('change', function() 
+		$('#cargar_semestre').on('change', function()
 	{	
-		var id = $('#cargar_semestre').val();//AL SELECT CURSO LE ENVIO EL NUMERO DE SEMESTRE 
+		var id = $('#cargar_semestre').val();//AL SELECT CURSO LE ENVIO EL NUMERO DE SEMESTRE
 		var id2 = $('#cargar_carrera').val();//AL SELECT CURSO LE ENVIO EL CODIGO DE LA CARRERA
-		
+
 		$.ajax({
 		url: 'php/cargar_curso.php',
 		type: 'POST',
