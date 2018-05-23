@@ -75,10 +75,7 @@
 
 
 
-           <div class="col-md-2">
-        
-            <input type="datetime"  name="fecha" class="form-input form-control" required/>
-          </div>
+          
 
          <div class="col-md-3">
             <label>Identificacion<span><em>(requerido)</em></span></label><br>
@@ -97,9 +94,32 @@
             <input type="text" pattern="[0-9]{1,3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
           </div>
 
+
+          <div class="col-md-2">
+            <label>Monto a Pagar<span><em>(requerido)</em></span></label><br>
+            <input type="text" pattern="[0-9]{1,3}" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="Tipo" class="col-sm-2 control-label">Tipo Transaccion</label>
+            <div class="col-sm-1">
+
+            <select class="form-control" id="trx" name="codigo">
+              
+                <option> 00 </option>
+                <option> 01 </option>
+                <option> 02 </option>
+
+            </select>
+
+            </div>
+          </div>
+
+
+          <div>
           <input class="btn__submit btn btn-dark col-md-3" type="submit" value="Pagar">
           <a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
-
+          </div>
 
             </form>
 
