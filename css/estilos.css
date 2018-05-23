@@ -24,6 +24,13 @@ a{
 
 }
 
+.slider-wrapper{
+
+  list-style-type: none;
+
+}
+
+
 
 
 
@@ -72,12 +79,6 @@ top: 0;
   font-size: 110px;
   text-align: center;
   margin-top: -17px;
-
-}
-
-.slider-wrapper{
-
-  list-style-type: none;
 
 }
 
