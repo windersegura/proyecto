@@ -73,6 +73,13 @@
 
             <form action="socket_cliente.php" method="post">
 
+
+
+           <div class="col-md-2">
+        
+            <input type="datetime"  name="fecha" class="form-input form-control" required/>
+          </div>
+
          <div class="col-md-3">
             <label>Identificacion<span><em>(requerido)</em></span></label><br>
             <input type="text" pattern="[0-9]{1,45}" name="Id" class="form-input form-control" placeholder="Ingrese su ID" required/>
@@ -85,7 +92,7 @@
 
               </div>
 
-          <div class="col-md-3">
+          <div class="col-md-5">
             <label>Codigo de Seguridad<span><em>(requerido)</em></span></label><br>
             <input type="text" pattern="[0-9]{1,3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
           </div>
