@@ -1,3 +1,31 @@
+*{
+
+  margin: 0;
+  padding: =0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing:border-box;
+
+}
+
+body{
+
+  background: #242c38;
+  font-family: 'Roboto', Arial, Tahoma, Sans-serif, Verdana, Helvetica;
+  font-size: 62.5%;
+
+
+}
+
+a{
+
+  color: #00c5b9;
+  text-decoration: none;
+
+}
+
+
+
 
 #titulo_principal{
   font-family: 'Didact Gothic', sans-serif;
@@ -46,3 +74,10 @@ top: 0;
   margin-top: -17px;
 
 }
+
+.slider-wrapper{
+
+  list-style-type: none;
+
+}
+
