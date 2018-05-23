@@ -1,20 +1,20 @@
 <?php
-/*
-*http://www.php.net/manual/en/ref.sockets.php
-*/
 
-$host = "127.0.0.1";
+set_time_limit(0);
 
-$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-$puerto = 65500;
+$contenido = array($banco, $trx, $fecha, $hora, $numTarjeta, $institucion, $monto, $estado, $codRef);
 
-if (socket_connect($socket, $host, $puerto))
-{
-echo "\nConexion Exitosa, puerto: " . $puerto;
-}
-else
-{
-echo "\nLa conexion TCP no se pudo realizar, puerto: ".$puerto;
-}
-socket_close($socket);
+$ip= '192.168.1.10';
+
+$puerto= '9999';
+
+$socket= socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+
+socket_bind($socket, $ip, $puerto) or die ('No se puede vincular el puerto con la direccion ip');
+
+echo socket_strerror(socket_last_error());
+
+socket_listen($socket);
+
+
 ?>
