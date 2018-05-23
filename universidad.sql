@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2018 a las 10:36:21
+-- Tiempo de generación: 23-05-2018 a las 08:30:44
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -72,7 +72,7 @@ CREATE TABLE `alumnos` (
 
 INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
 (1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 5),
-(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno', 0),
+(2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno', 1),
 (13, 'MARIA ANGELES MARTIN LEAL', 19, 'San Luis', 12340999, 'Femenino', 8967454152678, '122334', 'doamari@gmail.com', 'Alumno', 0),
 (14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno', 0),
 (15, 'FREDY HENRY SUAREZ CERON', 20, 'San Benito', 50786922, 'Masculino', 3245678909123, '135955', 'suarez@gmail.com', 'Alumno', 0),
@@ -95,7 +95,7 @@ INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `S
 (32, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
 (33, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
 (34, 'CARLOS ALFONSO LUQUE VILLAVICENCIO', 26, 'Santa Ana', 35143850, 'Masculino', 5934783179312, '955681', 'carlosalfonso66@gmail.com', 'Alumno', 0),
-(35, 'JAVIER GUTIERREZ VELEZ', 19, 'San Benito', 64631650, 'Masculino', 7898018538951, '595311', 'javier@gmail.com', 'Alumno', 0),
+(35, 'JAVIER GUTIERREZ VELEZ', 19, 'San Benito', 64631650, 'Masculino', 7898018538951, '595311', 'javier@gmail.com', 'Alumno', 1),
 (36, 'ROGER DIAZ ROJAS', 20, 'Santa Elena', 61673022, 'Masculino', 7459319766610, '385693', 'rogerdr@gmail.com', 'Alumno', 0),
 (37, 'ELENA CARPIO SALAZAR', 19, 'Santa Elena', 31501377, 'Femenino', 7887360554188, '599484', 'elenacarpio@gmail.com', 'Alumno', 0),
 (38, 'PATRICIO RIVERA OCHOA', 23, 'Poptun', 96233426, 'Masculino', 1644069910049, '113858', 'riveraochoa@hotmail.com', 'Alumno', 0),
@@ -144,11 +144,13 @@ CREATE TABLE `asignacioncursos` (
 --
 
 INSERT INTO `asignacioncursos` (`idAsignacion`, `IdAlumno4`, `IdCurso2`, `Solvencia`, `idSemestre2`, `idCarrera3`, `CursoSuperado`, `idHorario`) VALUES
-(37, 1, 8, 0, 6, 7, 0, 0),
-(38, 1, 11, 0, 6, 7, 0, 0),
-(39, 1, 12, 0, 6, 7, 0, 0),
-(40, 1, 13, 0, 6, 7, 0, 0),
-(41, 1, 14, 0, 6, 7, 0, 0);
+(42, 1, 8, 0, 6, 7, 0, 11),
+(43, 1, 11, 0, 6, 7, 0, 0),
+(44, 1, 12, 0, 6, 7, 0, 0),
+(45, 1, 13, 0, 6, 7, 0, 0),
+(46, 1, 14, 0, 6, 7, 0, 0),
+(47, 2, 8, 0, 6, 7, 0, 11),
+(48, 35, 8, 0, 6, 7, 0, 11);
 
 -- --------------------------------------------------------
 
@@ -175,9 +177,9 @@ CREATE TABLE `asignatura` (
 --
 
 INSERT INTO `asignatura` (`idAsignatura`, `idCurso`, `PrimerPar`, `SegundoPar`, `Tareas`, `ParcialFinal`, `idAlumno`, `idProfesor`, `idCarrera`, `idSemestre`, `idHorario`) VALUES
-(17, 8, 0, 0, 0, 0, 1, 1, 7, 6, 0),
-(18, 13, 0, 0, 0, 0, 1, 1, 7, 6, 0),
-(19, 11, 0, 0, 0, 0, 1, 1, 7, 6, 0);
+(23, 8, 0, 0, 0, 0, 1, 1, 7, 6, 11),
+(24, 8, 0, 0, 0, 0, 2, 1, 7, 6, 11),
+(25, 8, 0, 0, 0, 0, 35, 1, 7, 6, 11);
 
 -- --------------------------------------------------------
 
@@ -430,7 +432,7 @@ CREATE TABLE `profesor` (
 --
 
 INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
-(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 4),
+(1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 1),
 (5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro', 0),
 (6, 'LUIS FELIPE MORALES HERRERA', 'San Benito', 80502778, '818415', 4097444228826, 'luismorales@yahoo.com', 'Maestro', 0),
 (7, 'GILDA BEATRIZ RUIZ CASTILLO', 'Flores', 35849960, '810482', 2762446012347, 'gildacastillo@yahoo.com', 'Maestro', 0),
@@ -603,13 +605,13 @@ ALTER TABLE `alumnos`
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
 --
 ALTER TABLE `asignacioncursos`
-  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `carrera`
