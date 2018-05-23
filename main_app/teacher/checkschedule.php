@@ -32,49 +32,45 @@
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
         <?php
 			    include '../conexion.php';
-			    $query="SELECT * FROM asignatura WHERE idProfesor=$idProfesor";
-			    $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
-			    while($fila=$resultado->fetch_assoc())
-					{
-				    $idAsignatura = mysqli_real_escape_string($mysqli,$fila['idAsignatura']);
-						$idCurso = mysqli_real_escape_string($mysqli,$fila['idCurso']);
-						$PrimerPar = mysqli_real_escape_string($mysqli,$fila['PrimerPar']);
-						$SegundoPar = mysqli_real_escape_string($mysqli,$fila['SegundoPar']);
-						$Tareas = mysqli_real_escape_string($mysqli,$fila['Tareas']);
-						$ParcialFinal = mysqli_real_escape_string($mysqli,$fila['ParcialFinal']);
-						$idAlumno = mysqli_real_escape_string($mysqli,$fila['idAlumno']);
-						$idProfesor = mysqli_real_escape_string($mysqli,$fila['idProfesor']);
-            $idCarrera = mysqli_real_escape_string($mysqli,$fila['idCarrera']);
-            $idSemestre = mysqli_real_escape_string($mysqli,$fila['idSemestre']);
-            $idHorario = mysqli_real_escape_string($mysqli,$fila['idHorario']);
 
-						$query1 = "SELECT Nombre FROM curso WHERE idCurso=$idCurso";
-						$consulta1 =$mysqli->query($query1);
-						$fila1=$consulta1->fetch_assoc();
-						$NombreCurso =$fila1['Nombre'];
-						echo "<tr>";
-						echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
+			    $query="SELECT idCurso,idCarrera, idProfesor,idSemestre,idHorario FROM asignatura WHERE idProfesor=$idProfesor GROUP BY idCurso, idHorario";
+  			    $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
+  			    while($fila=$resultado->fetch_assoc())
+  					{
 
-            $query2 = "SELECT NoSemestre FROM semestre WHERE idSemestre=$idSemestre";
-						$consulta2 =$mysqli->query($query2);
-						$fila2=$consulta2->fetch_assoc();
-						$NoSemestre =$fila2['NoSemestre'];
-						echo "<td><center>";echo $NoSemestre; echo "</center></td>";
+  						$idCurso = mysqli_real_escape_string($mysqli,$fila['idCurso']);
+  						$idProfesor = mysqli_real_escape_string($mysqli,$fila['idProfesor']);
+              $idCarrera = mysqli_real_escape_string($mysqli,$fila['idCarrera']);
+              $idSemestre = mysqli_real_escape_string($mysqli,$fila['idSemestre']);
+              $idHorario = mysqli_real_escape_string($mysqli,$fila['idHorario']);
 
-            $query3 = "SELECT NombreCarrera FROM carrera WHERE idCarrera=$idCarrera";
-						$consulta3 =$mysqli->query($query3);
-						$fila3=$consulta3->fetch_assoc();
-						$NombreCarrera =$fila3['NombreCarrera'];
-						echo "<td><center>";echo $NombreCarrera; echo "</center></td>";
+  						$query1 = "SELECT Nombre FROM curso WHERE idCurso=$idCurso";
+  						$consulta1 =$mysqli->query($query1);
+  						$fila1=$consulta1->fetch_assoc();
+  						$NombreCurso =$fila1['Nombre'];
+  						echo "<tr>";
+  						echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
 
-						$query4 = "SELECT Hora,Jornada FROM horarios WHERE idHorario=$idHorario";
-						$consulta4 =$mysqli->query($query4);
-						$fila4=$consulta4->fetch_assoc();
-						$Hora =$fila4['Hora'];
-						$Jornada =$fila4['Jornada'];
-						echo "<td><center>"; echo $Hora; echo "</center></td>";
-						echo "<td><center>"; echo $Jornada; echo "</center></td>";
-					}
+              $query2 = "SELECT NoSemestre FROM semestre WHERE idSemestre=$idSemestre";
+  						$consulta2 =$mysqli->query($query2);
+  						$fila2=$consulta2->fetch_assoc();
+  						$NoSemestre =$fila2['NoSemestre'];
+  						echo "<td><center>";echo $NoSemestre; echo "</center></td>";
+
+              $query3 = "SELECT NombreCarrera FROM carrera WHERE idCarrera=$idCarrera";
+  						$consulta3 =$mysqli->query($query3);
+  						$fila3=$consulta3->fetch_assoc();
+  						$NombreCarrera =$fila3['NombreCarrera'];
+  						echo "<td><center>";echo $NombreCarrera; echo "</center></td>";
+
+  						$query4 = "SELECT Hora,Jornada FROM horarios WHERE idHorario=$idHorario";
+  						$consulta4 =$mysqli->query($query4);
+  						$fila4=$consulta4->fetch_assoc();
+  						$Hora =$fila4['Hora'];
+  						$Jornada =$fila4['Jornada'];
+  						echo "<td><center>"; echo $Hora; echo "</center></td>";
+  						echo "<td><center>"; echo $Jornada; echo "</center></td>";
+  					}
         ?>
 
         </tr>
