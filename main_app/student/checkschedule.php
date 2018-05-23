@@ -17,28 +17,6 @@
 	}
   $idAlumno = $_SESSION['usuario']['idAlumno'];
 ?>
-<?php
-	$consulta=consultaprod($idAlumno);
-	function consultaprod( $no_prod )
-	{
-    include '../conexion.php';
-    $query="SELECT * FROM asignacioncursos WHERE IdAlumno4=$no_prod";
-    $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
-    $fila=$resultado->fetch_assoc();
-
-    return
-		[
-      $fila['idAsignacion'],
-			$fila['IdAlumno4'],
-      $fila['IdCurso2'],
-      $fila['Solvencia'],
-      $fila['idSemestre2'],
-      $fila['idCarrera3'],
-      $fila['CursoSuperado'],
-			$fila['idHorario']
-		];
-	}
-?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -58,36 +36,45 @@
 
 			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
         <?php
-        include '../conexion.php';
-          $idCurso = $consulta[2];
-          $Solvencia = $consulta[3];
-          $query1 = "SELECT Nombre FROM curso WHERE idCurso=$idCurso";
-          $consulta1 =$mysqli->query($query1);
-          $fila1=$consulta1->fetch_assoc();
-          $NombreCurso =$fila1['Nombre'];
+			    include '../conexion.php';
+			    $query="SELECT * FROM asignacioncursos WHERE IdAlumno4=$idAlumno";
+			    $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
+			    while($fila=$resultado->fetch_assoc())
+					{
+				    $idAsignacion = mysqli_real_escape_string($mysqli,$fila['idAsignacion']);
+						$IdAlumno4 = mysqli_real_escape_string($mysqli,$fila['IdAlumno4']);
+						$IdCurso2 = mysqli_real_escape_string($mysqli,$fila['IdCurso2']);
+						$Solvencia = mysqli_real_escape_string($mysqli,$fila['Solvencia']);
+						$idSemestre2 = mysqli_real_escape_string($mysqli,$fila['idSemestre2']);
+						$idCarrera3 = mysqli_real_escape_string($mysqli,$fila['idCarrera3']);
+						$CursoSuperado = mysqli_real_escape_string($mysqli,$fila['CursoSuperado']);
+						$idHorario = mysqli_real_escape_string($mysqli,$fila['idHorario']);
+
+						$query1 = "SELECT Nombre FROM curso WHERE idCurso=$IdCurso2";
+						$consulta1 =$mysqli->query($query1);
+						$fila1=$consulta1->fetch_assoc();
+						$NombreCurso =$fila1['Nombre'];
+						echo "<tr>";
+						echo "<td><center>"; echo $NombreCurso; echo "</center></td>";
+						echo "<td><center>";
+						if($Solvencia == 0)
+						{
+							echo "Insolvente De Asignacion";
+						}
+						else
+						{
+							echo "Solvente";
+						} echo "</center></td>";
+
+						$query2 = "SELECT Hora,Jornada FROM horarios WHERE idHorario=$idHorario";
+						$consulta2 =$mysqli->query($query2);
+						$fila2=$consulta2->fetch_assoc();
+						$Hora =$fila2['Hora'];
+						$Jornada =$fila2['Jornada'];
+						echo "<td><center>"; echo $Hora; echo "</center></td>";
+						echo "<td><center>"; echo $Jornada; echo "</center></td>";
+					}
         ?>
-        <tr>
-          <td><center><?php echo $NombreCurso?></center></td>
-          <td><center><?php
-            if($Solvencia == 0)
-            {
-              echo "Insolvente De Asignacion";
-            }
-            else
-            {
-              echo "Solvente";
-            } ?></center></td>
-            <?php
-              include '../conexion.php';
-              $idHorario = $consulta[7];
-              $query1 = "SELECT Hora,Jornada FROM horarios WHERE idHorario=$idHorario";
-              $consulta1 =$mysqli->query($query1);
-              $fila1=$consulta1->fetch_assoc();
-              $Hora =$fila1['Hora'];
-              $Jornada =$fila1['Jornada'];
-            ?>
-          <td><center><?php echo $Hora?></center></td>
-          <td><center><?php echo $Jornada?></center></td>
         </tr>
         </table>
         <?php
