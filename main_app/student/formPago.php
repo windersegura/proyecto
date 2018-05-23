@@ -71,7 +71,7 @@
         <h3>Ingrese los Datos Requeridos</h3>
         <div class="form-group" width="700">
 
-            <form action="socket.php" method="post">
+            <form action="socket_cliente.php" method="post">
 
          <div class="col-md-3">
             <label>Identificacion<span><em>(requerido)</em></span></label><br>
