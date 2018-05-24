@@ -27,12 +27,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 	<title>Nuevo Semestre</title>
 
 </head>
+<?php require 'menu.php' ?>
 	<body>
 		<center>
 			<h1>Ingrese El Nuevo Semestre</h1>

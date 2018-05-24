@@ -48,9 +48,11 @@ function consultaprod( $no_prod )
     <title>Asignacion De Estudiante</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
 		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
 		<script src="js/index.js"></script>
   </head>
   <body>
+		<?php require 'menu.php' ?>
     <center>
 			<h1>Seleccione: Carrera, Semestre y Curso</h1>
       <table class="table">

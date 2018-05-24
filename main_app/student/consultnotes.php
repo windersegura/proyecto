@@ -3,12 +3,10 @@
 	//si la variable de session existe de lo contrario no se hace nada
 	if(isset($_SESSION['usuario']))
 	{
-
 		if($_SESSION['usuario']['TipoUsuario'] != "Alumno")
 		{
 			header('Location: ../salir.php');
 		}
-
 	}
 	else
 	{
@@ -57,8 +55,9 @@
 			<th><center>Seundo Parcial</center></th>
       <th><center>Tareas</center></th>
       <th><center>Parcial Final</center></th>
+			<th><center> Total </center></th>
 
-			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
+			<?php echo "<td><a href='printnotes.php?numero=".$consulta[0]."'><button type='button' name='eliminar' class='btn btn-dark'>Imprimir</Button></a></td>"; ?>
         <?php
         include '../conexion.php';
           $idCurso = $consulta[1];
@@ -66,6 +65,7 @@
           $consulta1 =$mysqli->query($query1);
           $fila1=$consulta1->fetch_assoc();
           $NombreCurso =$fila1['Nombre'];
+					$Total = $consulta[2]+$consulta[3]+$consulta[4]+$consulta[5];
         ?>
         <tr>
           <td><center><?php echo $NombreCurso?></center></td>
@@ -73,10 +73,11 @@
           <td><center><?php echo $consulta[3]?></center></td>
           <td><center><?php echo $consulta[4]?></center></td>
           <td><center><?php echo $consulta[5]?></center></td>
+					<td><center><?php echo $Total?></center></td>
         </tr>
         </table>
         <?php
-         echo "<a href='consultcoursestudent.php?><button type='button' name='eliminar' class='btn btn-danger col-md-3'>VOLVER</Button></a>"
+         echo "<a href='consultcoursestudent.php><button type='button' name='eliminar' class='btn btn-danger col-md-3'>VOLVER</Button></a>"
         ?>
       </center>
 

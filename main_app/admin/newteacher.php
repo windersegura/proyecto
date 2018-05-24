@@ -24,6 +24,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
@@ -31,6 +32,7 @@
 
 </head>
 	<body>
+		<?php require 'menu.php' ?>
 		<center>
 			<h2>Ingrese Los Datos Del Nuevo Maestro</h2>
 			<div id="main" width="700">

@@ -18,7 +18,7 @@
 	$consulta=consultaprod($_GET['numero']);
 	function consultaprod( $no_prod )
 	{
-    include '../conexion.php';
+    require '../conexion.php';
     $query="SELECT * FROM asignatura WHERE idAsignatura=$no_prod";
     $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
     $fila=$resultado->fetch_assoc();
@@ -34,7 +34,8 @@
       $fila['idAlumno'],
 			$fila['idProfesor'],
       $fila['idCarrera'],
-			$fila['idSemestre']
+			$fila['idSemestre'],
+			$fila['idHorario']
 		];
 	}
 ?>
@@ -50,7 +51,7 @@
     </head>
 
 	<body>
-		<center>
+		<center><?php echo $consulta[3]?>
 			<h1>Modifique Las Notas Del Aumno</h1>
 			<div id="main" width="70%">
 				<form class="form-group" action="modifynotesupdate.php" method="POST" >
@@ -62,6 +63,7 @@
 						<label>Primer Parcial</label><br>
 		        <input type="text" pattern="[0-9]{1,2}" name="parcial1" class="form-input form-control"  value="<?php echo $consulta[2]?>" required/>
 					</div>
+
 
 					<div class="col-md-2">
 						<label>Segundo Parcial</label><br>
@@ -82,6 +84,7 @@
           <input type="hidden" name="idprofesor" value="<?php echo $consulta[7]?>">
           <input type="hidden" name="idcarrera" value="<?php echo $consulta[8]?>">
           <input type="hidden" name="idsemestre" value="<?php echo $consulta[9]?>">
+					<input type="hidden" name="idhora" value="<?php echo $consulta[10]?>">
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 

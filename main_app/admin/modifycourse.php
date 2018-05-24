@@ -44,11 +44,14 @@
     <head>
         <meta charset="utf-8">
         <title>Modificación De Curso</title>
+				<meta name="viewport" content="width=device-width, user-scalable=no">
 				<link rel="stylesheet" href="../../css/bootstrap.css">
 				<script src="../../js/jquery-3.3.1.min.js"></script>
+				<script src="../../js/bootstrap.min.js"></script>
     </head>
 
 	<body>
+		<?php require 'menu.php' ?>
 		<center>
 			<h1>Modifique Los Datos Del Curso</h1>
 			<div id="main" width="70%">

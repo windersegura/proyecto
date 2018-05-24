@@ -45,7 +45,7 @@ require '../conexion.php';
 						$busque = $mysqli->query($busqueda) or die (mysql_error($mysqli));
 						while($fila=$busque->fetch_assoc())
 						{
-							$idAsignatur = mysqli_real_escape_string($mysqli,$fila['idCurso']);//LISTO
+							$idAsignatura = mysqli_real_escape_string($mysqli,$fila['idAsignatura']);//LISTO
 							$idCurso = mysqli_real_escape_string($mysqli,$fila['idCurso']);//LISTO
 							$PrimerParcial = mysqli_real_escape_string($mysqli,$fila['PrimerPar']);//LISTO
 							$SegundoParcial = mysqli_real_escape_string($mysqli,$fila['SegundoPar']);//LISTO
@@ -84,8 +84,8 @@ require '../conexion.php';
 								echo "<td><center>"; echo $Tareas; echo "</center></td>";
 								echo "<td><center>"; echo $ParcialFinal; echo " </center></td>";
 
-			          echo "<td><a href='modifynotes.php?numero=".$idAsignatur."'><button type='button' name='INGRESAR NOTAS' class='btn btn-danger'>MODIFICAR PUNTEOS</Button></a></td>";
-								echo "<td><a href='#?numero=".$idAsignatur."'><button type='button' name='IMPRIMIR' class='btn btn-success'>IMPRIMIR</Button></a></td>";
+			          echo "<td><a href='modifynotes.php?numero=".$idAsignatura."'><button type='button' name='INGRESAR NOTAS' class='btn btn-danger'>MODIFICAR PUNTEOS</Button></a></td>";
+								echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='IMPRIMIR' class='btn btn-success'>IMPRIMIR</Button></a></td>";
 							echo "<tr>";
 						}?>
 						</table>

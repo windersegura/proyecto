@@ -25,14 +25,15 @@
 	function consultaprod( $no_prod )
 	{
 		include '../conexion.php';
-        $sentencia="SELECT * FROM semestre WHERE idSemestre='".$no_prod."' ";
-        $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
-        $fila=$resultado->fetch_assoc();
+    $sentencia="SELECT * FROM semestre WHERE idSemestre='".$no_prod."' ";
+    $resultado= $mysqli->query($sentencia) or die ("Error al consultar producto".mysqli_error($mysqli));
+    $fila=$resultado->fetch_assoc();
 
-        return
-		[   $fila['idSemestre'],
+  	return
+		[
+			$fila['idSemestre'],
 			$fila['NoSemestre'],
-            $fila['idCarrera']
+    	$fila['idCarrera']
 		];
 	}
 ?>
@@ -41,12 +42,14 @@
   <head>
       <meta charset="utf-8">
       <title>Modificación De Curso</title>
+			<meta name="viewport" content="width=device-width, user-scalable=no">
 			<link rel="stylesheet" href="../../css/bootstrap.css">
 			<script src="../../js/jquery-3.3.1.min.js"></script>
 			<script src="../../js/bootstrap.min.js"></script>
   </head>
 
 	<body>
+		<?php require 'menu.php' ?>
 		<center>
 			<h1>Modificación Del Curso</h1>
 			<div id="main" width="70%">

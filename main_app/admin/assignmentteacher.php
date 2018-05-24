@@ -35,6 +35,9 @@
     <title>Buscador Maestro Para La Asignacion</title>
     <link rel="stylesheet" href="../../css/main.css"/>
 		<link rel="stylesheet" href="../../css/bootstrap.css"/>
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../js/bootstrap.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript">
       function active()
       {
@@ -75,6 +78,7 @@
     </style>
   </head>
   <body>
+		<?php require 'menu.php' ?>
     <center><br><br>
 			<div style="width 20px">
 	      <form class="" action="assignmentteacher.php" method="GET">

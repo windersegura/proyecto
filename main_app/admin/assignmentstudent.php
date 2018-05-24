@@ -36,6 +36,10 @@
     <title>Buscador Alumno Para La Asignacion</title>
     <link rel="stylesheet" href="../../css/main.css"/>
 		<link rel="stylesheet" href="../../css/bootstrap.css"/>
+
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../js/bootstrap.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript">
       function active()
       {
@@ -76,7 +80,8 @@
     </style>
   </head>
   <body>
-    <center><br><br>
+    <center>
+			<?php require 'menu.php' ?><br><br>
 			<div style="width 20px">
 	      <form class="" action="assignmentstudent.php" method="GET">
 	        <input type="text" id="buscar" name="q" value="Buscar..." maxlength="25" autocomplete="off" onmousedown="active();" onblur="inactive();" />
