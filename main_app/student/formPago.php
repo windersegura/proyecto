@@ -71,7 +71,7 @@
         <h3>Ingrese los Datos Requeridos</h3>
         <div class="form-group" width="700">
 
-            <form action="socket_cliente.php" method="post">
+            <form action="../../socket_cliente.php" method="post">
 
 
 
@@ -79,7 +79,7 @@
 
          <div class="col-md-3">
             <label>Identificacion<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{1,45}" name="Id" class="form-input form-control" placeholder="Ingrese su ID" required/>
+            <input type="text" pattern="[0-9]{1,45}" name="Id" class="form-input form-control" placeholder="Ingrese su ID" value="<?php echo $idAlumno=$_SESSION['usuario']['idAlumno']; ?>" required/>
           </div>
 
               <div class="col-md-4">
@@ -91,7 +91,7 @@
 
           <div class="col-md-5">
             <label>Codigo de Seguridad<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
+            <input type="text" pattern="[0-9]{3}" name="Seguridad" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
           </div>
 
 
