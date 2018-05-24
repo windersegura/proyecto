@@ -85,19 +85,19 @@
               <div class="col-md-4">
 
                 <label>Numero de Tarjeta <span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-20]{1,45}" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
+            <input type="text" pattern="[0-9]{13}" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
 
               </div>
 
           <div class="col-md-5">
             <label>Codigo de Seguridad<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{1,3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
+            <input type="text" pattern="[0-9]{3}" name="Codigo" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
           </div>
 
 
           <div class="col-md-2">
             <label>Monto a Pagar<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{1,3}" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
+            <input type="text" pattern="[0-9]{1,}" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
           </div>
 
           <div class="form-group">
