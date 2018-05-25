@@ -46,7 +46,7 @@
 						        </div>
 						      </li>
 									<li class="nav-item active">
-										<a class="nav-link" href="#">Admision<span class="sr-only">(current)</span></a>
+										<a class="nav-link" href="admission.php">Admision<span class="sr-only">(current)</span></a>
 									</li>
 									<li class="nav-item dropdown active">
 						        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -157,21 +157,104 @@
 				<!------------------------------------------------------------>
 
 
-		<footer cl>
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-6">
-							<p>© 2018 Universidad Gran Jauar</p>
-						</div>
-						<div class="col-xs-6">
-							<ul class="list-inline text-right">
-								<li><a href="#">Inicio</a></li>
-								<li><a href="#">Contactanos</a></li>
-								<li><a href="#">Desarrolladores</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-		</footer>
+				<!-- Footer -->
+		    <footer class="page-footer font-small stylish-color-dark pt-4 mt-4 bg-dark">
+		      <!-- Footer Links -->
+		      <div class="container text-center text-md-left">
+		        <!-- Grid row -->
+		        <div class="row">
+		          <!-- Grid column -->
+		          <div class="col-md-4 mx-auto">
+		            <!-- Content -->
+		            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">Universidad Gran Jaguar</h5>
+		            <p class="text-secondary">Decidete estudiar en nuestra universidad. Encontraras carreras de las cuales estaras encantado/a de estudiar hasta el final </p>
+		          </div>
+		          <!-- Grid column -->
+		          <hr class="clearfix w-100 d-md-none">
+		          <!-- Grid column -->
+		          <div class="col-md-2 mx-auto">
+		            <!-- Links -->
+		            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">CARRERAS</h5>
+		            <ul class="list-unstyled">
+		              <li>
+		                <a href="#!" class="text-secondary">Ingenieria En Electronica</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Ingenieria En Sistemas</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Ingenieria En Electricidad</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Mecatronica</a>
+		              </li>
+		            </ul>
+		          </div>
+		          <!-- Grid column -->
+		          <hr class="clearfix w-100 d-md-none">
+		          <!-- Grid column -->
+		          <div class="col-md-2 mx-auto">
+		            <!-- Links -->
+		            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">MAESTRIAS</h5>
+		            <ul class="list-unstyled">
+		              <li>
+		                <a href="#!" class="text-secondary">Seguridad y Banca Virtual</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Maestría en Sistemas de Información Base de Datos</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Postgrado en Seguridad Informática</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Experto Universitario en Investigación y Proyectos</a>
+		              </li>
+		            </ul>
+		          </div>
+		          <!-- Grid column -->
+		          <hr class="clearfix w-100 d-md-none">
+		          <!-- Grid column -->
+		          <div class="col-md-2 mx-auto">
+		            <!-- Links -->
+		            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-light">DOCTORADOS</h5>
+		            <ul class="list-unstyled text-secondary">
+		              <li>
+		                <a href="#!" class="text-secondary">Doctorado en Derecho Penal y Procesal Penal.</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Doctorado en Ciencias Administrativas.</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Ciencia y Tecnología Ambientales.</a>
+		              </li>
+		              <li>
+		                <a href="#!" class="text-secondary">Matemáticas.</a>
+		              </li>
+		            </ul>
+		          </div>
+		          <!-- Grid column -->
+		        </div>
+		        <!-- Grid row -->
+		      </div>
+		    <!-- Footer Links -->
+		      <hr>
+		      <!-- Call to action -->
+		      <ul class="list-unstyled list-inline text-center py-2">
+		        <li class="list-inline-item">
+		          <h5 class="mb-1 text-light">No Esperes Mas! Inscribete</h5>
+		        </li>
+		        <li class="list-inline-item">
+		          <a href="admission.php" class="btn btn-danger btn-rounded">Admision</a>
+		        </li>
+		      </ul>
+		      <!-- Call to action -->
+		      <hr>
+		      <!-- Copyright -->
+		      <div class="footer-copyright text-center py-3 text-secondary">© 2018 Copyright:
+		        <a href="index.php" class="text-light"> Universidad Gran Jaguar</a>
+		      </div>
+		      <!-- Copyright -->
+		    </footer>
+		    <!-- Footer -->
 	</body>
 </html>
