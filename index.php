@@ -16,50 +16,62 @@
 
 </head>
 	<body>
-		<body>
+
 		<div class="contenedor">
 			<header role="banner">
 					<div class="logo">
 
 						<img src="img(1)/logotipo3.png"  alt="logo de la universidad" id="logoprincipal">
 
-						<h2 id="titulo_principal">Universidad Gran Jaguar de Guatemala</h2>
+						<h2 id="titulo_principal">Universidad Gran Jaguar de Guatemala</h2></div>
 
-						<div class="pos-f-t">
-					  	<div class="collapse" id="navbarToggleExternalContent">
-						    <div class="bg-dark p-4">
-						      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-							  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-								    	<span class="navbar-toggler-icon"></span>
-								  	</button>
-								  	<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+						<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+						  <a class="navbar-brand text-light" href="index.php"><img src="../../img(1)/logotipo3.png" alt=""></a>
 
-											<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-													<li class="nav-item dropdown">
-														<a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															Menú
-														</a>
-														<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						    <span class="navbar-toggler-icon"></span>
+						  </button>
 
-															<a href="admin.php">Administrativo</a><br>
-															<a href="student.php">Estudiante</a>
-															<br><a href="teacher.php">Maestro</a>
-														</div>
-													</li>
+						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						    <ul class="navbar-nav mr-auto">
 
-											</ul>
+						      <li class="nav-item dropdown active">
+						        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          Ingresar
+						        </a>
+						        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="newstudent.php"></a>
+						          <a class="dropdown-item" href="admin.php">Administratico</a>
+						          <a class="dropdown-item" href="teacher.php">Maestro</a>
+						          <a class="dropdown-item" href="student.php">Estudiante</a>
+						        </div>
+						      </li>
+									<li class="nav-item active">
+										<a class="nav-link" href="#">Admision<span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item dropdown active">
+						        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          Carreras
+						        </a>
+						        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="newstudent.php"></a>
+											<?php
+												include 'main_app/conexion.php';
+												$query = "SELECT NombreCarrera FROM carrera";
+							              $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
+							              while($fila=$resultado->fetch_assoc())
+							    					{
+															echo "<a class='dropdown-item' href='#'>"; echo $fila['NombreCarrera']; echo"</a>";
+														}
+											?>
 
-									</div>
-								</nav>
-								</div>
-							</div>
-							<nav class="navbar navbar-dark bg-dark">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-								</button>
-							</nav>
-						</div>
-						</ul>
+						        </div>
+						      </li>
+									<li class="nav-item active">
+						        <a class="nav-link" href="#">Acerca De</a>
+						      </li>
+						    </ul>
+						  </div>
+						</nav>
+
 			</header>
 
 				<!---	CAROUSEL ----------------------->
@@ -145,12 +157,20 @@
 				<!------------------------------------------------------------>
 
 
-		<footer role="contentinfo">
-				<div class="descripcion-nosotros">
-				</div>
-				<div class="menu-nosotros">
-					<nav role="navigation">
-					</nav>
+		<footer class="bg-dark">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6">
+							<p>© 2018 Universidad Gran Jauar</p>
+						</div>
+						<div class="col-xs-6">
+							<ul class="list-inline text-right">
+								<li><a href="#">Inicio</a></li>
+								<li><a href="#">Contactanos</a></li>
+								<li><a href="#">Desarrolladores</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 		</footer>
 	</body>
