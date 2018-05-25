@@ -66,7 +66,7 @@
 						        </div>
 						      </li>
 									<li class="nav-item active">
-						        <a class="nav-link" href="#">Acerca De</a>
+						        <a class="nav-link" href="about.php">Acerca De</a>
 						      </li>
 						    </ul>
 						  </div>
@@ -157,7 +157,7 @@
 				<!------------------------------------------------------------>
 
 
-		<footer class="bg-dark">
+		<footer cl>
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-6">
