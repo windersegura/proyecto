@@ -36,8 +36,8 @@
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
 
-		<center>
-			<img src="img(1)/teachericon.png" width="20%">
+		<center><br><br>
+			<img src="img(1)/teachericon.png" width="30%"><br>
 			<div class="main col-md-5" style="margin-top: 0px" >
 
 				<form action="" id="formlgteacher">

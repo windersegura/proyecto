@@ -51,9 +51,10 @@
     </head>
 
 	<body>
-		<center><?php echo $consulta[3]?>
-			<h1>Modifique Las Notas Del Aumno</h1>
-			<div id="main" width="70%">
+		<?php include 'menu.php' ?><br>
+		<center>
+			<h1>Modifique Las Notas Del Aumno</h1><br>
+			<div id="main" width="70%" class="container">
 				<form class="form-group" action="modifynotesupdate.php" method="POST" >
 
           <input type="hidden" name="id" value="<?php echo $consulta[0]?>">
@@ -84,14 +85,14 @@
           <input type="hidden" name="idprofesor" value="<?php echo $consulta[7]?>">
           <input type="hidden" name="idcarrera" value="<?php echo $consulta[8]?>">
           <input type="hidden" name="idsemestre" value="<?php echo $consulta[9]?>">
-					<input type="hidden" name="idhora" value="<?php echo $consulta[10]?>">
+					<input type="hidden" name="idhora" value="<?php echo $consulta[10]?>"><br><br>
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 
 					<a href="consultstudentteacher.php" class="btn btn-success col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

@@ -21,6 +21,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 	<body>
+		<?php include 'menu.php' ?><br>
 		<center><br><h1>LISTADO DE TUS HORARIOS DE CLASES</h1><br><br>
 		<table class="table">
 			<th><center>Nombre Del Curso</center></th>
@@ -66,12 +67,12 @@
         ?>
 
         </tr>
-        </table>
+			</table><br><br>
         <?php
          echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger col-md-3'>VOLVER</Button></a>"
         ?>
-      </center>
-
+      </center><br><br>
+			<?php include 'footer.php' ?>
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>

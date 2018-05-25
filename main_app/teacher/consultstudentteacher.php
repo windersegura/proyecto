@@ -26,6 +26,7 @@ require '../conexion.php';
 	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 </head>
 	<body>
+		<?php include 'menu.php' ?><br><br>
 		<center><br>
 			<h1>Control De Notas Del Estudiante</h1>
 
@@ -88,12 +89,12 @@ require '../conexion.php';
 								echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='IMPRIMIR' class='btn btn-success'>IMPRIMIR</Button></a></td>";
 							echo "<tr>";
 						}?>
-						</table>
+					</table><br><br>
 						<?php
 						 echo "<a href='index.php?><button type='button' class='btn btn-dark col-md-3'>VOLVER</Button></a>"
 						?>
-					</center>
-
+					</center><br><br>
+					<?php include 'footer.php' ?>
 					<script src="../../js/bootstrap.js"></script>
 				<script src="../../js/jquery-3.2.1.min.js"></script>
 				<script src="../../js/bootstrap.min.js"></script>

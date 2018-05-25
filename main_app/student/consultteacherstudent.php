@@ -57,7 +57,7 @@
 
 					if ($idProfesor != NULL)
 					{
-						$query4 = "SELECT Nombre,Telefono,Correo FROM profesor WHERE idProfesor=$idProfesor";
+						$query4 = "SELECT Nombre,Telefono,Correo FROM profesor WHERE idProfesor=$idProfesor GROUP BY Nombre, Telefono";
 		        $consulta4 = $mysqli->query($query4) or die (mysql_error($mysqli));
 		        $fila4 = $consulta4->fetch_assoc();
 		        $NombreProfesor = $fila4['Nombre'];
