@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/main.js"></script>
-</head>
+</head><br><br><br>
 	<div class="contenedor_admin">
 		<header role=banner>
 
@@ -47,7 +47,7 @@
 								<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 							</div>
 							<div class="main" style="margin-top: 0px">
-								<img src="img(1)/adminicon.png" width="20%"><br>
+								<img src="img(1)/adminicon.png" width="25%"><br><br>
 								<form action="" id="formlg" class="form-group">
 									<div class="col-md-4">
 										<input class="form-input form-control" type="text" name="usuariolg" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" required/>

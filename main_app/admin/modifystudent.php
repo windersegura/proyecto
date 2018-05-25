@@ -129,7 +129,7 @@
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 
-					<a href="index.php" class="btn btn-success col-md-3" >REGRESAR</a>
+					<a href="consultstudent.php" class="btn btn-success col-md-3" >REGRESAR</a>
 				</form>
 			</div>
 		</center>
