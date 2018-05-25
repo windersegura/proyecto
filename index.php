@@ -61,51 +61,90 @@
 						</div>
 						</ul>
 			</header>
-			<main class="contenedor-principal" role="main">
-				<section>
-					<h2 id="eslogan"> "Construimos Un Futuro Juntos"</h2>
 
+				<!---	CAROUSEL ----------------------->
+			<!------------------------------------------------------->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="img(1)/carousel2.jpg" alt="First slide">
+						<div class="carousel-caption d-none d-md-block">
+					    <h1>Apredizaje</h1>
+					    <p>Contamos Con La Mejor Aprendizaje De Todo Peten</p>
+					  </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="img(1)/carousel4.jpg" alt="Second slide">
+						<div class="carousel-caption d-none d-md-block">
+					    <h1>Maestros</h1>
+					    <p>Los Mejores Mestros De Toda Guatemala</p>
+					  </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="img(1)/carousel5.jpg" alt="Third slide">
+						<div class="carousel-caption d-none d-md-block">
+					    <h1>Tecnologia</h1>
+					    <p>Instalaciones Con La Mejor Tecnologia</p>
+					  </div>
+			    </div>
+					<div class="carousel-item">
+			      <img class="d-block w-100" src="img(1)/carousel1.jpg" alt="Fourth slide">
+						<div class="carousel-caption d-none d-md-block">
+					    <h1>Establecimiento</h1>
+					    <p>Uno De Los Mejores Establecimientos De Toda Centroamerica</p>
+					  </div>
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Anterior</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Siguiente</span>
+			  </a>
+			</div>
+					<!-------------------------------------------------------->
+
+
+
+
+				<!-- CARDS ----->
+				<section class="container mt-5 pt-5">
+					<div class="card-deck">
+					  <div class="card">
+					    <img class="card-img-top" src="img(1)/universitarios1.jpg" alt="Card image cap">
+					    <div class="card-body">
+					      <h5 class="card-title">Conoce Nuevas Personas</h5>
+					      <p class="card-text">Hacer amistades en la Universidad puede ser un poco complicado al comienzo. Si es tu primera vez en el campus, seguramente conozcas a muy pocas personas.</p>
+					    </div>
+					  </div>
+					  <div class="card">
+					    <img class="card-img-top" src="img(1)/profecionales.jpg" alt="Card image cap">
+					    <div class="card-body">
+					      <h5 class="card-title">Conviertete en un Profesional</h5>
+					      <p class="card-text">Conviértete en un profesional internacional de la Universidad Gran Jaguar y con la obtención de la certificación oficial.</p>
+					    </div>
+					  </div>
+					  <div class="card">
+					    <img class="card-img-top" src="img(1)/superacion.jpg" alt="Card image cap">
+					    <div class="card-body">
+					      <h5 class="card-title">Alcanza tus Sueños </h5>
+					      <p class="card-text">Todos tenemos sueños, es preciso perseverar  con fe para alcanzarlos, lucha por tus sueños, visualiza tus sueños.</p>
+					    </div>
+					  </div>
+					</div>
 				</section>
-
-				<section class="slider-container">
-						<ul id="slider" class="slider-wrapper">
-
-							<li>
-								<img src="img(1)/universitarios1.jpg" alt="" width="500">
-								<div class="caption">
-										<h3 class="caption-title">Conoce Nuevas Personas</h3>
-										<p></p>
-
-								</div>
-
-							</li>
-
-							<li>
-								<img src="img(1)/profecionales.jpg" alt="" width="500">
-								<div class="caption">
-										<h3 class="caption-title">Conviertete en un Profesional</h3>
-										<p></p>
-
-								</div>
-							</li>
-
-							<li>
-								<img src="img(1)/superacion.jpg" alt="" width="500">
-								<div class="caption">
-										<h3 class"caption-title">Alcanza tus Sueños </h3>
-										<p></p>
-
-								</div>
-
-							</li>
+				<br><br>
+				<!------------------------------------------------------------>
 
 
-						</ul>
-
-				</section>
-
-			</main>
-		</div>
 		<footer role="contentinfo">
 				<div class="descripcion-nosotros">
 				</div>
