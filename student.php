@@ -1,6 +1,5 @@
 <?php
 	session_start();
-
 	//si la variable de session existe de lo contrario no se hace nada
 	if(isset($_SESSION['usuario']))
 	{
@@ -37,18 +36,15 @@
 <div class="contenedor_principal_estudiante">
 
 
-<header>
-</header>
-
 <main>
 
 	<body>
 		<div class="error">
 			<span>Datos Ingresados No Validos, Intente De Nuevo!</span>
 		</div>
-		<center>
+		<center><br>
 			<div class="main" style="margin-top: 0px">
-				<img src="img(1)/studenticon.png" width="20%">
+				<img src="img(1)/studenticon.png" width="30%"><br>
 				<form action="" id="formlgstudent">
 					<input type="text" name="usuariolgstudent" placeholder="Usuario" pattern="[A-Za-z0-9_-@.]{1,25}" class="col-md-4" required/><br><br>
 					<input type="password" name="passlgstudent" placeholder="Contraseña" pattern="[A-Za-z0-9_-@.]{1,25}" class="col-md-4" required/><br><br>
@@ -58,8 +54,6 @@
 
 			</div>
 		</center>
-
-
 
 	</main>
 

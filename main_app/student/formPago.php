@@ -29,43 +29,7 @@
     <title>Formulario de Pagos</title>
   </head>
   <body>
-
-    <div class="pos-f-t">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-danger p-4">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Opciones
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Consultar Horario</a>
-                      <a class="dropdown-item" href="#">Consultar Curso</a>
-                      <a class="dropdown-item" href="#">Consultar Maestro</a>
-                      <a class="dropdown-item" href="#">Realizar Pago</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="../salir.php">Salir</a>
-                  </li>
-              </ul>
-          </div>
-        </nav>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark bg-danger">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-    </div>
-
-
+		<?php include 'menu.php' ?><br><br><br>
     <center>
 
         <h3>Ingrese los Datos Requeridos</h3>
@@ -75,7 +39,7 @@
 
 
 
-          
+
 
          <div class="col-md-3">
             <label>Identificacion<span><em>(requerido)</em></span></label><br>
@@ -105,7 +69,7 @@
             <div class="col-sm-1">
 
             <select class="form-control" id="trx" name="codigo">
-              
+
                 <option> 00 </option>
                 <option> 01 </option>
                 <option> 02 </option>
@@ -130,7 +94,7 @@
 
 
 
-    </center>
-
+    </center><br><br>
+		<?php include 'footer.php' ?>
   </body>
 </html>

@@ -46,7 +46,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 	<body>
-
+		<?php require 'menu.php' ?>
+		<div class="container">
 		<center><br><h1>LISTADO DE TUS NOTAS</h1><br><br>
 
 		<table class="table">
@@ -77,10 +78,17 @@
         </tr>
         </table>
         <?php
-         echo "<a href='consultcoursestudent.php><button type='button' name='eliminar' class='btn btn-danger col-md-3'>VOLVER</Button></a>"
+
+				 echo "<br><br><div class='progress'>";
+  		 	echo "<div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' aria-valuenow='$Total' aria-valuemin='0' aria-valuemax='100' style='width: $Total%''></div>";
+				echo "</div>";
+				echo "<br><br><a href='consultcoursestudent.php'  class='btn btn-danger col-md-3'>VOLVER</a>";
         ?>
       </center>
 
+
+			</div>
+			<?php require 'footer.php' ?>
     <script src="../../js/bootstrap.js"></script>
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>

@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 	<body>
-
+		<?php include 'menu.php' ?><br>
 		<center><br><h1>LISTADO DE PROFESORES QUE TE IMPARTE CURSOS</h1><br><br>
 
 		<table class="table">
@@ -79,8 +79,8 @@
 			<?php
 			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-dark col-md-3'>VOLVER</Button></a>"
 			?>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 		<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/jquery-3.2.1.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
