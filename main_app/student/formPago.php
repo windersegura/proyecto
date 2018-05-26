@@ -119,11 +119,6 @@ socket_write($socket, $msg, strlen($msg)) or die("No se pudo enviar el mensaje a
 
 $result= socket_read($socket, 1024) or die("No hay respuesta del servidor");
 
-echo $result . "\n";
-
- 
-
-echo "OK.\n";
 
 
 socket_close($socket);
