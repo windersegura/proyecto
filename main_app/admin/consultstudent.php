@@ -160,6 +160,7 @@
 
 	  </div>
 	</div>
-		</center>
+</center><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

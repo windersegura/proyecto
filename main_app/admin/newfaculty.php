@@ -32,10 +32,10 @@
 
 </head>
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br><br>
 		<center>
 			<div id="main" width="70%">
-				<h1>Ingrese Los Datos De La Facultad</h1>
+				<h1>Ingrese Los Datos De La Facultad</h1><br>
 				<form class="form-group" action="facultyupdate.php" method="POST" >
 
 					<div class="col-md-4">
@@ -43,12 +43,12 @@
 		        <input type="text" pattern="[A-Za-z ñÑ]{1,70}" name="nombre" class="form-input form-control" placeholder="Nombre De la Facultad" required/>
 					</div>
 
-					<br>
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
-
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

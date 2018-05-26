@@ -45,6 +45,7 @@
 		<center>
 			<h1>BIENVENIDO <?php echo $_SESSION['usuario']['Nombre'] ?></h1>
 			<img src="../../img(1)/device_manager.png" width="35%" >
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

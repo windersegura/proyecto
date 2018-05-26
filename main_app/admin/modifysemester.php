@@ -41,7 +41,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>Modificación De Curso</title>
+      <title>Modificación De Semestre</title>
 			<meta name="viewport" content="width=device-width, user-scalable=no">
 			<link rel="stylesheet" href="../../css/bootstrap.css">
 			<script src="../../js/jquery-3.3.1.min.js"></script>
@@ -49,9 +49,9 @@
   </head>
 
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
 		<center>
-			<h1>Modificación Del Curso</h1>
+			<h1>Modificación Del Semestre</h1>
 			<div id="main" width="70%">
 				<form class="form-group" action="modifysemesterupdate.php" method="POST" >
 
@@ -61,7 +61,7 @@
 						<label>No. Semestre <span><em>(requerido)</em></span></label><br>
 		        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese El No. Del Semestre" value="<?php echo $consulta[1]?>" required/>
 					</div>
-
+					<br>
 					<div class="form-group">
 						<label for="carrera" class="col-sm-2 control-label">Seleccionar Carrera</label>
 						<div class="col-md-4">
@@ -79,13 +79,12 @@
 							</select>
 						</div>
 					</div>
-
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
-
-					<a href="consultsemester.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="consultsemester.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

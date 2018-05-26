@@ -33,8 +33,8 @@
 </head>
 	<body>
 		<?php require 'menu.php' ?>
-		<center>
-			<h2>Ingrese Los Datos Del Nuevo Maestro</h2>
+		<center><br>
+			<h1>Ingrese Los Datos Del Nuevo Maestro</h1>
 			<div id="main" width="700">
 				<form class="form-group" action="teacherupdate.php" method="POST" >
 						<div class="col-md-4">
@@ -77,11 +77,12 @@
 								</select>
 							</div>
 						</div>
-
+						<br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

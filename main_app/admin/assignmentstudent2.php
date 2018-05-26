@@ -52,7 +52,7 @@ function consultaprod( $no_prod )
 		<script src="js/index.js"></script>
   </head>
   <body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
     <center>
 			<h1>Seleccione: Carrera, Semestre y Curso</h1>
       <table class="table">
@@ -93,12 +93,12 @@ function consultaprod( $no_prod )
 				<input type="hidden" name="idStudent" value="<?php echo $consulta[0]?>">
 				<select name="cargar_carrera" id="cargar_carrera" class="col-md-4 form-control"></select><br>
 	      <select name="cargar_semestre" id="cargar_semestre"  class="col-md-4 form-control"></select><br>
-	      <select name="cargar_curso" id="cargar_curso"  class="col-md-4 form-control"></select><br>
+	      <select name="cargar_curso" id="cargar_curso"  class="col-md-4 form-control"></select><br><br>
 				<input type="submit" name="" value="ASIGNAR" class="btn btn-dark col-md-3">
-				<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+				<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 	    </form>
 		</div>
-  </center>
-
+  </center><br><br>
+	<?php include 'footer.php' ?>
   </body>
 </html>

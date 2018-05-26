@@ -36,7 +36,7 @@
 
 </head>
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
 		<center>
 			<div id="main" width="70%">
 				<h1>Ingrese Los Datos Del Curso</h1>
@@ -72,12 +72,13 @@
 							</select>
 						</div>
 					</div>
-
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
 
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

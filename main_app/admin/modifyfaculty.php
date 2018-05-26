@@ -39,7 +39,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Modificación De Curso</title>
+        <title>Modificación De La Facultad</title>
 				<meta name="viewport" content="width=device-width, user-scalable=no">
 				<link rel="stylesheet" href="../../css/bootstrap.css">
 				<script src="../../js/jquery-3.3.1.min.js"></script>
@@ -48,8 +48,8 @@
 
 	<body>
 		<?php require 'menu.php' ?>
-		<center>
-			<h1>Modificación Del Curso</h1>
+		<center><br>
+			<h1>Modificación De La Facultad</h1><br>
 			<div id="main" width="70%">
 				<form class="form-group" action="modifyfacultyupdate.php" method="POST" >
 
@@ -60,13 +60,12 @@
 		        <input type="text" pattern="[A-Za-z ñÑ]{1,45}" name="nombre" class="form-input form-control" placeholder="Ingrese Nombre Completo" value="<?php echo $consulta[1]?>" required/>
 					</div>
 
-					<br>
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
-
-					<a href="consultfaculty.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="consultfaculty.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

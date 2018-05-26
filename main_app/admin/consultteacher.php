@@ -159,7 +159,7 @@
 	  </div>
 	</div>
 		</center>
-
+<?php include 'footer.php' ?>
 
 	</body>
 </html>

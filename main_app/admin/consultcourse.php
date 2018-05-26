@@ -135,7 +135,7 @@
 						echo "<td><center>"; echo $carrera; echo "</center></td>";
 					echo "<td><a href='deletecourse.php?numero=".$idCurso."' class='btn btn-danger'>Eliminar</a></td>";
 					echo "<td><a href='modifycourse.php?numero=".$idCurso."' class='btn btn-primary'>Modificar</a></td>";
-					
+
 				echo "</tr>";
 			}
 			?>
@@ -145,5 +145,6 @@
 	  </div>
 	</div>
 		</center>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

@@ -34,17 +34,17 @@
 	<title>Nuevo Semestre</title>
 
 </head>
-<?php require 'menu.php' ?>
+<?php require 'menu.php' ?><br>
 	<body>
 		<center>
-			<h1>Ingrese El Nuevo Semestre</h1>
+			<h1>Ingrese El Nuevo Semestre</h1><br>
 			<div id="main" width="70%">
 				<form class="form-group" action="updatesemester.php" method="POST" >
 					<div class="col-md-3">
 						<label>No. Del Semestre<span><em>(requerido)</em></span></label><br>
 		        <input type="text" pattern="[0-9]{1,2}" name="semestre" class="form-input form-control" placeholder="Ingrese No. Del Semestre" required/>
 					</div>
-
+					<br>
 	        <div class="form-group col-md-4">
 						<label for="carrera" class=" control-label">Seleccionar Carrera</label>
 						<div class="col-sm-10">
@@ -60,13 +60,12 @@
 							</select>
 						</div>
 					</div>
-
-
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
-
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

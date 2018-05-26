@@ -33,7 +33,7 @@
 </head>
 <?php require 'menu.php' ?>
 	<body>
-		<center>
+		<center><br>
 			<div id="main" width="70%">
 				<h1>Ingrese Los Datos De La Carrera</h1>
 				<form class="form-group" action="careerupdate.php" method="POST" >
@@ -53,12 +53,13 @@
 						<input type="text" pattern="[0-9]{1,5}" name="codigocarrera" class="form-input form-control" placeholder="Ingrese El Codigo Que Identifique La Carrera" required/>
 					</div>
 
-					<br>
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
 
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

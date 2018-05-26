@@ -61,9 +61,9 @@
   </head>
 
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
 		<center>
-			<h3>Modificación De Los Datos Del Estudiante</h3>
+			<h1>Modificación De Los Datos Del Estudiante</h1>
 			<div id="main" width="70%">
 				<form class="form-group" action="modifystudentupdate.php" method="POST" >
 
@@ -126,13 +126,12 @@
 		        <input type="mail" pattern="[0-9A-Za-z_-@.]{1,35}" name="correo" class="form-input form-control" placeholder="Su Correo" value="<?php echo $consulta[9]?>" required/>
 					</div>
 					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[10]?>">
-
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
-
-					<a href="consultstudent.php" class="btn btn-success col-md-3" >REGRESAR</a>
+					<a href="consultstudent.php" class="btn btn-warning col-md-3" >REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

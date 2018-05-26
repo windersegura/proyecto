@@ -56,7 +56,7 @@
   </head>
 
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
 		<center>
 			<h1>Modificación De Los Datos Del Maestro</h1>
 			<div id="main" width="70%">
@@ -106,12 +106,12 @@
 						</div>
 					</div>
 					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[9]?>">
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
-
-					<a href="consultteacher.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="consultteacher.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

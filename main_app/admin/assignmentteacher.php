@@ -120,7 +120,7 @@
           }
         }
       ?>
-			<a href="index.php" class="btn btn-dark col-md-3">Regresar</a>
-    </center>
+    </center><br><br>
+		<?php include 'footer.php' ?>
   </body>
 </html>

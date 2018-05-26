@@ -52,7 +52,7 @@
 		<script src="js/index.js"></script>
   </head>
   <body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
     <center>
 			<h1>Seleccione: Carrera, Semestre y Curso</h1>
       <table class="table">
@@ -111,16 +111,14 @@
 						}
 
 					}
-
 				echo "</select><br>";
-
 				?>
-
+				<br>
 				<input type="submit" name="" value="ASIGNAR" class="btn btn-dark col-md-3">
-				<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+				<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 	    </form>
 		</div>
-  </center>
-
+  </center><br><br>
+	<?php include 'footer.php' ?>
   </body>
 </html>

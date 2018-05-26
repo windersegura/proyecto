@@ -32,9 +32,9 @@
 
 </head>
 	<body>
-<?php require 'menu.php' ?>
+<?php require 'menu.php' ?><br>
 		<center>
-			<h3>Ingrese Los Datos Del Estudiante</h3>
+			<h1>Ingrese Los Datos Del Estudiante</h1>
 			<div class="form-group" width="700">
 				<form  action="studentupdate.php" method="POST" >
 					<div class="col-md-4">
@@ -94,14 +94,14 @@
 						<label>Correo Electronico<span><em>(requerido)</em></span></label><br>
 						<input type="mail" pattern="[0-9A-Za-z_-@.]{1,35}" name="correo" class="form-input form-control" placeholder="Su Correo" required/>
 					</div>
-
+					<br><br>
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="index.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 
 	</body>
 </html>

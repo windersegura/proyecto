@@ -51,7 +51,7 @@
     </head>
 
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.php' ?><br>
 		<center>
 			<h1>Modifique Los Datos Del Curso</h1>
 			<div id="main" width="70%">
@@ -95,13 +95,12 @@
 							</select>
 						</div>
 					</div>
-
+					<br><br>
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
-
-					<a href="consultcourse.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="consultcourse.php" class="btn btn-warning col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>
