@@ -46,8 +46,6 @@
               $resultado = $mysqli->query($query) or die (mysql_error($mysqli));
               while($fila=$resultado->fetch_assoc())
     					{
-
-
                 echo "<tr>";
       						echo "<td><center>"; echo $fila['NOMBRE']; echo "</center></td>";
                   echo "<td><center>"; echo $fila['TELEFONO']; echo "</center></td>";

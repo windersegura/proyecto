@@ -86,7 +86,7 @@ require '../conexion.php';
 								echo "<td><center>"; echo $ParcialFinal; echo " </center></td>";
 
 			          echo "<td><a href='modifynotes.php?numero=".$idAsignatura."'><button type='button' name='INGRESAR NOTAS' class='btn btn-danger'>MODIFICAR PUNTEOS</Button></a></td>";
-								echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='IMPRIMIR' class='btn btn-success'>IMPRIMIR</Button></a></td>";
+								echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='IMPRIMIR' class='btn btn-success'></Button></a></td>";
 							echo "<tr>";
 						}?>
 					</table><br><br>

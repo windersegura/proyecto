@@ -32,7 +32,7 @@
 			<th><center>Semestre</center></th>
 			<th><center>Profesor</center></th>
 
-			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
+			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark"></Button></a></th>
 
 			<?php
       $idAlumno = $_SESSION['usuario']['idAlumno'];
@@ -76,7 +76,7 @@
 		        $NombreProfesor = $fila4['Nombre'];
 						echo "<td><center>"; echo $NombreProfesor; echo "</center></td>";
 						echo "<td><a href='consultnotes.php?numero=".$idAsignatura."'><button type='button' name='eliminar' class='btn btn-danger'>Ver El Punto Del Curso</Button></a></td>";
-						echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='modificar' class='btn btn-success'>Imprimir</Button></a></td>";
+						echo "<td><a href='#?numero=".$idAsignatura."'><button type='button' name='modificar' class='btn btn-success'></Button></a></td>";
 					}
 					else
 					{

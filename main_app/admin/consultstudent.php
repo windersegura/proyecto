@@ -151,7 +151,7 @@
 					echo "<td><center>"; echo $correo; echo "</td>";
 					echo "<td><a href='deletestudent.php?numero=".$idAlumno."' class='btn btn-danger'>Eliminar</a></td>";
 					echo "<td><a href='modifystudent.php?numero=".$idAlumno."' class='btn btn-primary'>Modificar</a></td>";
-					echo "<td><a href='#' class='btn btn-dark'>Imprimir</a></td>";
+					echo "<td><a href='#' class='btn btn-dark'></a></td>";
 				echo "</tr>";
 			}
 			?>
