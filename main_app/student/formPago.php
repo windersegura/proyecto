@@ -35,7 +35,7 @@
         <h3>Ingrese los Datos Requeridos</h3>
         <div class="form-group" width="700">
 
-            <form action="socket_cliente.php" method="post">
+            <form action="formPago.php" method="post">
 
 
 
@@ -98,3 +98,50 @@
 		<?php include 'footer.php' ?>
   </body>
 </html>
+
+
+<?php 
+
+define(banco,"00");
+define(institucion,"0001");
+
+$fecha=strftime("%d%m%y");
+$hora= strftime("%H:%S");
+
+
+$estado="0000";
+
+$cod_referencia="0000";
+
+
+$port=9999;
+$addres='192.168.1.10';
+$i=0;
+
+while ($i<1) {
+  # code...
+
+ $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP) or die("No se pudo conectar ");
+ $result= socket_connect($socket, $address, $port) or die("No se pudo conectar");
+$msg="";
+$msg="". "$banco" . "$institucion" . $_REQUEST['codigo'] . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $_REQUEST['Monto'] . $estado . $cod_referencia;
+
+socket_write($socket, $msg, strlen($msg)) or die("No se pudo enviar el mensaje al servidor");
+
+$result= socket_read($socket, 1024) or die("No hay respuesta del servidor");
+
+echo $result . "\n";
+
+ 
+
+echo "OK.\n";
+
+echo "Cerrando socket...";
+socket_close($socket);
+echo "OK.\n\n";
+
+$i++;
+
+}
+
+?>
