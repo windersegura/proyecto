@@ -17,8 +17,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="consultstudentteacher.php">Ingresar Notas Del Estudiante</a>
-          <a class="dropdown-item" href="#">Consultar Curso</a>
-          <a class="dropdown-item" href="#">Consultar Alumno</a>
+          <a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
           <a class="dropdown-item" href="checkschedule.php">Consultar Horario</a>
         </div>
       </li>

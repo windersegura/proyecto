@@ -40,7 +40,7 @@
 						          Ingresar
 						        </a>
 						        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="newstudent.php"></a>
-						          <a class="dropdown-item" href="admin.php">Administratico</a>
+						          <a class="dropdown-item" href="admin.php">Administrativo</a>
 						          <a class="dropdown-item" href="teacher.php">Maestro</a>
 						          <a class="dropdown-item" href="student.php">Estudiante</a>
 						        </div>
