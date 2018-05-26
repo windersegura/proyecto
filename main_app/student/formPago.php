@@ -64,20 +64,7 @@
             <input type="text" pattern="[0-9]{1,}" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
           </div>
 
-          <div class="form-group">
-            <label for="Tipo" class="col-sm-2 control-label">Tipo Transaccion</label>
-            <div class="col-sm-1">
-
-            <select class="form-control" id="trx" name="codigo">
-
-                <option> 00 </option>
-                <option> 01 </option>
-                <option> 02 </option>
-
-            </select>
-
-            </div>
-          </div>
+          
 
 
           <div>
@@ -102,11 +89,12 @@
 
 <?php 
 
-define(banco,"00");
-define(institucion,"0001");
-
+//define(banco,"00");
+//define(institucion,"0001");
+$banco="00";
+$institucion="0001";
 $fecha=strftime("%d%m%y");
-$hora= strftime("%H:%S");
+$hora= strftime("%H%S");
 
 
 $estado="0000";
@@ -114,17 +102,17 @@ $estado="0000";
 $cod_referencia="0000";
 
 
-$port=9999;
+$port='9999';
 $addres='192.168.1.10';
 $i=0;
 
 while ($i<1) {
   # code...
 
- $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP) or die("No se pudo conectar ");
- $result= socket_connect($socket, $address, $port) or die("No se pudo conectar");
-$msg="";
-$msg="". "$banco" . "$institucion" . $_REQUEST['codigo'] . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $_REQUEST['Monto'] . $estado . $cod_referencia;
+ $socket = socket_create(AF_INET, SOCK_STREAM, 0) or die("No se pudo conectar ");
+ $result= socket_connect($socket, $addres, $port) or die("No se pudo conectar");
+  $msg="";
+  $msg="". $banco . $institucion . $_REQUEST['codigo'] . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $_REQUEST['Monto'] . $estado . $cod_referencia;
 
 socket_write($socket, $msg, strlen($msg)) or die("No se pudo enviar el mensaje al servidor");
 
