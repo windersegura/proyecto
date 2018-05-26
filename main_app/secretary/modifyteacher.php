@@ -56,48 +56,7 @@
   </head>
 
 	<body>
-		<div class="pos-f-t">
-			<div class="collapse" id="navbarToggleExternalContent">
-				<div class="bg-primary p-4">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-
-							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-
-
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Opciones
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="newstudent.php">Ingresar Alumno</a>
-											<a class="dropdown-item" href="newteacher.php">Ingresar Maestro</a>
-											<a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
-											<a class="dropdown-item" href="consultteacher.php">Consultar Maestro</a>
-											<a class="dropdown-item" href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a>
-											<a class="dropdown-item" href="#">Asignar Alumno a curso</a>
-											<a class="dropdown-item" href="#">Asignar Maestro a curso</a>
-										</div>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link " href="../salir.php">Salir</a>
-									</li>
-							</ul>
-
-					</div>
-				</nav>
-				</div>
-			</div>
-			<nav class="navbar navbar-dark bg-primary">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-			</nav>
-		</div>
+		<?php include 'menu.php' ?><br><br>
 
 		<center>
 			<h1>Modificación De Los Datos Del Maestro</h1>
@@ -148,14 +107,14 @@
 						</div>
 					</div>
 
-					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[8]?>">
+					<input type="hidden" name="cantidadcursos" value="<?php echo $consulta[8]?>"><br>
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="GUARDAR CAMBIOS">
 
-					<a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
+					<a href="consultteacher.php" class="btn btn-primary col-md-3">REGRESAR</a>
 				</form>
 			</div>
-		</center>
-
+		</center><br><br>
+		<?php include 'footer.php' ?>
 	</body>
 </html>

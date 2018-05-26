@@ -31,6 +31,7 @@
 	<title>Nuevo Estudiante S.</title>
 </head>
 	<body>
+		<?php include 'menu.php' ?><br><br>
 		<center>
 			<h1>Ingrese Los Datos Del Nuevo Estudiante</h1>
 
@@ -92,7 +93,7 @@
 							<label>Correo Electronico<span><em>(requerido)</em></span></label><br>
 			        <input type="mail" pattern="[0-9A-Za-z_-@.]{1,35}" name="correo" class="form-input form-control" placeholder="Su Correo" required/>
 						</div>
-
+						<br>
 
 					<input class="btn__submit btn btn-dark col-md-3" type="submit" value="REGISTRAR">
 
@@ -100,8 +101,8 @@
 
 				</div>
 			</form>
-		</center>
-
+		</center><br><br>
+<?php include 'footer.php' ?>
 
 	</body>
 </html>

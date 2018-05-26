@@ -22,73 +22,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<meta charset="UTF-8">
-	<title>Consulta Del Alumno</title>
-	<link rel="stylesheet" href="../../css/bootstrap.css">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Consulta Del Alumno</title
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#3498db">
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="js/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+    <!-- CSS DataTable -->
+	<script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.min.js"></script>
+
+    <!-- Botones para DATATABLES -->
+	<script type="text/javascript">
+		jQuery(document).ready( function () {
+			var table = jQuery("#example").DataTable({
+
+				"oLanguage": {
+					"sEmptyTable":     "Sin Resultados",
+					"sInfo":           "Viendo _START_ a _END_ de _TOTAL_ entradas",
+					"sInfoEmpty":      "Viendo 0 a 0 de 0 entradas",
+					"sInfoFiltered":   "(filtered from _MAX_ total entries)",
+					"sInfoPostFix":    "",
+					"sInfoThousands":  ",",
+					"sLengthMenu":     "Ver _MENU_ Entradas",
+					"sLoadingRecords": "Cargando...",
+					"sProcessing":     "Procesando...",
+					"sSearch":         "",
+					"sZeroRecords":    "Sin Resultados",
+					"oPaginate": {
+						"sFirst":    "Primero",
+						"sLast":     "Ultimo",
+						"sNext":     "Siguiente >",
+						"sPrevious": "< Anterior"
+					}
+				},
+				"pageLength": 10,
+				"order": [
+					[ 0, "asc" ]
+				],
+				"lengthMenu": [
+					[10, 25, 50, 100, -1],
+					[10, 25, 50, 100, "Todo"]
+				],
+				"aoColumnDefs": [
+					{
+						"bSortable": false,
+						"aTargets": [  ]
+					},
+					{
+						"sType": "string",
+						"aTargets": [ 3 ]
+					}
+				],
+				"stateSave": true
+			});
+			//$("div.toolbar").html('<b>Custom tool bar! Text/images etc.</b>');
+			jQuery(".dataTables_filter input").attr("placeholder", "Buscar...");
+			jQuery(".dataTables_filter input").css("width", "200px");
+			jQuery(".dt-buttons a").css("width", "100px");
+			jQuery(".dt-buttons").css("text-align", "left");
+			jQuery(".row").css("padding-bottom", "10px");
+		} );
+	</script>
 </head>
 	<body>
-		<div class="pos-f-t">
-	  	<div class="collapse" id="navbarToggleExternalContent">
-		    <div class="bg-primary p-4">
-		      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-				    	<span class="navbar-toggler-icon"></span>
-				  	</button>
-				  	<div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+		<?php include 'menu.php' ?><br><br>
+		<center><div class="panel panel-primary" style="width: 90%;">
+	  <div class="panel-heading"><h1>LISTADO DE ALUMNOS</h1></div>
+	  <div class="panel-body">
+	  <a href="newstudent.php" class="btn btn-dark">Nuevo Alumno</a><br>
+		<table id="example" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+			<thead>
 
-				    	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<tr class="info">
 
+					<th>Id.</th>
+					<th>Nombre</th>
+					<th>Edad</th>
+					<th>Direccion</th>
+					<th>Telefono</th>
+					<th>Sexo</th>
+					<th>DPI</th>
+					<th>Password</th>
+					<th>Tipo De Usuario</th>
+					<th>Correo</th>
+					<th>Opcion 1</th>
+					<th>Opcion 2</th>
+					<th>Opcion 3</th>
+				</tr>
+			</thead>
 
-
-					      	<li class="nav-item dropdown">
-						        <a class="nav-link dropdown-toggle bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          Opciones
-						        </a>
-						        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						          <a class="dropdown-item" href="newstudent.php">Ingresar Alumno</a>
-						          <a class="dropdown-item" href="newteacher.php">Ingresar Maestro</a>
-						          <a class="dropdown-item" href="consultstudent.php">Consultar Alumno</a>
-						          <a class="dropdown-item" href="consultteacher.php">Consultar Maestro</a>
-						          <a class="dropdown-item" href="#">Solvencias (PENDIENTE HASTA TENER PROTOCOLO)</a>
-						          <a class="dropdown-item" href="#">Asignar Alumno a curso</a>
-						          <a class="dropdown-item" href="#">Asignar Maestro a curso</a>
-						        </div>
-					      	</li>
-					      	<li class="nav-item">
-					        	<a class="nav-link " href="../salir.php">Salir</a>
-					      	</li>
-				    	</ul>
-
-				  </div>
-				</nav>
-		    </div>
-		  </div>
-		  <nav class="navbar navbar-dark bg-primary">
-		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		  </nav>
-		</div>
-		<center><br><h1>LISTADO DE ALUMNOS</h1><br><br>
-
-		<table class="table">
-
-			<th>Nombre</th>
-			<th>Edad</th>
-			<th>Direccion</th>
-			<th>Telefono</th>
-			<th>Sexo</th>
-			<th>DPI</th>
-			<th>Password</th>
-
-			<th>Correo</th>
-			<th>Cantidad Cursos Asignados</th>
-			<th><a href="newstudent.php"><button type="button" name="nuevo" class="btn btn-info">Nuevo</Button></a></th>
-			<th><a href="#"><button type="button" name="imprimir" class="btn btn-info">Imprimir Todo</Button></a></th>
-
-			<?php
+			<tbody>
+				<?php
 			include "../conexion.php";
 			$busqueda = "SELECT * FROM alumnos";
 			$busqueda = $mysqli->query($busqueda) or die (mysql_error($mysqli));
@@ -104,10 +138,9 @@
 				$password = mysqli_real_escape_string($mysqli,$fila['Password']);
 				$tipoUsuario = mysqli_real_escape_string($mysqli,$fila['TipoUsuario']);
 				$correo = mysqli_real_escape_string($mysqli,$fila['Correo']);
-				$cantidadcursos = mysqli_real_escape_string($mysqli,$fila['CantidadCursos']);
 
 				echo "<tr>";
-					$idAlumno;
+					echo "<td><center>"; echo $idAlumno; echo "</center></td>";
 					echo "<td><center>"; echo $nombre; echo "</center></td>";
 					echo "<td><center>"; echo $edad; echo "</center></td>";
 					echo "<td><center>"; echo $direccion; echo "</center></td>";
@@ -115,26 +148,22 @@
 					echo "<td><center>"; echo $sexo; echo "</center></td>";
 					echo "<td><center>"; echo $dpi; echo "</center></td>";
 					echo "<td><center>"; echo $password; echo "</center></td>";
-					 $tipoUsuario;
+					echo "<td><center>"; echo $tipoUsuario; echo "</td>";
 					echo "<td><center>"; echo $correo; echo "</td>";
-					echo "<td><center>"; echo $cantidadcursos; echo "</td>";
-					echo "<td><a href='deletestudent.php?numero=".$idAlumno."'><button type='button' name='eliminar' class='btn btn-danger'>Eliminar</Button></a></td>";
-					echo "<td><a href='modifystudent.php?numero=".$idAlumno."'><button type='button' name='modificar' class='btn btn-success'>Modificar</Button></a></td>";
-					echo "<td><a href='#?numero=".$idAlumno."'><button type='button' name='imprimir' class='btn btn-success'>Imprimir</Button></a></td>";
-				echo "<tr>";
+					echo "<td><a href='deletestudent.php?numero=".$idAlumno."' class='btn btn-danger'>Eliminar</a></td>";
+					echo "<td><a href='modifystudent.php?numero=".$idAlumno."' class='btn btn-primary'>Modificar</a></td>";
+					echo "<td><a href='#' class='btn btn-dark'>Imprimir</a></td>";
+				echo "</tr>";
 			}
-
-
 			?>
-			</table>
+			</tbody>
+		</table>
 
-			<?php
-			 echo "<a href='index.php?><button type='button' name='eliminar' class='btn btn-danger'>Volver</Button></a>"
-
-			?>
+	  </div>
+	</div>
 		</center>
-		<script src="../../js/bootstrap.js"></script>
-	<script src="../../js/jquery-3.2.1.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
+
+	<br><br>
+	<?php include 'footer.php' ?>
 	</body>
 </html>
