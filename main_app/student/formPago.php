@@ -95,6 +95,7 @@ $banco="00";
 $institucion="0001";
 $fecha=strftime("%d%m%y");
 $hora= strftime("%H%S");
+$trx="01";
 
 
 $estado="0000";
@@ -112,7 +113,7 @@ while ($i<1) {
  $socket = socket_create(AF_INET, SOCK_STREAM, 0) or die("No se pudo conectar ");
  $result= socket_connect($socket, $addres, $port) or die("No se pudo conectar");
   $msg="";
-  $msg="". $banco . $institucion . $_REQUEST['codigo'] . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $_REQUEST['Monto'] . $estado . $cod_referencia;
+  $msg="". $banco . $trx . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $institucion . $_REQUEST['Monto'] . $estado . $cod_referencia;
 
 socket_write($socket, $msg, strlen($msg)) or die("No se pudo enviar el mensaje al servidor");
 
@@ -124,9 +125,9 @@ echo $result . "\n";
 
 echo "OK.\n";
 
-echo "Cerrando socket...";
+
 socket_close($socket);
-echo "OK.\n\n";
+
 
 $i++;
 
