@@ -109,7 +109,6 @@
 						{
 							echo "<option value='$row[idHorario]'>$row[Hora] || $row[Jornada]</option>";
 						}
-
 					}
 				echo "</select><br>";
 				?>
