@@ -69,6 +69,11 @@
 
           <div>
           <input class="btn__submit btn btn-dark col-md-3" type="submit" value="Pagar">
+          <script type="text/javascript">
+
+            alert("Transaccion Exitosa");
+            
+          </script>
           <a href="index.php" class="btn btn-success col-md-3">REGRESAR</a>
           </div>
 
