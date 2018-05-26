@@ -89,12 +89,14 @@
 
 <?php 
 
+date_default_timezone_set('UTC');
+
 //define(banco,"00");
 //define(institucion,"0001");
 $banco="00";
 $institucion="0001";
-$fecha=strftime("%d%m%y");
-$hora= strftime("%H%S");
+$fecha=date('dmy');
+$hora= date('gis');
 $trx="01";
 
 
