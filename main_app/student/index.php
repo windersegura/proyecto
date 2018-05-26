@@ -34,8 +34,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<title>Bienvenido Estudiante</title>
 </head>
 <body>
@@ -46,9 +46,9 @@
 			<h1>BIENVENIDO <?php echo $consulta[1] ?></h1>
 			<img src="../../img(1)/student_manager.png" width="35%" ><br><br><br>
 		</center>
-		<script src="js/bootstrap.js"></script>
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+		<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/jquery-3.2.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 
 	<?php require 'footer.php' ?>
 </body>

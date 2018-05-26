@@ -38,6 +38,7 @@ function consultaprod( $no_prod )
     $fila['Password'],
     $fila['TipoUsuario'],
     $fila['Correo'],
+		$fila['CantidadCursos'],
   ];
 }
 ?>
@@ -66,6 +67,7 @@ function consultaprod( $no_prod )
   			<th>Password</th>
   			<th>Tipo De Usuario</th>
   			<th>Correo</th>
+				<th>Cantidad De Cursos Asignados</th>
       <?php
       echo "<tr>";
         echo "<td><center>"; echo $consulta[0]; echo "</center></td>";
@@ -78,6 +80,7 @@ function consultaprod( $no_prod )
         echo "<td><center>"; echo $consulta[7]; echo "</center></td>";
         echo "<td><center>"; echo $consulta[8]; echo "</center></td>";
         echo "<td><center>"; echo $consulta[9]; echo "</center></td>";
+				echo "<td><center>"; echo $consulta[10]; echo "</center></td>";
       echo "</tr>";
       ?>
     </table>
