@@ -46,7 +46,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 	<body>
-		<?php require 'menu.php' ?>
+		<?php require 'menu.html' ?>
 		<div class="container">
 		<center><br><h1>LISTADO DE TUS NOTAS</h1><br><br>
 

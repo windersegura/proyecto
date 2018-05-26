@@ -29,7 +29,7 @@
     <title>Formulario de Pagos</title>
   </head>
   <body>
-		<?php include 'menu.php' ?><br><br><br>
+		<?php include 'menu.html' ?><br><br><br>
     <center>
 
         <h3>Ingrese los Datos Requeridos</h3>
