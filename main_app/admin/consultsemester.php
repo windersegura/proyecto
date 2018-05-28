@@ -138,7 +138,7 @@
 				echo "<td><center>"; echo $carrera; echo "</center></td>";
 					echo "<td><a href='deletesemester.php?numero=".$idSemestre."' class='btn btn-danger'>Eliminar</a></td>";
 					echo "<td><a href='modifysemester.php?numero=".$idSemestre."' class='btn btn-primary'>Modificar</a></td>";
-					echo "<td><a href='#' class='btn btn-dark'>Imprimir</a></td>";
+					echo "<td><a href='#' class='btn btn-dark'></a></td>";
 				echo "</tr>";
 			}
 			?>

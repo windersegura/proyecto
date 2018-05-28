@@ -117,7 +117,6 @@
 			<th>Cantidad Cursos</th>
 			<th>Opcion 1</th>
 			<th>Opcion 2</th>
-			<th>Opcion 3</th>
 				</tr>
 			</thead>
 
@@ -150,7 +149,6 @@
 				echo "<td><center>"; echo $cantidadcursos; echo "</td>";
 					echo "<td><a href='deleteteacher.php?numero=".$idProfesor."' class='btn btn-danger'>Eliminar</a></td>";
 					echo "<td><a href='modifyteacher.php?numero=".$idProfesor."' class='btn btn-primary'>Modificar</a></td>";
-					echo "<td><a href='#' class='btn btn-dark'>Imprimir</a></td>";
 				echo "</tr>";
 			}
 			?>

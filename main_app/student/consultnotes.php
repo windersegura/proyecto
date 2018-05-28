@@ -44,13 +44,14 @@
 	<title>Consulta De Notas</title>
 	<link rel="stylesheet" href="../../css/bootstrap.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
 </head>
 	<body>
 		<?php require 'menu.html' ?>
 		<div class="container">
 		<center><br><h1>LISTADO DE TUS NOTAS</h1><br><br>
 
-		<table class="table">
+		<table class="table" id="example">
 			<th><center>Nombre Del Curso</center></th>
 			<th><center>Primer Parcial</center></th>
 			<th><center>Seundo Parcial</center></th>

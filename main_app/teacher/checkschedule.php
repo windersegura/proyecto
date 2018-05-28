@@ -30,7 +30,7 @@
       <th><center>Horario</center></th>
       <th><center>Jornada</center></th>
 
-			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark">IMPRIMIR TODO</Button></a></th>
+			<th><a href="#"><button type="button" name="imprimir" class="btn btn-dark"></Button></a></th>
         <?php
 			    include '../conexion.php';
 
