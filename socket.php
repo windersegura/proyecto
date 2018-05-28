@@ -8,7 +8,7 @@ set_time_limit(0);
  * mientras llega. */
 ob_implicit_flush();
 
-$address = '192.168.1.10';
+$address = '192.168.43.157';
 $port = '9999';
 $socket= socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp')) or die("No se pudo crear el socket");
 
