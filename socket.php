@@ -26,16 +26,28 @@ while(true){
    //	$mensaje_respuesta;
 
 
-   	$mensaje_respuesta='1';	
+   		
 
    	echo $mensaje. "\n";
    	 
    	//socket_write($socket,$mensaje_respuesta,strlen($mensaje_respuesta)) or die ("No se pudo enviar Respuesta
 
    	$mensaje='1';
+
+   	if($mensaje != ''){
+
+   		$mensaje='1';
+   		socket_write($client[$i], $mensaje . "\n\r", 1024);
+
+
+   	}
+
+else{
+
+	$mensaje='0';
     socket_write($client[$i], $mensaje . "\n\r", 1024);
   
-
+}
    
 
     socket_close($client[$i]);
