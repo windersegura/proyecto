@@ -8,7 +8,7 @@ set_time_limit(0);
  * mientras llega. */
 ob_implicit_flush();
 
-$address = '192.168.43.157';
+$address = '192.168.1.10';
 $port = '9999';
 $socket= socket_create(AF_INET, SOCK_STREAM, getprotobyname('tcp')) or die("No se pudo crear el socket");
 
@@ -23,10 +23,21 @@ while(true){
 
     $client[++$i]= socket_accept($socket);
     $mensaje=socket_read($client[$i], 1024);
+   //	$mensaje_respuesta;
 
-    echo $mensaje. "\n";
 
+   	$mensaje_respuesta='1';	
+
+   	echo $mensaje. "\n";
+   	 
+   	//socket_write($socket,$mensaje_respuesta,strlen($mensaje_respuesta)) or die ("No se pudo enviar Respuesta
+
+   	$mensaje='1';
     socket_write($client[$i], $mensaje . "\n\r", 1024);
+  
+
+   
+
     socket_close($client[$i]);
 
 }

@@ -49,19 +49,19 @@
               <div class="col-md-4">
 
                 <label>Numero de Tarjeta <span><em>(requerido)</em></span></label><br>
-            <input type="text" minlength="1" maxlength="6" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
+            <input type="text" minlength="1" maxlength="13" name="Tarjeta" class="form-input form-control" placeholder="Ingrese su Numero de Tarjeta" required/>
 
               </div>
 
           <div class="col-md-5">
             <label>Codigo de Seguridad<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{3}" name="Seguridad" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
+            <input type="text" minlength="3" maxlength="3" name="Seguridad" class="form-input form-control" placeholder="Ingrese su Codigo de Seguridad" required/>
           </div>
 
 
           <div class="col-md-2">
             <label>Monto a Pagar<span><em>(requerido)</em></span></label><br>
-            <input type="text" pattern="[0-9]{6}" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
+            <input type="text" minlength="1" maxlength="6" name="Monto" class="form-input form-control" placeholder="Ingrese su Monto a Pagar" required/>
           </div>
 
           
@@ -80,6 +80,54 @@
 
         </div>
 
+
+<?php 
+
+date_default_timezone_set('America/Guatemala');
+
+//define(banco,"00");
+//define(institucion,"0001");
+$banco="00";
+$institucion="0001";
+$fecha=date('dmy');
+$hora= date('gis');
+$trx="01";
+$trama="";
+
+
+$estado="0000";
+
+$cod_referencia="0000";
+$monto_total=$_REQUEST['Monto'];
+$monto_total= str_pad($monto_total,6,'0',STR_PAD_LEFT);
+
+
+$port='9999';
+$addres='192.168.1.10';
+$i=0;
+
+while ($i<1) {
+  # code...
+
+ $socket = socket_create(AF_INET, SOCK_STREAM, 0) or die("No se pudo conectar ");
+ $result= socket_connect($socket, $addres, $port) or die("No se pudo conectar");
+  $msg="";
+  $msg="". $banco . $trx . $fecha . $hora . $_REQUEST['Tarjeta'] . $_REQUEST['Seguridad'] . $institucion . $monto_total . $estado . $cod_referencia;
+
+$trama=socket_write($socket, $msg, strlen($msg)) or die("No se pudo enviar el mensaje al servidor");
+
+$result= socket_read($socket, 1024) or die("No hay respuesta del servidor");
+echo $result;
+
+
+socket_close($socket);
+
+
+$i++;
+
+}
+
+?>
         
 
     </center><br><br>

@@ -18,7 +18,7 @@ $cod_referencia="0000";
 
 
 $port='9999';
-$addres='192.168.43.157';
+$addres='192.168.1.10';
 $i=0;
 
 while ($i<1) {
