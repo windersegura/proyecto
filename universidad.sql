@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2018 a las 08:30:44
+-- Tiempo de generación: 07-06-2018 a las 20:09:37
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -71,10 +71,9 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `Sexo`, `DPI`, `Password`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
-(1, 'JOSE FRANCISCO BARRIOS ROQUE', 23, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 5),
+(1, 'JOSE FRANCISCO BARRIOS ROQUE', 22, 'san benito peten', 31465812, 'Masculino', 2154318259745, '111111', 'jose@gmail.com', 'Alumno', 5),
 (2, 'ELI NO SANCHEZ SALGUERO', 22, 'carretera a melchor peten', 64851395, 'Masculino', 79843186549725, '222222', 'eli@gmail.com', 'Alumno', 1),
-(13, 'MARIA ANGELES MARTIN LEAL', 19, 'San Luis', 12340999, 'Femenino', 8967454152678, '122334', 'doamari@gmail.com', 'Alumno', 0),
-(14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno', 0),
+(14, 'CARLOS JOSUE CHAMALE RAMIREZ', 19, 'poptun, peten', 79278154, 'Masculino', 79461346765, '916465', 'carl@gmail.com', 'Alumno', 2),
 (15, 'FREDY HENRY SUAREZ CERON', 20, 'San Benito', 50786922, 'Masculino', 3245678909123, '135955', 'suarez@gmail.com', 'Alumno', 0),
 (16, 'ROSA MARGARITA LOPEZ PEREZ', 22, 'San Francisco', 56788900, 'Femenino', 5555566678222, '141104', 'rosita@gmail.com', 'Alumno', 0),
 (17, 'CARLOS DIAZ CRUZ', 23, 'San Andres', 55556790, 'Masculino', 3456789012345, '255113', 'carlosdc@gmail.com', 'Alumno', 0),
@@ -93,7 +92,6 @@ INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `S
 (30, 'JOSE MARTIN CORCUERA CESPEDES', 24, 'Las Cruces', 11273856, 'Masculino', 909507866948, '905969', 'martincespedes@gmail.com', 'Alumno', 0),
 (31, 'SUSAN MEJIA REVOLLEDO', 19, 'San Benito', 30322422, 'Femenino', 142375305294, '696657', 'susan@gmail.com', 'Alumno', 0),
 (32, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
-(33, 'VICTOR EMILIO ZUNIGA SALAS', 18, 'San Benito', 58900554, 'Masculino', 1450943585485, '610007', 'victor66@gmail.com', 'Alumno', 0),
 (34, 'CARLOS ALFONSO LUQUE VILLAVICENCIO', 26, 'Santa Ana', 35143850, 'Masculino', 5934783179312, '955681', 'carlosalfonso66@gmail.com', 'Alumno', 0),
 (35, 'JAVIER GUTIERREZ VELEZ', 19, 'San Benito', 64631650, 'Masculino', 7898018538951, '595311', 'javier@gmail.com', 'Alumno', 1),
 (36, 'ROGER DIAZ ROJAS', 20, 'Santa Elena', 61673022, 'Masculino', 7459319766610, '385693', 'rogerdr@gmail.com', 'Alumno', 0),
@@ -120,7 +118,8 @@ INSERT INTO `alumnos` (`idAlumno`, `Nombre`, `Edad`, `Direccion`, `Telefono`, `S
 (57, 'CHRISTIAN MADRID HERBOZO', 19, 'San Benito', 89882441, 'Masculino', 6106088008731, '609876', 'herbozo@yahoo.com', 'Alumno', 0),
 (58, 'JOSE ANTONIO LUNA BAZO', 25, 'Melchor', 53503541, 'Masculino', 5960182722657, '813783', 'lunabazo@yahoo.com', 'Alumno', 0),
 (59, 'CONSUELO ISABEL CASAS PONCE', 23, 'San Benito', 83023880, 'Femenino', 7125494670122, '900958', 'casasponce@outlook.com', 'Alumno', 0),
-(60, 'REBECA LUQUE DE VASQUEZ', 25, 'Poptun', 62068250, 'Femenino', 4691655423492, '697757', 'luquevasquez@outlook.com', 'Alumno', 0);
+(60, 'REBECA LUQUE DE VASQUEZ', 25, 'Poptun', 62068250, 'Femenino', 4691655423492, '697757', 'luquevasquez@outlook.com', 'Alumno', 0),
+(61, 'ONIEL ESTUARDO', 27, 'san luis peten', 758943, 'Femenino', 8958347985, '1234', 'oniel@gmail.com', 'Alumno', 1);
 
 -- --------------------------------------------------------
 
@@ -145,12 +144,15 @@ CREATE TABLE `asignacioncursos` (
 
 INSERT INTO `asignacioncursos` (`idAsignacion`, `IdAlumno4`, `IdCurso2`, `Solvencia`, `idSemestre2`, `idCarrera3`, `CursoSuperado`, `idHorario`) VALUES
 (42, 1, 8, 0, 6, 7, 0, 11),
-(43, 1, 11, 0, 6, 7, 0, 0),
-(44, 1, 12, 0, 6, 7, 0, 0),
-(45, 1, 13, 0, 6, 7, 0, 0),
-(46, 1, 14, 0, 6, 7, 0, 0),
+(43, 1, 11, 0, 6, 7, 0, 12),
+(44, 1, 12, 0, 6, 7, 0, 11),
+(45, 1, 13, 0, 6, 7, 0, 14),
+(46, 1, 14, 0, 6, 7, 0, 15),
 (47, 2, 8, 0, 6, 7, 0, 11),
-(48, 35, 8, 0, 6, 7, 0, 11);
+(48, 35, 8, 0, 6, 7, 0, 11),
+(49, 14, 12, 0, 6, 7, 0, 11),
+(50, 14, 8, 0, 6, 7, 0, 0),
+(51, 61, 32, 0, 9, 7, 0, 11);
 
 -- --------------------------------------------------------
 
@@ -177,9 +179,15 @@ CREATE TABLE `asignatura` (
 --
 
 INSERT INTO `asignatura` (`idAsignatura`, `idCurso`, `PrimerPar`, `SegundoPar`, `Tareas`, `ParcialFinal`, `idAlumno`, `idProfesor`, `idCarrera`, `idSemestre`, `idHorario`) VALUES
-(23, 8, 0, 0, 0, 0, 1, 1, 7, 6, 11),
+(23, 8, 8, 16, 18, 0, 1, 1, 7, 6, 11),
 (24, 8, 0, 0, 0, 0, 2, 1, 7, 6, 11),
-(25, 8, 0, 0, 0, 0, 35, 1, 7, 6, 11);
+(25, 8, 0, 0, 0, 0, 35, 1, 7, 6, 11),
+(26, 11, 0, 0, 0, 0, 1, 1, 7, 6, 12),
+(27, 13, 0, 0, 0, 0, 1, 1, 7, 6, 14),
+(28, 14, 0, 0, 0, 0, 1, 1, 7, 6, 15),
+(29, 12, 0, 0, 0, 0, 1, 5, 7, 6, 11),
+(30, 12, 6, 15, 20, 50, 14, 5, 7, 6, 11),
+(31, 32, 1, 3, 10, 20, 61, 10, 7, 9, 11);
 
 -- --------------------------------------------------------
 
@@ -200,7 +208,6 @@ CREATE TABLE `carrera` (
 
 INSERT INTO `carrera` (`idCarrera`, `NombreCarrera`, `Duracion`, `CodCarrera`) VALUES
 (2, 'CRIMINOLOGIA', 5, 3311),
-(3, 'CRIMINALISTICA', 5, 3481),
 (4, 'ENFERMERIA', 5, 9485),
 (6, 'ARQUITECTURA', 6, 3169),
 (7, 'INGENIERIA EN SISTEMAS DE INFORMACION', 5, 1690),
@@ -241,16 +248,13 @@ INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `idCarrera`) V
 (2, 'PROGRAMACION III', 5, '5', 7),
 (3, 'ESTADISTICA II', 5, '5', 7),
 (4, 'ELECTRONICA ANALOGICA', 5, '5', 7),
-(5, 'COMPILADORES', 5, '7', 7),
 (8, 'INTRODUCCION A LOS SISTEMAS DE COMPUTO', 5, '1', 7),
-(10, 'PROGRAMACION I', 5, '3', 7),
 (11, 'DESARROLLO HUMANO Y PROFESIONAL', 4, '1', 7),
 (12, 'METODOLOGIA DE LA INVESTIGACION', 5, '1', 7),
 (13, 'CONTABILIDAD I', 5, '1', 7),
 (14, 'LOGICA DE SISTEMAS', 5, '1', 7),
 (15, 'PRECALCULO', 5, '2', 7),
 (17, 'ALGEBRA LINEAL', 5, '2', 7),
-(18, 'DESARROLLO WEB', 5, '8', 7),
 (19, 'ALGORITMOS', 5, '2', 7),
 (20, 'CONTABILIDAD II', 5, '2', 7),
 (21, 'MATEMATICA DISCRETA', 5, '2', 7),
@@ -270,7 +274,55 @@ INSERT INTO `curso` (`idCurso`, `Nombre`, `Creditos`, `Semestre`, `idCarrera`) V
 (35, 'AUTOMATAS Y LENGUAJES FORMALES', 5, '6', 7),
 (36, 'SISTEMAS OPERATIVOS I', 5, '6', 7),
 (37, 'ELECTRONICA DIGITAL', 5, '6', 7),
-(38, 'BASE DE DATOS II', 5, '7', 7);
+(38, 'BASE DE DATOS II', 5, '7', 7),
+(39, 'ANALISIS DE SISTEMAS I', 5, '7', 7),
+(40, 'SISTEMAS OPERATIVOS II', 5, '7', 7),
+(41, 'ARQUITECTURA DE COMPUTADORAS I', 5, '7', 7),
+(42, 'COMPILADORES', 5, '7', 7),
+(43, 'DESARROLLO WEB', 5, '8', 7),
+(44, 'ANALISIS DE SISTEMAS II', 5, '8', 7),
+(45, 'REDES DE COMPUTADORES I', 5, '8', 7),
+(46, 'ETICA PROFESIONAL', 4, '8', 7),
+(47, 'ARQUITECTURA DE COMPUTADORAS II', 5, '8', 7),
+(48, 'ADMINISTRACION DE TECNOLOGIAS DE INFORMACION', 5, '9', 7),
+(49, 'INGENIERIA DE SOFTWARE', 5, '9', 7),
+(50, 'PROYECTO DE GRADUACION I', 6, '9', 7),
+(51, 'REDES DE COMPUTADORAS II', 5, '9', 7),
+(52, 'INTELIGENCIA ARTIFICIAL', 5, '9', 7),
+(53, 'TELECOMUNICACIONES', 5, '10', 7),
+(54, 'SEMINARIO DE TECNOLOGIAS DE INFORMACION', 6, '10', 7),
+(55, 'ASEGURAMIENTO DE CALIDAD DE SOFTWARE', 5, '10', 7),
+(56, 'PROYECTO DE GRADUACION II', 6, '10', 7),
+(57, 'SEGURIDAD Y AUDITORIA DE SISTEMAS', 5, '10', 7),
+(58, 'INTRODUCCION AL DERECHO', 5, '1', 2),
+(59, 'CRIMINALISTICA I', 5, '1', 2),
+(60, 'CRIMINOLOGIA I', 5, '1', 2),
+(61, 'SOCIOLOGIA APLICADA', 5, '1', 2),
+(62, 'DESARROLLO HUMANO Y PROFESIONAL', 5, '1', 2),
+(63, 'BIOLOGIA GENERAL', 5, '1', 4),
+(64, 'ANTROPOLOGIA SOCIAL', 5, '1', 4),
+(65, 'FUNDAMENTOS DE QUIMICA', 5, '1', 4),
+(66, 'LOGICA MATEMATICA', 5, '1', 4),
+(67, 'EDUCACION PARA LA SALUD', 5, '1', 4),
+(68, 'DESARROLLO HUMANO', 5, '1', 4),
+(69, 'TECNICAS DE EXPRESION GRAFICA I', 5, '1', 6),
+(70, 'DIBUJO ARQUITECTONICO I', 5, '1', 6),
+(71, 'METODOS Y TECNICAS DE DISENO', 5, '1', 6),
+(72, 'MATEMATICA I', 5, '1', 6),
+(73, 'HUMANISTICA Y ESTETICA', 5, '1', 6),
+(74, 'DESARROLLO HUMANO Y PROFESIONAL', 5, '1', 6),
+(75, 'COMUNICACION ORAL Y ESCRITA', 5, '1', 6),
+(76, 'ECOLOGIA', 5, '1', 6),
+(77, 'ALGEBRA SUPERIOR', 5, '1', 8),
+(78, 'GEOMETRIA PLANA Y DEL ESPACIO', 5, '1', 8),
+(79, 'PROGRAMACION PARA LA CIENCIA Y LA INGENIERIA', 5, '1', 8),
+(80, 'QUIMICA INORGANICA I', 5, '1', 8),
+(81, 'DESARROLLO HUMANO Y PROFESIONAL', 5, '1', 8),
+(82, 'TECNICAS DE INVESTIGACION', 5, '1', 9),
+(83, 'MATEMATICA I', 5, '1', 9),
+(84, 'INTRODUCCION A LA ECONOMIA', 5, '1', 9),
+(85, 'CONTABILIDAD BASICA', 5, '1', 9),
+(86, 'INTRODUCCION AL DERECHO', 5, '1', 9);
 
 -- --------------------------------------------------------
 
@@ -302,7 +354,6 @@ INSERT INTO `facultad` (`idFacultad`, `Nombre`) VALUES
 (1, 'FACULTAD DE CIENCIAS ECONOMICAS'),
 (2, 'FACULTAD DE ARQUITECTURA'),
 (4, 'FACULTAD DE ODONTOLOGIA'),
-(5, 'FACULTAD DE NUTRICION'),
 (6, 'FACULTAD DE INGENIERIA EN SISTEMAS');
 
 -- --------------------------------------------------------
@@ -433,12 +484,11 @@ CREATE TABLE `profesor` (
 
 INSERT INTO `profesor` (`idProfesor`, `Nombre`, `Direccion`, `Telefono`, `Password`, `DPI`, `Correo`, `TipoUsuario`, `CantidadCursos`) VALUES
 (1, 'JORGE RAMIRO IBARRA MONRY', 'ciudad de guatemala', 31582674, '111111', 3164792587416, 'jorge@gmail.com', 'Maestro', 1),
-(5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro', 0),
+(5, 'JORGE ALAN CAMEY', 'ciudad capital', 13468259, '121212', 134628645297, 'jorge@gmail.com', 'Maestro', 1),
 (6, 'LUIS FELIPE MORALES HERRERA', 'San Benito', 80502778, '818415', 4097444228826, 'luismorales@yahoo.com', 'Maestro', 0),
 (7, 'GILDA BEATRIZ RUIZ CASTILLO', 'Flores', 35849960, '810482', 2762446012347, 'gildacastillo@yahoo.com', 'Maestro', 0),
-(8, 'ROSA GARAY SANCHEZ', 'San Francisco', 94952660, '395267', 2756189879029, 'garayrs@gmail.com', 'Maestro', 0),
-(9, 'JUAN NOE UCEDA SOTO', 'Santa Ana', 83023345, '158507', 2867853414267, 'sotojuan@yahoo.com', 'Maestro', 0),
-(11, 'JUAN NOE UCEDA SOTO', 'quetin', 4679458, '666', 666, 'quetin@gmail.com', 'Maestro', 0);
+(8, 'ROSA GARAY SANCHEZ', 'San Francisco, peten', 94952660, '395267', 2756189879029, 'garayrs@gmail.com', 'Maestro', 0),
+(10, 'JOSEMARIA VILLEDA VELASQUEZ', 'san luis peten', 9034875, '1234', 9034785, 'josemaria@hotmail.com', 'Maestro', 4);
 
 -- --------------------------------------------------------
 
@@ -457,7 +507,6 @@ CREATE TABLE `semestre` (
 --
 
 INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `idCarrera`) VALUES
-(4, '10', 2),
 (5, '1', 2),
 (6, '1', 7),
 (7, '2', 7),
@@ -470,7 +519,13 @@ INSERT INTO `semestre` (`idSemestre`, `NoSemestre`, `idCarrera`) VALUES
 (14, '9', 7),
 (15, '10', 7),
 (19, '2', 2),
-(20, '3', 2);
+(20, '3', 2),
+(21, '4', 2),
+(22, '5', 2),
+(23, '1', 4),
+(24, '1', 6),
+(25, '1', 8),
+(26, '1', 9);
 
 --
 -- Índices para tablas volcadas
@@ -599,19 +654,19 @@ ALTER TABLE `administracion`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `idAlumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT de la tabla `asignacioncursos`
 --
 ALTER TABLE `asignacioncursos`
-  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `idAsignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idAsignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `carrera`
@@ -623,7 +678,7 @@ ALTER TABLE `carrera`
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `idCurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de la tabla `facultad`
@@ -653,13 +708,13 @@ ALTER TABLE `pagomensualidad`
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `idProfesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idProfesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idSemestre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
